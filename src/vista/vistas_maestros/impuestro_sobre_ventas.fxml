@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.controladores_maestro.Impuestro_sobre_ventasController">
+    <stylesheets>
+        <URL value="@/style/styles_maestros/impuestro_sobre_ventas.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="2.0" prefHeight="517.0" prefWidth="723.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="204.0" layoutY="3.0" prefHeight="231.0" prefWidth="512.0" style="-fx-background-color: #accad5;">
+               <children>
+                  <Label layoutX="11.0" layoutY="6.0" prefHeight="17.0" prefWidth="103.0" text="Código">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="11.0" layoutY="23.0" prefHeight="25.0" prefWidth="60.0" />
+                  <Label layoutX="82.0" layoutY="6.0" prefHeight="17.0" prefWidth="103.0" text="Nombre">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="82.0" layoutY="23.0" prefHeight="25.0" prefWidth="333.0" />
+                  <CheckBox layoutX="11.0" layoutY="56.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="103.0" text="Tarifa Excluida" />
+                  <CheckBox layoutX="282.0" layoutY="56.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="216.0" text="Código del iva como auxiliar" />
+                  <Label layoutX="116.0" layoutY="56.0" prefHeight="17.0" prefWidth="70.0" text="Porcentaje" />
+                  <TextField layoutX="188.0" layoutY="52.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="22.0" layoutY="82.0" prefHeight="17.0" prefWidth="216.0" text="Códigos contables">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets right="1.0" />
+                     </opaqueInsets>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="99.0" prefHeight="17.0" prefWidth="125.0" text="Generado en ventas" />
+                  <ComboBox layoutX="8.0" layoutY="116.0" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutX="172.0" layoutY="98.0" prefHeight="17.0" prefWidth="181.0" text="Descontable en devol. en ventas" />
+                  <ComboBox layoutX="169.0" layoutY="115.0" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutX="357.0" layoutY="98.0" prefHeight="17.0" prefWidth="153.0" text="Descontable en compras" />
+                  <ComboBox layoutX="354.0" layoutY="115.0" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutX="12.0" layoutY="143.0" prefHeight="17.0" prefWidth="125.0" text="Devolución compras" />
+                  <ComboBox layoutX="9.0" layoutY="160.0" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutX="173.0" layoutY="142.0" prefHeight="17.0" prefWidth="181.0" text="Iva Implicito generado en ventas" />
+                  <ComboBox layoutX="170.0" layoutY="159.0" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutX="358.0" layoutY="142.0" prefHeight="17.0" prefWidth="181.0" text="Iva generado por consumo" />
+                  <ComboBox layoutX="355.0" layoutY="159.0" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutY="185.0" prefHeight="17.0" prefWidth="181.0" text="Rete.Iva al regimen simplificado" />
+                  <ComboBox layoutX="10.0" layoutY="202.0" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutX="174.0" layoutY="184.0" prefHeight="17.0" prefWidth="181.0" text="Rete.Iva al reg.común" />
+                  <ComboBox layoutX="171.0" layoutY="201.0" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutX="319.0" layoutY="186.0" prefHeight="17.0" prefWidth="110.0" text="\% Ret. por Iva" />
+                  <TextField layoutX="321.0" layoutY="201.0" prefHeight="25.0" prefWidth="86.0" />
+                  <Label layoutX="425.0" layoutY="186.0" prefHeight="17.0" prefWidth="110.0" text="Base Ret." />
+                  <TextField layoutX="417.0" layoutY="201.0" prefHeight="25.0" prefWidth="86.0" />
+               </children>
+            </Pane>
+            <TableView layoutX="204.0" layoutY="238.0" prefHeight="200.0" prefWidth="512.0">
+               <columns>
+                  <TableColumn prefWidth="128.0" text="Código" />
+                  <TableColumn prefWidth="368.0" text="Nombre" />
+               </columns>
+            </TableView>
+            <Button contentDisplay="TOP" layoutX="642.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="586.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="529.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Elimina">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/eliminar%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="473.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Modifica">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="416.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Nuevo">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/registro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="434.0" fitWidth="200.0" layoutX="-1.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/impuestosobreventas.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

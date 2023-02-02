@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="804.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.documentos.comprobante_egreso.Comprobante_de_egresoController">
+    <stylesheets>
+        <URL value="@/style/documentos/comprobante_egreso/comprobante_de_egreso.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="606.0" prefWidth="804.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="45.0" layoutY="-1.0" prefHeight="200.0" prefWidth="715.0" style="-fx-background-color: ffffd9;">
+               <children>
+                  <Label layoutX="613.0" layoutY="13.0" prefHeight="17.0" prefWidth="92.0" text="0000004808" textFill="#dd0101">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="582.0" layoutY="13.0" prefHeight="17.0" prefWidth="37.0" text="No.">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField alignment="CENTER_RIGHT" layoutX="579.0" layoutY="34.0" prefHeight="25.0" prefWidth="106.0" text="0.00" />
+                  <Label layoutX="566.0" layoutY="37.0" prefHeight="17.0" prefWidth="20.0" text="\$" />
+                  <TextField alignment="CENTER_RIGHT" layoutX="439.0" layoutY="34.0" prefHeight="25.0" prefWidth="106.0" />
+                  <Label layoutX="331.0" layoutY="38.0" prefHeight="17.0" prefWidth="115.0" text="Fecha (mm/dd/aa)" />
+                  <Button layoutX="459.0" layoutY="63.0" mnemonicParsing="false" text="Busca" />
+                  <ComboBox layoutX="168.0" layoutY="63.0" prefHeight="25.0" prefWidth="282.0" />
+                  <Label layoutX="86.0" layoutY="67.0" prefHeight="17.0" prefWidth="93.0" text="Beneficiario" />
+                  <Label layoutX="63.0" layoutY="96.0" prefHeight="17.0" prefWidth="110.0" text="Son: (en letras):" />
+                  <TextField layoutX="170.0" layoutY="94.0" prefHeight="25.0" prefWidth="515.0" style="-fx-background-color: transparent;" />
+                  <Separator layoutX="170.0" layoutY="113.0" prefHeight="13.0" prefWidth="516.0" />
+                  <Separator layoutX="482.0" layoutY="153.0" prefHeight="10.0" prefWidth="200.0" />
+                  <Label layoutX="557.0" layoutY="160.0" prefHeight="17.0" prefWidth="62.0" text="Firma" />
+               </children>
+            </Pane>
+            <Label layoutX="81.0" layoutY="209.0" prefHeight="17.0" prefWidth="93.0" text="Detalles" />
+            <TextField layoutX="132.0" layoutY="207.0" prefHeight="25.0" prefWidth="265.0" />
+            <Label layoutX="422.0" layoutY="210.0" prefHeight="17.0" prefWidth="98.0" text="Modo de pago" />
+            <ComboBox layoutX="513.0" layoutY="207.0" prefHeight="25.0" prefWidth="243.0" />
+            <Label layoutX="361.0" layoutY="241.0" prefHeight="17.0" prefWidth="116.0" text="Cheque No." />
+            <TextField layoutX="432.0" layoutY="238.0" prefHeight="25.0" prefWidth="120.0" />
+            <Label layoutX="563.0" layoutY="241.0" prefHeight="17.0" prefWidth="116.0" text="Fecha Posfe." />
+            <TextField layoutX="634.0" layoutY="238.0" prefHeight="25.0" prefWidth="120.0" text="01-07-2023" />
+            <Label layoutX="81.0" layoutY="245.0" prefHeight="17.0" prefWidth="74.0" text="C.Costo" />
+            <ComboBox layoutX="131.0" layoutY="242.0" prefHeight="25.0" prefWidth="79.0" />
+            <Label layoutX="220.0" layoutY="246.0" prefHeight="17.0" prefWidth="46.0" text="Sub" />
+            <ComboBox layoutX="249.0" layoutY="242.0" prefHeight="25.0" prefWidth="70.0" />
+            <ScrollPane layoutX="52.0" layoutY="272.0" prefHeight="134.0" prefWidth="715.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="132.0" prefWidth="995.0">
+                     <children>
+                        <TableView layoutX="-4.0" layoutY="2.0" prefHeight="125.0" prefWidth="995.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Cuenta" />
+                            <TableColumn prefWidth="131.0" text="Detalle" />
+                              <TableColumn prefWidth="61.666656494140625" text="Base" />
+                              <TableColumn prefWidth="61.666656494140625" text="Debe" />
+                              <TableColumn prefWidth="61.666656494140625" text="Haber" />
+                              <TableColumn prefWidth="87.33334350585938" text="Nit Tercero" />
+                              <TableColumn prefWidth="52.0" text="C.Cost" />
+                              <TableColumn prefWidth="52.0" text="S.Cco" />
+                              <TableColumn prefWidth="96.0" text="Afecta.Comp" />
+                              <TableColumn prefWidth="54.66668701171875" text="Cuota" />
+                              <TableColumn prefWidth="84.33331298828125" text="Orden Trabajo" />
+                              <TableColumn prefWidth="84.33331298828125" text="Articulo" />
+                              <TableColumn prefWidth="84.33331298828125" text="Cantidad" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Pane layoutX="53.0" layoutY="406.0" prefHeight="84.0" prefWidth="712.0" style="-fx-background-color: c0c0c0;">
+               <children>
+                  <Button contentDisplay="TOP" layoutX="23.0" layoutY="4.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="59.0" text="Agrega">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/anadir.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="86.0" layoutY="4.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="59.0" text="Quita">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/eliminar%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="152.0" layoutY="3.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="70.0" text="Info. Ter">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/cuento-de-hada.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TableView layoutX="287.0" layoutY="-2.0" prefHeight="88.0" prefWidth="425.0">
+                    <columns>
+                      <TableColumn prefWidth="185.99996948242188" text="Detalle" />
+                      <TableColumn prefWidth="109.00003051757812" text="Saldo" />
+                        <TableColumn prefWidth="130.0" text="Sumas Iguales" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <RadioButton layoutX="63.0" layoutY="501.0" mnemonicParsing="false" text="Pequeño">
+               <toggleGroup>
+                  <ToggleGroup fx:id="grupbuttons" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="144.0" layoutY="501.0" mnemonicParsing="false" text="Grande" toggleGroup="$grupbuttons" />
+            <CheckBox layoutX="63.0" layoutY="523.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="142.0" text="Imprime cheque" />
+            <TextField layoutX="59.0" layoutY="545.0" prefHeight="25.0" prefWidth="226.0" />
+            <Button layoutX="261.0" layoutY="517.0" mnemonicParsing="false" text="..." />
+            <Button contentDisplay="TOP" layoutX="309.0" layoutY="513.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="70.0" text="Frecuente">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/anadir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="382.0" layoutY="513.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="70.0" text="Proveedores">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/menuImg/intercambiando.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="455.0" layoutY="513.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="70.0" text="Cartera">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cartera.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="585.0" layoutY="514.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="59.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="647.0" layoutY="515.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="59.0" text="Anexo">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/libreta-de-contactos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="709.0" layoutY="516.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="59.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="13.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="15.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="15.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="15.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="16.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="18.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="18.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="18.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="19.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="21.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="21.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="21.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="22.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="24.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="24.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="24.0" layoutY="551.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/lavado-en-seco.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

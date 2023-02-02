@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="453.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.documentos.fact_puntVenta_PDV.Cajon_monederoController">
+    <stylesheets>
+        <URL value="@/style/documentos/fact_puntVenta_PDV/cajon_monedero.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="33.0" layoutY="65.0" prefHeight="26.0" prefWidth="181.0" text="Clave de usuario">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="190.0" layoutY="66.0" prefHeight="25.0" prefWidth="222.0" />
+      <Button contentDisplay="TOP" layoutX="271.0" layoutY="117.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="68.0" text="Ok" underline="true">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/aceptar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="344.0" layoutY="117.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="68.0" text="Salir" underline="true">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/cerrar-sesion.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

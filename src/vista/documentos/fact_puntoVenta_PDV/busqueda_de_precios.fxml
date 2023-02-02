@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="910.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.documentos.fact_puntVenta_PDV.Busqueda_de_preciosController">
+    <stylesheets>
+        <URL value="@/style/documentos/fact_puntVenta_PDV/busqueda_de_precios.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="1.0" prefHeight="648.0" prefWidth="912.0" style="-fx-background-color: d6d6d6;">
+         <children>
+            <Label layoutX="31.0" layoutY="15.0" prefHeight="30.0" prefWidth="362.0" text="Digite referencia o codigo de barra">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField layoutX="34.0" layoutY="50.0" prefHeight="48.0" prefWidth="329.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER_RIGHT" layoutX="526.0" layoutY="14.0" prefHeight="81.0" prefWidth="372.0" style="-fx-background-color: grey; -fx-text-fill: #00FD0C;" text="0">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </TextField>
+            <TableView layoutX="29.0" layoutY="113.0" prefHeight="235.0" prefWidth="871.0" style="-fx-background-color: #FDF39C;">
+              <columns>
+                <TableColumn prefWidth="77.66667175292969" text="Referencia" />
+                <TableColumn prefWidth="129.6666717529297" text="Ref. Prov." />
+                  <TableColumn prefWidth="87.66665649414062" text="Codigo" />
+                  <TableColumn prefWidth="104.33331298828125" text="Detalles" />
+              </columns>
+            </TableView>
+            <Label layoutX="30.0" layoutY="354.0" prefHeight="17.0" prefWidth="92.0" text="Sin buscar" />
+            <Label layoutX="109.0" layoutY="362.0" prefHeight="17.0" prefWidth="69.0" text="Saldo">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <TextField alignment="CENTER_RIGHT" layoutX="176.0" layoutY="360.0" prefHeight="36.0" prefWidth="69.0" text="0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <TableView layoutX="40.0" layoutY="414.0" prefHeight="225.0" prefWidth="271.0" style="-fx-background-color: #FDF39C;">
+              <columns>
+                <TableColumn prefWidth="121.66667175292969" text="Bodega" />
+                <TableColumn prefWidth="176.3333282470703" text="Cantidad" />
+              </columns>
+            </TableView>
+            <TableView layoutX="324.0" layoutY="411.0" prefHeight="225.0" prefWidth="426.0" style="-fx-background-color: #FDF39C;">
+               <columns>
+                  <TableColumn prefWidth="214.0" text="Lista de Precio" />
+                  <TableColumn prefWidth="115.3333740234375" text="Precio" />
+                  <TableColumn prefWidth="95.0" text="Precios POS" />
+               </columns>
+            </TableView>
+            <Button contentDisplay="TOP" layoutX="762.0" layoutY="564.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="112.0" text="Salir" underline="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView layoutX="255.0" layoutY="352.0" prefHeight="50.0" prefWidth="644.0">
+              <columns>
+                <TableColumn prefWidth="123.0" text="Marca" />
+                <TableColumn prefWidth="133.6666259765625" text="Grupo" />
+                  <TableColumn prefWidth="132.3333740234375" text="Subgrupo" />
+                  <TableColumn prefWidth="145.0" text="Tar.Iva" />
+                  <TableColumn prefWidth="110.0" text="Ubicacion" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

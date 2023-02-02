@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="532.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.contables_financieros.Resumen_x_diasController">
+    <stylesheets>
+        <URL value="@/style/informes/contables_financieros/resumen_x_dias.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="-1.0" layoutY="-4.0" prefHeight="469.0" prefWidth="552.0" style="-fx-background-color: white;">
+         <children>
+            <Button contentDisplay="TOP" layoutX="485.0" layoutY="387.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="63.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="409.0" layoutY="387.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="70.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="331.0" layoutY="387.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="70.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane layoutX="4.0" layoutY="8.0" prefHeight="370.0" prefWidth="544.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="11.0" layoutY="27.0" prefHeight="17.0" prefWidth="70.0" text="Periodo">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="64.0" layoutY="23.0" prefWidth="150.0" />
+                  <TextField layoutX="220.0" layoutY="23.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="11.0" layoutY="63.0" prefHeight="17.0" prefWidth="70.0" text="Tipo doc.">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="127.0" layoutY="63.0" prefHeight="17.0" prefWidth="70.0" text="Cuenta">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="236.0" layoutY="63.0" prefHeight="17.0" prefWidth="70.0" text="Nombre">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="8.0" layoutY="83.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox layoutX="8.0" layoutY="108.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox layoutX="8.0" layoutY="132.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox layoutX="8.0" layoutY="157.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox layoutX="8.0" layoutY="182.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox layoutX="8.0" layoutY="207.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox layoutX="8.0" layoutY="231.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox layoutX="8.0" layoutY="256.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox layoutX="8.0" layoutY="281.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox layoutX="8.0" layoutY="306.0" prefHeight="25.0" prefWidth="102.0" />
+                  <TextField layoutX="110.0" layoutY="83.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="83.0" prefHeight="25.0" prefWidth="303.0" />
+                  <TextField layoutX="110.0" layoutY="108.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="108.0" prefHeight="25.0" prefWidth="303.0" />
+                  <TextField layoutX="110.0" layoutY="132.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="132.0" prefHeight="25.0" prefWidth="303.0" />
+                  <TextField layoutX="110.0" layoutY="157.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="157.0" prefHeight="25.0" prefWidth="303.0" />
+                  <TextField layoutX="110.0" layoutY="182.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="182.0" prefHeight="25.0" prefWidth="303.0" />
+                  <TextField layoutX="110.0" layoutY="207.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="207.0" prefHeight="25.0" prefWidth="303.0" />
+                  <TextField layoutX="110.0" layoutY="231.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="231.0" prefHeight="25.0" prefWidth="303.0" />
+                  <TextField layoutX="110.0" layoutY="256.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="256.0" prefHeight="25.0" prefWidth="303.0" />
+                  <TextField layoutX="110.0" layoutY="281.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="281.0" prefHeight="25.0" prefWidth="303.0" />
+                  <TextField layoutX="110.0" layoutY="306.0" prefHeight="25.0" prefWidth="115.0" />
+                  <TextField layoutX="225.0" layoutY="306.0" prefHeight="25.0" prefWidth="303.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

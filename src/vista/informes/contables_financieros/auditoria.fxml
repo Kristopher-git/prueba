@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.contables_financieros.AuditoriaController">
+    <stylesheets>
+        <URL value="@/style/informes/contables_financieros/auditoria.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="-2.0" layoutY="-6.0" prefHeight="504.0" prefWidth="623.0">
+         <children>
+            <Button contentDisplay="TOP" layoutX="547.0" layoutY="418.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="69.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="473.0" layoutY="418.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="69.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="397.0" layoutY="418.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="69.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane layoutX="6.0" layoutY="7.0" prefHeight="399.0" prefWidth="610.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="19.0" layoutY="17.0" prefHeight="17.0" prefWidth="202.0" text="Tipos documentos a auditar">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="341.0" layoutY="91.0" prefHeight="17.0" prefWidth="113.0" text="Cuentas">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="75.0" layoutY="49.0" prefHeight="17.0" prefWidth="68.0" text="Desde" />
+                  <TextField layoutX="341.0" layoutY="134.0" prefHeight="25.0" prefWidth="135.0" />
+                  <TextField layoutX="341.0" layoutY="108.0" prefHeight="25.0" prefWidth="135.0" />
+                  <Button layoutX="477.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ComboBox layoutX="114.0" layoutY="44.0" prefHeight="25.0" prefWidth="106.0" />
+                  <CheckBox layoutX="15.0" layoutY="112.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="228.0" text="Imprimir nombre del tercero" />
+                  <CheckBox layoutX="15.0" layoutY="203.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="264.0" text="Sume todas las columnas" />
+                  <CheckBox layoutX="15.0" layoutY="242.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="274.0" text="Razón de la primera columna con la segunda." />
+                  <CheckBox layoutX="15.0" layoutY="149.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="244.0" text="Imprimir el número del cheque (Egresos)" />
+                  <CheckBox layoutX="15.0" layoutY="223.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="228.0" text="Imprimir los nombres de las cuentas" />
+                  <Label layoutX="17.0" layoutY="279.0" prefHeight="17.0" prefWidth="94.0" text="Agrupar por" />
+                  <ComboBox layoutX="181.0" layoutY="13.0" prefHeight="25.0" prefWidth="135.0" />
+                  <Label layoutX="19.0" layoutY="49.0" prefHeight="17.0" prefWidth="69.0" text="Periodo">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="223.0" layoutY="44.0" prefHeight="25.0" prefWidth="68.0" />
+                  <Label layoutX="305.0" layoutY="49.0" prefHeight="17.0" prefWidth="68.0" text="Hasta" />
+                  <ComboBox layoutX="344.0" layoutY="44.0" prefHeight="25.0" prefWidth="106.0" />
+                  <TextField layoutX="453.0" layoutY="44.0" prefHeight="25.0" prefWidth="68.0" />
+                  <Button layoutX="477.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox layoutX="513.0" layoutY="112.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="38.0" />
+                  <CheckBox layoutX="512.0" layoutY="138.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="38.0" />
+                  <TextField layoutX="341.0" layoutY="186.0" prefHeight="25.0" prefWidth="135.0" />
+                  <TextField layoutX="341.0" layoutY="160.0" prefHeight="25.0" prefWidth="135.0" />
+                  <Button layoutX="477.0" layoutY="160.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="477.0" layoutY="186.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox layoutX="512.0" layoutY="164.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="38.0" />
+                  <CheckBox layoutX="512.0" layoutY="190.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="38.0" />
+                  <TextField layoutX="341.0" layoutY="211.0" prefHeight="25.0" prefWidth="135.0" />
+                  <Button layoutX="477.0" layoutY="211.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox layoutX="512.0" layoutY="215.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="38.0" />
+                  <TextField layoutX="341.0" layoutY="263.0" prefHeight="25.0" prefWidth="135.0" />
+                  <TextField layoutX="341.0" layoutY="237.0" prefHeight="25.0" prefWidth="135.0" />
+                  <Button layoutX="477.0" layoutY="237.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="477.0" layoutY="263.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <CheckBox layoutX="512.0" layoutY="241.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="38.0" />
+                  <CheckBox layoutX="512.0" layoutY="267.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="38.0" />
+                  <Label layoutX="19.0" layoutY="91.0" prefHeight="17.0" prefWidth="113.0" text="Opciones">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <CheckBox layoutX="15.0" layoutY="130.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="264.0" text="Imprimir número externo del comprobante" />
+                  <CheckBox layoutX="15.0" layoutY="167.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="274.0" text="Imprimir en hoja oficio horizontal (12 cuentas)" />
+                  <CheckBox layoutX="15.0" layoutY="185.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="274.0" text="Cuente el número de transacciones" />
+                  <ComboBox layoutX="88.0" layoutY="276.0" prefHeight="25.0" prefWidth="228.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

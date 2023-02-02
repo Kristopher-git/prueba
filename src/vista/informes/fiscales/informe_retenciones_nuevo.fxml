@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="666.0" prefWidth="539.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.fiscales.Informe_retenciones_nuevoController">
+    <stylesheets>
+        <URL value="@/style/informes/fiscales/informe_retenciones_nuevo.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutY="-5.0" prefHeight="671.0" prefWidth="537.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="237.0" prefWidth="513.0" style="-fx-background-color: f0f0f0; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="146.0" text="Tipo retención">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="14.0" layoutY="40.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="121.0" text="Rete. Pte" />
+                  <RadioButton layoutX="14.0" layoutY="57.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="121.0" text="Ret. Iva" />
+                  <RadioButton layoutX="14.0" layoutY="74.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="121.0" text="Ret. ICA" />
+                  <RadioButton layoutX="14.0" layoutY="91.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="121.0" text="Otro" />
+                  <RadioButton layoutX="14.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="121.0" text="Otro" />
+                  <Pane layoutX="316.0" layoutY="16.0" prefHeight="100.0" prefWidth="186.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                     <children>
+                        <Label layoutX="8.0" layoutY="21.0" prefHeight="17.0" prefWidth="53.0" text="Desde" />
+                        <TextField layoutX="48.0" layoutY="17.0" prefHeight="25.0" prefWidth="110.0" />
+                        <Label layoutX="8.0" layoutY="50.0" prefHeight="17.0" prefWidth="53.0" text="Hasta" />
+                        <TextField layoutX="48.0" layoutY="46.0" prefHeight="25.0" prefWidth="110.0" />
+                        <Label layoutX="12.0" layoutY="-10.0" prefHeight="17.0" prefWidth="121.0" style="-fx-background-color: f0f0f0;" text="Elija el periodo">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="160.0" layoutY="170.0" prefHeight="81.0" prefWidth="129.0" style="-fx-border-color: grey; -fx-background-color: f0f0f0;">
+                     <children>
+                        <RadioButton layoutX="13.0" layoutY="11.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="97.0" text="Servicios" />
+                        <RadioButton layoutX="13.0" layoutY="33.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="86.0" text="Productos" />
+                        <RadioButton layoutX="14.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="86.0" text="Todos" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="12.0" layoutY="272.0" prefHeight="237.0" prefWidth="513.0" style="-fx-background-color: f0f0f0; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="24.0" layoutY="-8.0" prefHeight="17.0" prefWidth="146.0" style="-fx-background-color: f0f0f0;" text="Tipo de informe">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="14.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="159.0" text="Informe consolidado" />
+                  <RadioButton layoutX="14.0" layoutY="33.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="121.0" text="Informe detallado" />
+                  <RadioButton layoutX="14.0" layoutY="51.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="159.0" text="Certificados de retención" />
+                  <Label layoutX="37.0" layoutY="102.0" prefHeight="17.0" prefWidth="186.0" text="Seleccionar terceros" />
+                  <TextArea layoutX="30.0" layoutY="121.0" prefHeight="72.0" prefWidth="436.0" />
+                  <Button layoutX="439.0" layoutY="93.0" mnemonicParsing="false" text="...." />
+               </children>
+            </Pane>
+            <Label layoutX="14.0" layoutY="547.0" prefHeight="17.0" prefWidth="78.0" text="Nit DIAN" />
+            <TextField layoutX="73.0" layoutY="543.0" prefHeight="25.0" prefWidth="138.0" />
+            <Label layoutX="221.0" layoutY="547.0" prefHeight="17.0" prefWidth="53.0" text="Nota:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="269.0" layoutY="547.0" prefHeight="17.0" prefWidth="252.0" text="Los movimientos con el Nit de la DIAN serán" />
+            <Label layoutX="270.0" layoutY="559.0" prefHeight="17.0" prefWidth="252.0" text="excluidos del informe, se asume que son los" />
+            <Label layoutX="270.0" layoutY="571.0" prefHeight="17.0" prefWidth="252.0" text="pagos." />
+            <Button contentDisplay="TOP" layoutX="461.0" layoutY="593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="395.0" layoutY="593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="329.0" layoutY="593.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

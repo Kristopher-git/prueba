@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladores_maestro.PlanesController">
+    <stylesheets>
+        <URL value="@/style/styles_maestros/planes.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="130.0" prefWidth="573.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="20.0" layoutY="14.0" prefHeight="27.0" prefWidth="215.0" text="Plan Unico de Cuentas">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboMaestros" layoutX="221.0" layoutY="15.0" onAction="#clickMaestros" prefHeight="25.0" prefWidth="215.0" />
+            <Label layoutX="20.0" layoutY="67.0" prefHeight="17.0" prefWidth="73.0" text="Buscar" />
+            <TextField fx:id="txtNombre" layoutX="78.0" layoutY="63.0" onKeyReleased="#filtrarTabla" onKeyTyped="#txtMayuscula" prefHeight="25.0" prefWidth="359.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="14.0" layoutY="165.0" onMouseClicked="#click_table" prefHeight="228.0" prefWidth="573.0">
+        <columns>
+          <TableColumn fx:id="colCuenta" prefWidth="158.0" text="Cuenta" />
+          <TableColumn fx:id="colNombre" prefWidth="414.0" text="Nombre" />
+        </columns>
+      </TableView>
+      <Button contentDisplay="TOP" layoutX="525.0" layoutY="404.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="61.0" text="Salir">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/botones/cerrar-sesion.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="457.0" layoutY="404.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="61.0" text="Menores">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/botones/anadir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="387.0" layoutY="404.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="61.0" text="Adiciona">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/botones/anadir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

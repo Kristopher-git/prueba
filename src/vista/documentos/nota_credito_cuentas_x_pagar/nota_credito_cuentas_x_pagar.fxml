@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="877.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.documentos.nota_credito_cuentas_x_pagar.Nota_credito_cuentas_x_pagarController">
+    <stylesheets>
+        <URL value="@/style/documentos/nota_credito_cuentas_x_pagar/nota_credito_cuentas_x_pagar.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="48.0" layoutY="17.0" prefHeight="17.0" prefWidth="55.0" text="No.">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="84.0" layoutY="19.0" prefHeight="17.0" prefWidth="55.0" text="PC1" textFill="#d70000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="19.0" prefHeight="17.0" prefWidth="112.0" text="0000000001" textFill="#d70000">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="214.0" layoutY="19.0" prefHeight="17.0" prefWidth="172.0" text="Fecha (mm/dd/aaaa):">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="350.0" layoutY="16.0" />
+      <Label layoutX="520.0" layoutY="20.0" prefHeight="17.0" prefWidth="172.0" text="Número Externo">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField layoutX="621.0" layoutY="17.0" />
+      <Label layoutX="52.0" layoutY="49.0" prefHeight="17.0" prefWidth="172.0" text="Proveedor">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="126.0" layoutY="46.0" prefHeight="25.0" prefWidth="297.0" />
+      <Button layoutX="428.0" layoutY="46.0" mnemonicParsing="false" text="Buscar" />
+      <Label layoutX="496.0" layoutY="51.0" prefHeight="17.0" prefWidth="69.0" text="Plazo" />
+      <TextField layoutX="529.0" layoutY="47.0" prefHeight="25.0" prefWidth="62.0" />
+      <TextField layoutX="595.0" layoutY="47.0" prefHeight="25.0" prefWidth="102.0" />
+      <ComboBox layoutX="101.0" layoutY="80.0" prefHeight="25.0" prefWidth="102.0" />
+      <Label layoutX="52.0" layoutY="83.0" prefHeight="17.0" prefWidth="69.0" text="C.Costo" />
+      <Label layoutX="210.0" layoutY="84.0" prefHeight="17.0" prefWidth="69.0" text="Detalles" />
+      <TextField layoutX="258.0" layoutY="80.0" prefHeight="25.0" prefWidth="257.0" />
+      <ComboBox layoutX="606.0" layoutY="80.0" prefHeight="25.0" prefWidth="230.0" />
+      <Label layoutX="520.0" layoutY="83.0" prefHeight="17.0" prefWidth="92.0" text="Modo de pago" />
+      <ComboBox layoutX="114.0" layoutY="110.0" prefHeight="25.0" prefWidth="102.0" />
+      <Label layoutX="52.0" layoutY="113.0" prefHeight="17.0" prefWidth="69.0" text="Subcentro" />
+      <ScrollPane layoutX="52.0" layoutY="142.0" prefHeight="200.0" prefWidth="801.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="211.0" prefWidth="1025.0">
+               <children>
+                  <TableView layoutY="-3.0" prefHeight="211.0" prefWidth="1025.0">
+                     <columns>
+                        <TableColumn prefWidth="98.0" text="Cuenta" />
+                        <TableColumn prefWidth="164.0" text="Detalle" />
+                        <TableColumn prefWidth="69.0" text="Base" />
+                        <TableColumn prefWidth="71.0" text="Debe" />
+                        <TableColumn prefWidth="71.0" text="Haber" />
+                        <TableColumn prefWidth="71.0" text="Nit Tercero" />
+                        <TableColumn prefWidth="47.0" text="CCo" />
+                        <TableColumn prefWidth="47.0" text="SCo" />
+                        <TableColumn prefWidth="102.0" text="Afecta. Comp" />
+                        <TableColumn prefWidth="57.0" text="Cuota" />
+                        <TableColumn prefWidth="107.0" text="Orden Trabajo" />
+                        <TableColumn prefWidth="120.0" text="Articulo" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button contentDisplay="TOP" layoutX="50.0" layoutY="351.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="69.0" text="Agregar">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/anadir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="125.0" layoutY="351.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="69.0" text="Quita">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/eliminar%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="200.0" layoutY="352.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="69.0" text="Info. Ter">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/cuento-de-hada.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView layoutX="278.0" layoutY="342.0" prefHeight="106.0" prefWidth="574.0">
+        <columns>
+          <TableColumn prefWidth="274.0" text="Detalle" />
+          <TableColumn prefWidth="136.0" text="Saldo" />
+            <TableColumn prefWidth="163.0" text="Sumas Iguales" />
+        </columns>
+      </TableView>
+      <Button contentDisplay="TOP" layoutX="783.0" layoutY="459.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="69.0" text="Salir">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/cerrar-sesion.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="707.0" layoutY="459.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="69.0" text="Anexo">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/libreta-de-contactos.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="631.0" layoutY="459.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="69.0" text="Grabar">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/disquete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button contentDisplay="TOP" layoutX="553.0" layoutY="459.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="69.0" text="Prov">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/cartera%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="14.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="15.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="15.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="16.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="17.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="18.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="18.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="19.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="20.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="21.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="21.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="16.0" layoutX="22.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/botones/lavado-en-seco.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

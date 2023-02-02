@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PrincipalController">
+    <stylesheets>
+        <URL value="@/style/principal.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutY="1.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-25.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="47.0" prefWidth="1364.0" style="-fx-background-color: #0694FA;">
+               <children>
+                  <Label layoutX="15.0" prefHeight="31.0" prefWidth="417.0" text="Sistema Integrado Contable V6 - 1 " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="46.0" prefWidth="1364.0">
+               <children>
+                  <MenuBar prefHeight="45.0" prefWidth="1048.0" style="-fx-background-color: transparent;">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Periodos">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#click_cambio_mes" text="Cambio de Mes">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/calendario-de-escritorio.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_meses_abiertos" text="Meses Abiertos">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/buscar.png" />
+                                       </image></ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem mnemonicParsing="false" text="Salir">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes1" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/puerta-de-salida.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Maestros">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#click_plan_cuentas" text="Plan de cuentas">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/planes.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_centro" text="Centro de costo">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes21" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/planes.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_tiposDocumentos" text="Tipos de Documentos">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes22" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/planes.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#ClickTerceros" text="Terceros">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes23" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/personas.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <Menu mnemonicParsing="false" text="Regiones Geograficas">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_zonas" text="Zonas" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_Dep" text="Departamentos" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_ciudad" text="Ciudad" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_paises" text="Paises" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes24" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/geografia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <MenuItem mnemonicParsing="false" onAction="#click_archivos_inventarios" text="Archivos de Inventario">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes25" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/herramienta-de-llave.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_productos" text="Productos">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes251" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/herramienta-de-llave.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_servicios" text="Servicios">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes252" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cliente.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <Menu mnemonicParsing="false" text="Configurar facturación en Lote">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_constantes" text="Constantes" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_novedades" text="Novedades" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_constantes_generales" text="Constantes Generales" />
+                                 </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes253" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <MenuItem mnemonicParsing="false" onAction="#click_modo_pagos" text="Modos de pago">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes254" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/planes.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_operaciones_frecuentes" text="Operaciones Frecuentes">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2541" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/planes.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_impuestro_sobre_ventas" text="Tabla de Impuesto sobre las Ventas">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2542" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/planes.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_impuesto_industria_y_comercio" text="Tabla de Impuesto de Industria y Comercio">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2543" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/planes.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_tablas_nomina" text="Tabla de Nómina">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2544" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/frecuencia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Documentos">
+                        <items>
+                          <MenuItem fx:id="idMante_documents" mnemonicParsing="false" onAction="#click_mante_documents" text="Mantenimiento de Documentos">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes26" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/martillo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem fx:id="idFactVenta" mnemonicParsing="false" onAction="#click_fact_venta" text="Factura de Venta              CTRL+F">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <Menu mnemonicParsing="false" text="Facturación Punto de Venta (PDV)">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_factura_de_venta_pdv" text="Factura de venta PDV                           F9">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes29" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/escritorio.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_dev_venta" text="Devolución en venta PDV                   F11">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes291" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/escritorio.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_toma_pedidos_cotizaciones_pdv" text="Toma de pedidos\Cotizaciones PDV    F7">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes292" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/pedido.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_abrir_cajon" text="Abrir el cajón monedero            CTRL+F5">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes293" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_busqueda_precios" text="Busqueda de Precios                             F2">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2931" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/herramienta-de-llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes28" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/punto-de-venta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Otros (Área Ventas)">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_remision_cliente" text="Remisión a cliente">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes293111" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_pedido_de_cliente" text="Pedido de clientes">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes293112" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_cotizacion_a_cliente" text="Cotización a cliente">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes293113" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes29311" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <MenuItem mnemonicParsing="false" onAction="#click_nota_contabilidad" text="Nota de contabilidad">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes293114" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_comprobante_egreso" text="Comprobante de Egreso">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes293115" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_recibo_de_caja" text="Recibo de caja">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes293116" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_consignacion_bancaria" text="Consignación bancaria">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes293117" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_nota_debito_causa_cts_x_cobrar" text="Nota débito (causación ctas x cobrar)">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes293118" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_nota_credito_devol_venta" text="Nota crédito (devol.venta)">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes293119" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_factura_compra_causacion_servicio" text="Factura de Compras\causación servicios">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2931110" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_nota_credito_cuentas_x_pagar" text="Nota crédito (causación ctas x pagar)">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2931111" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_nota_debito_devol_compra" text="Nota débito (devol.compra)">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2931112" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_orden_compra" text="Orden de compra">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2931113" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_orden_servicio" text="Orden de servicio">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2931114" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <Menu mnemonicParsing="false" text="Documentos de inventarios">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_nota_inventarios" text="Nota de inventarios">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes272" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_salida_inventario" text="Salidas de inventarios">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes273" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Separado de inventarios">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes274" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_translado_bodegas" text="Translado entre bodegas">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes275" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Nota de Inventarios M/cia en Consignación">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes276" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Traslado entre Bodegas M/cia en Consignación">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes277" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes271" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <MenuItem mnemonicParsing="false" onAction="#click_documentos_nomina" text="Documentos de Nómina">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2931115" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#click_documentos_iniciales" text="Documentos Saldos Iniciales">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2931116" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/cuenta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                        </items>
+                      </Menu>
+                        <Menu mnemonicParsing="false" text="Procesos">
+                          <items>
+                              <Menu mnemonicParsing="false" text="Procesos de Inventarios">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_procesar_costos_ventas" text="Procesar Costos de ventas">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2794665" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/llave-inglesa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_conversion_insumos" text="Conversión insumos en artículos">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2794664" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/herramienta-de-llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_inventarios_fisicos" text="Inventario fisíco">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2794663" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/herramienta-de-llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_cancelacion_inventarios" text="Cancelar Inventario">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2794662" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/herramienta-de-llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_pedidos_a_proveedores" text="Pedidos a proveedores">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2794661" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/herramienta-de-llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_manto_lotes_productos" text="Manto. Lotes de Productos">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes279466" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/herramienta-de-llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_nivelacion_de_costos" text="Nivelación de costos">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes279465" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/llave-inglesa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                </items>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Procesos Contables">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_procesar_depreciacion" text="Procesar Depreciación">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes279464" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_liquidacion_terceros" text="Liquidacion de Terceros">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes279463" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/personas.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_reclasificacion_saldos" text="Reclasificación de Saldos">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes279462" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/personas.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_concilacion_bancaria" text="Realizar conciliación bancaria">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes279461" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/herramienta-de-llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_corte_fisico" text="Corte Físico">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes27946" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/tijeras.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Cierre de AÑO">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes27945" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_consolidar_empresas" text="Consolidar empresas">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes27944" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/empresa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                </items>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Procesos de Ventas">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_facturacion_cobro_lotes" text="Facturación/cobros en lote">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes27943" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_abrir_factura_saldos_bodega" text="Facturar saldos bodega">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes27942" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_cierre_lapso_venta" text="Cierre Lapso de Ventas">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes27941" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/llave.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_planilla_transportadores" text="Planilla transportadores">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2794" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/cuenta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                </items>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Procesos de Cartera">
+                                 <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_causacion_interes_deudores" text="Causación de intereses Deudores">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes279" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/llave-inglesa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_cruce_cartera_clie_con_anticipos" text="Cruce de cartera clientes con anticipos">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2791" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/llave-inglesa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_definir_cuentas_categorias" text="Definir Cuentas y categorias">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2792" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/llave-inglesa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                    <MenuItem mnemonicParsing="false" onAction="#click_clasificacion_cartera_comercial" text="Clasificación de Cartera comercial">
+                                       <graphic>
+                                          <ImageView fx:id="imgCambiomes2793" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/menuImg/llave-inglesa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></MenuItem>
+                                 </items>
+                              </Menu>
+                              <MenuItem mnemonicParsing="false" onAction="#click_reconstruir_movimientos" text="Reconstruir Movimientos     F6">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes278" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/llave-inglesa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Informes">
+                          <items>
+                              <Menu mnemonicParsing="false" text="Facturación">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" text="Informes de Facturación" />
+                                    <MenuItem mnemonicParsing="false" text="Informes de Facturación nuevo" />
+                                    <MenuItem mnemonicParsing="false" text="Comparativo Facturación" />
+                                    <MenuItem mnemonicParsing="false" text="Descuentos comerciales" />
+                                    <MenuItem mnemonicParsing="false" text="Informe Nuevos clientes" />
+                                    <MenuItem mnemonicParsing="false" text="Informes de Pedidos - Servicios" />
+                                    <MenuItem mnemonicParsing="false" text="Comisiones a la venta" />
+                                    <MenuItem mnemonicParsing="false" text="Comisiones al recaudo" />
+                                    <MenuItem mnemonicParsing="false" text="Informe de puntos" />
+                                    <MenuItem mnemonicParsing="false" text="Facturas por Pedido" />
+                                    <MenuItem mnemonicParsing="false" text="Informe de Remisiones" />
+                                    <MenuItem mnemonicParsing="false" text="Informe de Facturación x marcas - segmentos" />
+                                    <MenuItem mnemonicParsing="false" text="Comisiones a la venta - Listado por documentos" />
+                                    <MenuItem mnemonicParsing="false" text="Informes de Cotizaciones" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_ver_trazabilidad_pedido" text="ver trazabilidad de pedidos" />
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Deudores">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_cartera" text="Cartera" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_cartera_por_edades" text="Cartera por edades Nuevo" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_consulta_por_terceros" text="Consultas por tercero" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_analisis_morosidad" text="Análisis de morosidad" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_listado_clientes_saldos" text="Listado de clientes y saldos" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_saldo_tercero_x_cuentas" text="Saldos terceros x cuentas" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_consultas_x_documento" text="Consultas x Documento" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_cartas_cobros" text="Cartas de cobro" />
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946661" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Proveedores CxP">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_informe_cuentas_xpagar" text="Informe cuentas x pagar" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_consultas" text="Consultas" />
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946662" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Inventarios">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_kardex_general" text="Kardex general" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_kardex_bodegas" text="Kardex por bodegas" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_saldos_inventario" text="Saldos de inventario" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_saldos_inventarios_segmentos" text="Saldos de inventario x segmentos" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_saldo_inventario_unidades_mayor" text="Saldos de inventario x unidades mayores" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_saldos_inventario_acumu_series" text="Saldos de inventario acumulados x serie" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_extracto_inventario_general" text="Extracto de Inventario - General" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_extracto_inventario_bodegas" text="Extracto de Inventario - Bodega" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_rotacion_inventario" text="Rotación de Inventario" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_rentabilidad_inventario" text="Rentabilidad del Inventario" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_extracto_bodega" text="Extracto de bodega" />
+                                    <MenuItem mnemonicParsing="false" onAction="#clicl_informe_translados_bodegas" text="Informe translados bodega" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_saldo_inventario_bodegas_2" text="Saldos de inventario por bodegas 2" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_kardex_bodegas_mercan_consig" text="Kardex por bodegas mercancia en consignación" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informe_maximos_minimos" text="Informe Maximos y Minimos" />
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946663" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Compras">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_informe_compras" text="Informe de Compras" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_comparativo_compras" text="Comparativo de Compras" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_compras" text="Compras" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_registros_ordenes_compra" text="Registros de ordenes de compra" />
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946664" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Tesorería">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_estado_caja_bancos" text="Estado de caja y bancos" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_relacion_cheques" text="Relación de Cheques" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informe_recaudos" text="Informes de recaudos" />
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946665" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Fiscales">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_comprobante_informe_diario_facturacion" text="Comprobante informe diario - facturación" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_comprobante_informe_diario_compras" text="Comprobante informe diario - compras" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_certificado_retencion" text="Certificados de retención" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_concolidado_retencion" text="Consolidado de retenciones" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informe_iva" text="Informe de IVA" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_pagos_terceros" text="Pagos a terceros" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_medios_magneticos" text="Medios magnéticos (Ayuda)" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informe_retenciones_nuevo" text="Informe de retenciones - Nuevo" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_medios_magneticos_nuevo" text="Medios magnéticos (Ayuda) Nuevo" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_comprobante_informe_diario_fact" text="Comprobante informe diario facturación nuevo" />
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946666" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                            <MenuItem mnemonicParsing="false" onAction="#click_informes_especificos" text="Informes especificos">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946667" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <Menu mnemonicParsing="false" text="Contables Financieros">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#click_estados_financieros" text="Estados Financieros" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_libros_oficiales" text="Libros oficiales" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_auxiliares" text="Auxiliares" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_movimiento" text="Movimiento" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_auxiliar_especial" text="Auxiliar especial" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_auditoria" text="Auditoría" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_comprobante_diario" text="Comprobante diario" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_resumen_x_dias" text="Resumen x días" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_resumen_contable" text="Resumen contable" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_ingresos_gastos_tercero" text="Ingresos y gastos x tercero" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_analisis_grafico" text="Análisis Gráfico" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_saldos_terceros" text="Saldos x terceros" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_saldos_centros_costos" text="Saldos x centros de costo" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_listado_documento" text="Listado de Documentos" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_resumen_documentos" text="Resumen de Documentos" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_movimiento_ref1" text="Movimiento - Ref1" />
+                                </items>
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946668" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Menu>
+                              <MenuItem mnemonicParsing="false" onAction="#click_informes_de_nomina" text="Informes de Nómina">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946669" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boletin-informativo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Mantenimiento">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Parámetrización">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes279466610" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/llave-inglesa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Mantenimiento Base de datos">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes279466611" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/mantenimiento.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Usuarios y Permisos">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666111" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/personas.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Bloquear temporalmente      F12">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666112" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/llave.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Cambio de Password">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946661121" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/llave.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Exportar información">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666101" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/llave-inglesa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Importar información">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666102" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/llave-inglesa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Examinar fallas en información">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666103" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/boya-salvavidas.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Historial de operaciones">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666104" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/frecuencia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Mostrar barra de herramientas">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946661041" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/frecuencia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Envio de e-mail">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946661042" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/correo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Calculadora">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes27946661043" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/calculadora.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="CRM Clientes">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Seguimiento de Cotizaciones">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666105" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/archivos.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Seguimiento de clientes">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666106" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/intercambiando.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Ventas por cliente">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666107" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/frecuencia.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Acerca de...">
+                                 <graphic>
+                                    <ImageView fx:id="imgCambiomes2794666108" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/menuImg/en-todo-el-mundo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></MenuItem>
+                          </items>
+                        </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </Pane>
+            <Pane prefHeight="645.0" prefWidth="1282.0">
+               <children>
+                  <ImageView fitHeight="680.0" fitWidth="1388.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/principal/Sin%20título-1.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="28.0" layoutY="2.0" prefHeight="47.0" prefWidth="442.0" text="Este software ha sido licenciado a: " textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="445.0" layoutY="2.0" prefHeight="47.0" prefWidth="417.0" text="Krisotpher Giraldo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="483.0" layoutY="154.0" prefHeight="141.0" prefWidth="527.0" text="10:21 A.M" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="96.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="544.0" layoutY="273.0" prefHeight="47.0" prefWidth="360.0" text="07 de septiembre del 2022" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="463.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/principal/calendario-de-pared-mensual.png" />
+                     </image>
+                  </ImageView>
+                  <TextField layoutX="441.0" layoutY="345.0" prefHeight="69.0" prefWidth="608.0" promptText="Buscar acceso directo" style="-fx-background-radius: 10px;">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                     <padding>
+                        <Insets left="75.0" />
+                     </padding>
+                  </TextField>
+                  <ImageView fitHeight="53.0" fitWidth="45.0" layoutX="990.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/principal/lupa.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

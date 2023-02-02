@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="704.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.controladores_maestro.Modos_de_pagoController">
+    <stylesheets>
+        <URL value="@/style/styles_maestros/modos_de_pago.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="517.0" prefWidth="704.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="204.0" layoutY="3.0" prefHeight="231.0" prefWidth="497.0" style="-fx-background-color: #accad5;">
+               <children>
+                  <Label layoutX="11.0" layoutY="6.0" prefHeight="17.0" prefWidth="103.0" text="Código">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="11.0" layoutY="23.0" prefHeight="25.0" prefWidth="60.0" />
+                  <Label layoutX="82.0" layoutY="6.0" prefHeight="17.0" prefWidth="103.0" text="Detalle">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="82.0" layoutY="23.0" prefHeight="25.0" prefWidth="333.0" />
+                  <Label layoutX="14.0" layoutY="55.0" prefHeight="17.0" prefWidth="52.0" text="Tipo" />
+                  <ComboBox layoutX="39.0" layoutY="51.0" prefHeight="25.0" prefWidth="186.0" />
+                  <Label layoutX="234.0" layoutY="55.0" prefHeight="17.0" prefWidth="52.0" text="Cuenta" />
+                  <TextField layoutX="273.0" layoutY="51.0" prefHeight="25.0" prefWidth="168.0" />
+                  <Button layoutX="444.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0">
+                     <graphic>
+                        <ImageView fitHeight="14.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/botones/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="12.0" layoutY="85.0" prefHeight="17.0" prefWidth="126.0" style="-fx-background-color: #f1f1f1;" text="Caracteristcas">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <CheckBox layoutX="11.0" layoutY="104.0" mnemonicParsing="false" text="Caja" />
+                  <CheckBox layoutX="71.0" layoutY="104.0" mnemonicParsing="false" text="Banco" />
+                  <CheckBox layoutX="138.0" layoutY="104.0" mnemonicParsing="false" text="Pregunta No cheque" />
+                  <Label layoutX="286.0" layoutY="104.0" prefHeight="17.0" prefWidth="139.0" text="Consec. cheque" />
+                  <TextField layoutX="373.0" layoutY="100.0" prefHeight="25.0" prefWidth="103.0" />
+                  <CheckBox layoutX="11.0" layoutY="126.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="198.0" text="Cuenta por cobrar para intereses" />
+                  <Label layoutX="12.0" layoutY="149.0" prefHeight="17.0" prefWidth="216.0" style="-fx-background-color: #f1f1f1;" text="Aplica en las clases de Documentos">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="234.0" layoutY="149.0" prefHeight="17.0" prefWidth="52.0" text="Clase" />
+                  <ComboBox layoutX="280.0" layoutY="145.0" prefHeight="25.0" prefWidth="186.0" />
+                  <CheckBox layoutX="11.0" layoutY="170.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="204.0" text="Facturas de venta y devoluciones" />
+                  <CheckBox layoutX="225.0" layoutY="170.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="204.0" text="Facturación y devoluciones PDV" />
+                  <CheckBox layoutX="11.0" layoutY="193.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="204.0" text="Comprobantes de egreso" />
+                  <CheckBox layoutX="171.0" layoutY="193.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="147.0" text="Recibos de caja" />
+                  <CheckBox layoutX="282.0" layoutY="193.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="147.0" text="Compras" />
+               </children>
+            </Pane>
+            <TableView layoutX="204.0" layoutY="238.0" prefHeight="200.0" prefWidth="497.0">
+              <columns>
+                <TableColumn prefWidth="305.0" text="Detalle" />
+                <TableColumn prefWidth="191.0" text="Código" />
+              </columns>
+            </TableView>
+            <Button contentDisplay="TOP" layoutX="642.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="586.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="529.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Elimina">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/eliminar%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="473.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Modifica">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="416.0" layoutY="447.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="Nuevo">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/registro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="434.0" fitWidth="200.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/modos_pago.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="505.0" prefWidth="871.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.documentos.mante_docs.Mantenimiento_documentosController">
+    <stylesheets>
+        <URL value="@/style/documentos/mante_docs/mantenimiento_documentos.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="9.0" layoutY="8.0" prefHeight="86.0" prefWidth="854.0" style="-fx-border-color: grey; -fx-background-color: #D3DCE3;">
+         <children>
+            <Label layoutX="14.0" layoutY="26.0" prefHeight="17.0" prefWidth="77.0" text="Doc. Tipo" />
+            <ComboBox layoutX="81.0" layoutY="22.0" prefWidth="150.0" />
+            <Label layoutX="236.0" layoutY="26.0" prefHeight="17.0" prefWidth="35.0" text="No." />
+            <TextField layoutX="263.0" layoutY="22.0" />
+            <Button layoutX="416.0" layoutY="19.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="25.0">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/girar-a-la-izquierda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="458.0" layoutY="19.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="39.0">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/flecha-correcta.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="500.0" layoutY="19.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="Buscar por">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <CheckBox layoutX="590.0" layoutY="26.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="176.0" text="Opciones para varios docs." />
+            <Button layoutX="760.0" layoutY="20.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="84.0" text="Salir">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="10.0" layoutY="100.0" prefHeight="383.0" prefWidth="854.0" style="-fx-border-color: grey; -fx-background-color: #D3DCE3;" />
+   </children>
+</AnchorPane>

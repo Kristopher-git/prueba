@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="445.0" prefWidth="630.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladores_maestro.CuentasController">
+    <stylesheets>
+        <URL value="@/style/styles_maestros/cuentas.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="445.0" prefWidth="213.0" style="-fx-background-color: #009788;">
+         <children>
+            <Button fx:id="idProduccion" mnemonicParsing="false" onAction="#click_produc" prefHeight="45.0" prefWidth="213.0" styleClass="btn" text="Producción" textFill="WHITE" />
+            <Button fx:id="idInventario" mnemonicParsing="false" onAction="#click_inventario" prefHeight="51.0" prefWidth="213.0" styleClass="btn" text="Inventarios" textFill="WHITE" />
+            <Button fx:id="idAjustDep" mnemonicParsing="false" onAction="#click_AjsDep" prefHeight="50.0" prefWidth="213.0" styleClass="btn" text="Ajust.Inf/Dep." textFill="WHITE" />
+            <Button fx:id="idCierre" mnemonicParsing="false" onAction="#click_cierre" prefHeight="50.0" prefWidth="213.0" styleClass="btn" text="Cierre anual" textFill="WHITE" />
+            <Button fx:id="idCooperativo" mnemonicParsing="false" onAction="#click_Cooperativo" prefHeight="49.0" prefWidth="213.0" styleClass="btn" text="Cooperativo" textFill="WHITE" />
+            <Button fx:id="idFacturacion" mnemonicParsing="false" onAction="#click_facturacion" prefHeight="49.0" prefWidth="213.0" styleClass="btn" text="Facturación" textFill="WHITE" />
+            <Button fx:id="idRecibos" mnemonicParsing="false" onAction="#click_recibos" prefHeight="49.0" prefWidth="213.0" styleClass="btn" text="Recibos de Caja" textFill="WHITE" />
+            <Button fx:id="idCompras" mnemonicParsing="false" onAction="#click_compras" prefHeight="49.0" prefWidth="213.0" styleClass="btn" text="Compras" textFill="WHITE" />
+            <Button fx:id="idCompEgre" mnemonicParsing="false" onAction="#click_CompEgre" prefHeight="49.0" prefWidth="213.0" styleClass="btn" text="Comp. Egreso" textFill="WHITE" />
+         </children>
+      </VBox>
+      <Pane layoutX="212.0" prefHeight="45.0" prefWidth="418.0" style="-fx-border-color: gray; -fx-background-color: white;">
+         <children>
+            <Label fx:id="labelTitle" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="20.0" prefWidth="393.0" text="Producción">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneComprasEgreso" layoutX="221.0" layoutY="52.0" prefHeight="376.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="113.0" text="Interes por mora (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="10.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField layoutX="226.0" layoutY="38.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="41.0" prefHeight="17.0" prefWidth="213.0" text="Desctos concedidos (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="66.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="70.0" prefHeight="17.0" prefWidth="213.0" text="Anticipos a proveedores (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="94.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="98.0" prefHeight="17.0" prefWidth="213.0" text="ReteFte por pagar (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="122.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="125.0" prefHeight="17.0" prefWidth="213.0" text="ReteFte por pagar Salarios (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="150.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="155.0" prefHeight="17.0" prefWidth="213.0" text="ReteIva por pagar (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="178.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="183.0" prefHeight="17.0" prefWidth="213.0" text="ReteIca por pagar (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="327.0" layoutY="311.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="60.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneCompras" layoutX="221.0" layoutY="52.0" prefHeight="376.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="132.0" text="ReteFte compras (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="10.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField layoutX="226.0" layoutY="38.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="41.0" prefHeight="17.0" prefWidth="213.0" text="IpoConsumo (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="66.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="70.0" prefHeight="17.0" prefWidth="213.0" text="Diferencia en cambio (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="94.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="98.0" prefHeight="17.0" prefWidth="213.0" text="Diferencia en cambio (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="327.0" layoutY="308.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="60.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneRecibos" layoutX="221.0" layoutY="52.0" prefHeight="376.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="132.0" text="Ingresos por mora (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="10.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField layoutX="226.0" layoutY="38.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="41.0" prefHeight="17.0" prefWidth="213.0" text="Desctos concedidos (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="66.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="70.0" prefHeight="17.0" prefWidth="213.0" text="Anticipo de ReteFte P. (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="94.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="98.0" prefHeight="17.0" prefWidth="213.0" text="Anticipo de ReteIva (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="122.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="125.0" prefHeight="17.0" prefWidth="213.0" text="Anticipo de ReteIca (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="150.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="155.0" prefHeight="17.0" prefWidth="213.0" text="Anticipo de clientes (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="178.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="183.0" prefHeight="17.0" prefWidth="213.0" text="Anticipo de clientes (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="213.0" prefHeight="17.0" prefWidth="213.0" text="Anticipo de ReteFte S.(DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="327.0" layoutY="308.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="60.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneFacturacion" layoutX="221.0" layoutY="52.0" prefHeight="376.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="113.0" text="Ingreso en ventas (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="10.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField layoutX="226.0" layoutY="38.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="41.0" prefHeight="17.0" prefWidth="213.0" text="Devoluciones en ventas (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="66.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="70.0" prefHeight="17.0" prefWidth="213.0" text="Descuento a pie la factura (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="94.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="98.0" prefHeight="17.0" prefWidth="213.0" text="Ingreso por fletes (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="122.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="125.0" prefHeight="17.0" prefWidth="213.0" text="Comisiones por pagar (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="150.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="155.0" prefHeight="17.0" prefWidth="213.0" text="Ajuste al peso (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="178.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="183.0" prefHeight="17.0" prefWidth="213.0" text="Iva Implicito generado pagar (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="213.0" prefHeight="17.0" prefWidth="213.0" text="Cree">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="236.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="241.0" prefHeight="17.0" prefWidth="213.0" text="Ipoconsumo bolsas">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="227.0" layoutY="264.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="269.0" prefHeight="17.0" prefWidth="213.0" text="Dctos Ipo Bolsa">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="227.0" layoutY="293.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="14.0" layoutY="298.0" prefHeight="17.0" prefWidth="213.0" text="Ingresos en Nota Débito">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="327.0" layoutY="321.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="60.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneCooperativo" layoutX="221.0" layoutY="52.0" prefHeight="376.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="152.0" text="Aportes ordinarios (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="10.0" prefHeight="9.0" prefWidth="160.0" />
+            <TextField layoutX="226.0" layoutY="38.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="41.0" prefHeight="17.0" prefWidth="213.0" text="Aportes extraordinarios (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="66.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="70.0" prefHeight="17.0" prefWidth="213.0" text="Aportes capitalización (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="94.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="98.0" prefHeight="17.0" prefWidth="213.0" text="Intereses Corrientes (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="122.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="125.0" prefHeight="17.0" prefWidth="213.0" text="Créditos por desembolsar (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="150.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="155.0" prefHeight="17.0" prefWidth="213.0" text="Seguro de préstamo (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="178.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="183.0" prefHeight="17.0" prefWidth="213.0" text="Otros aportes (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="213.0" prefHeight="17.0" prefWidth="213.0" text="Intereses Comi. causados (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="236.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="241.0" prefHeight="17.0" prefWidth="213.0" text="Solidaridad">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="227.0" layoutY="264.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="269.0" prefHeight="17.0" prefWidth="213.0" text="Recreación">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="227.0" layoutY="293.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="14.0" layoutY="298.0" prefHeight="17.0" prefWidth="213.0" text="Administración">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="327.0" layoutY="321.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="60.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="14.0" layoutY="330.0" prefHeight="17.0" prefWidth="132.0" text="Educación">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="86.0" layoutY="326.0" prefHeight="25.0" prefWidth="160.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneCierre" layoutX="221.0" layoutY="52.0" prefHeight="376.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Button contentDisplay="TOP" layoutX="326.0" layoutY="301.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="60.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="14.0" layoutY="56.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Adiciona" />
+            <Button layoutX="107.0" layoutY="56.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Quita" />
+            <TableView layoutX="14.0" layoutY="89.0" prefHeight="200.0" prefWidth="369.0">
+              <columns>
+                <TableColumn prefWidth="185.0" text="Cuenta de producción" />
+                <TableColumn prefWidth="183.0" text="Cuenta cruce" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="paneAjust" layoutX="221.0" layoutY="52.0" prefHeight="376.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="189.0" text="Depreciación acumulada (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="10.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField layoutX="226.0" layoutY="39.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="44.0" prefHeight="17.0" prefWidth="213.0" text="Amortización acumulada (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="68.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="73.0" prefHeight="17.0" prefWidth="213.0" text="Correción monetaria (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="97.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="101.0" prefHeight="17.0" prefWidth="213.0" text="Gasto por depreciación Admon (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="326.0" layoutY="301.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="60.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField layoutX="227.0" layoutY="126.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="130.0" prefHeight="17.0" prefWidth="213.0" text="Gasto por depreciación Vtas (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="227.0" layoutY="156.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="160.0" prefHeight="17.0" prefWidth="213.0" text="Corr. Monet Dep. Acumulada (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="paneInventarios" layoutX="221.0" layoutY="52.0" prefHeight="376.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="113.0" text="Inventarios (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="10.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField layoutX="226.0" layoutY="38.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="41.0" prefHeight="17.0" prefWidth="213.0" text="Ajuste por inflación inventarios(DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="66.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="70.0" prefHeight="17.0" prefWidth="213.0" text="Costo venta inventario permanente (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="94.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="98.0" prefHeight="17.0" prefWidth="213.0" text="Costo de venta inventario periódico (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="122.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="125.0" prefHeight="17.0" prefWidth="213.0" text="Ajuste por inflación costo de venta (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="150.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="155.0" prefHeight="17.0" prefWidth="213.0" text="Costo de producción (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="178.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="183.0" prefHeight="17.0" prefWidth="213.0" text="Prod en proceso, Hoja de costo (DB) o CR">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="207.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="213.0" prefHeight="17.0" prefWidth="213.0" text="Cta orden separados (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="236.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="241.0" prefHeight="17.0" prefWidth="213.0" text="Cta orden separados (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="227.0" layoutY="264.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="269.0" prefHeight="17.0" prefWidth="213.0" text="Cta orden m/cia consignación (CR)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="227.0" layoutY="293.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="14.0" layoutY="298.0" prefHeight="17.0" prefWidth="213.0" text="Cta inventarios en transito (DB)">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="327.0" layoutY="321.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="60.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneProduccion" layoutX="221.0" layoutY="52.0" prefHeight="376.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="113.0" text="Materia prima">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="10.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField layoutX="226.0" layoutY="39.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="13.0" layoutY="44.0" prefHeight="17.0" prefWidth="213.0" text="Cuenta 74">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="68.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="73.0" prefHeight="17.0" prefWidth="213.0" text="Costos indirectos">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <TextField layoutX="226.0" layoutY="97.0" prefHeight="25.0" prefWidth="160.0" />
+            <Label layoutX="12.0" layoutY="101.0" prefHeight="17.0" prefWidth="213.0" text="Contrapartida">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="326.0" layoutY="301.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="60.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 7/09/2022, 04:29:25 PM
+    Author     : SENA
+*/
+
+
+#btniniciar{
+    -fx-background-color: #19A8FC;
+}
+
+#btniniciar:hover{
+    -fx-background-color: #0075ba;
+    
+}
+#btniniciar:pressed{
+    -fx-background-color: #326482;
+}
+#btncerrar:hover{
+     -fx-text-fill: #4c4c4c;
+}
+#btncerrar:pressed{
+     -fx-text-fill: #262626;
+}

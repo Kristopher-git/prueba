@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.procesos.procesos_contables.Consolidar_empresasController">
+    <stylesheets>
+        <URL value="@/style/procesos/procesos_contables/consolidar_empresas.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="485.0" prefWidth="690.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="17.0" layoutY="10.0" prefHeight="131.0" prefWidth="659.0" style="-fx-background-color: cacef4; -fx-border-color: grey;" />
+            <Label layoutX="17.0" layoutY="152.0" prefHeight="27.0" prefWidth="227.0" text="Paso 1: Elegir empresa">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="179.0" prefHeight="17.0" prefWidth="563.0" text="Seleccione la empresa que tiene el movimiento que se anexará o consolidará en la empresa actual." />
+            <ComboBox layoutX="17.0" layoutY="202.0" prefHeight="25.0" prefWidth="659.0" />
+            <Button layoutX="18.0" layoutY="238.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="201.0" text="Buscar otras empresas..." />
+            <Label layoutX="18.0" layoutY="283.0" prefHeight="17.0" prefWidth="73.0" text="Ruta" />
+            <TextField layoutX="56.0" layoutY="279.0" prefHeight="25.0" prefWidth="618.0" />
+            <Button contentDisplay="TOP" layoutX="611.0" layoutY="382.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="64.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="539.0" layoutY="382.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="66.0" text="Siguiente">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/flecha-correcta.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="466.0" layoutY="382.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="66.0" text="Atras">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/girar-a-la-izquierda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

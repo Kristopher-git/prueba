@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="612.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.controladores_maestro.controladores_regiones_geograficas.PaisesController">
+    <stylesheets>
+        <URL value="@/style/styles_maestros/styles_regiones_geograficas/paises.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="405.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/paises.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="251.0" layoutY="16.0" prefHeight="79.0" prefWidth="353.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label layoutX="19.0" layoutY="9.0" prefHeight="17.0" prefWidth="67.0" text="Código">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="97.0" layoutY="9.0" prefHeight="17.0" prefWidth="67.0" text="Pais">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtcodigo" layoutX="18.0" layoutY="30.0" onKeyPressed="#keyPressedCodigo" onKeyTyped="#keyTypedCodigo" prefHeight="25.0" prefWidth="56.0" />
+            <TextField fx:id="txtnombre" layoutX="97.0" layoutY="30.0" onKeyPressed="#keyListener" onKeyTyped="#txtFieldKeyTyped" prefHeight="25.0" prefWidth="245.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="tablePaises" layoutX="251.0" layoutY="104.0" onMouseClicked="#clicked_table" prefHeight="214.0" prefWidth="353.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="85.0" text="Código" />
+            <TableColumn fx:id="colNombre" prefWidth="267.0" text="Nombre" />
+         </columns>
+      </TableView>
+      <Button fx:id="btngrabar" contentDisplay="TOP" layoutX="251.0" layoutY="330.0" mnemonicParsing="false" onAction="#click_grabar" prefHeight="62.0" prefWidth="67.0" text="Grabar">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/disquete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btn_deshacer" contentDisplay="TOP" layoutX="323.0" layoutY="330.0" mnemonicParsing="false" onAction="#click_deshacer" prefHeight="62.0" prefWidth="67.0" text="Deshacer">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/girar-a-la-izquierda.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnnuevo" contentDisplay="TOP" layoutX="251.0" layoutY="330.0" mnemonicParsing="false" onAction="#click_nuevo" prefHeight="62.0" prefWidth="67.0" text="Nuevo">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/registro.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnmodifica" contentDisplay="TOP" layoutX="323.0" layoutY="330.0" mnemonicParsing="false" onAction="#btn_modificar" prefHeight="62.0" prefWidth="67.0" text="Modifica">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/editar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnelimina" contentDisplay="TOP" layoutX="395.0" layoutY="330.0" mnemonicParsing="false" onAction="#click_eliminar" prefHeight="62.0" prefWidth="67.0" text="Eliminar">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/eliminar%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnexcel" contentDisplay="TOP" layoutX="467.0" layoutY="330.0" mnemonicParsing="false" onAction="#click_excel" prefHeight="62.0" prefWidth="67.0" text="Excel">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/sobresalir.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnsalir" contentDisplay="TOP" layoutX="538.0" layoutY="330.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="67.0" text="Salir">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/cerrar-sesion.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

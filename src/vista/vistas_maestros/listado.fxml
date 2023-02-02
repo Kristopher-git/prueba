@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="272.0" prefWidth="381.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.controladores_maestro.ListadoController">
+    <stylesheets>
+        <URL value="@/style/styles_maestros/listado.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="5.0" layoutY="5.0" prefHeight="263.0" prefWidth="372.0" style="-fx-background-color: white; -fx-border-color: gray;">
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="37.0" prefHeight="32.0" prefWidth="350.0" text="Este informe puede generarlo en">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="62.0" prefHeight="32.0" prefWidth="350.0" text="alguna de las siguientes opciones:">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="86.0" prefHeight="32.0" prefWidth="350.0" text="Papel o Excel. Debera escoger el">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="109.0" prefHeight="32.0" prefWidth="350.0" text="Informe que necesite.">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="25.0" layoutY="172.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="71.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="105.0" layoutY="172.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="71.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="287.0" layoutY="172.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="71.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

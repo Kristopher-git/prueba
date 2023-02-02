@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="235.0" prefWidth="701.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.procesos.procesos_inventario.Procesar_costos_ventasController">
+    <stylesheets>
+        <URL value="@/style/procesos/procesos_inventario/procesar_costos_ventas.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="4.0" prefHeight="233.0" prefWidth="697.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="4.0" layoutY="7.0" prefHeight="129.0" prefWidth="690.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <ComboBox layoutX="145.0" layoutY="26.0" prefHeight="25.0" prefWidth="193.0" />
+                  <TextField layoutX="65.0" layoutY="26.0" prefHeight="25.0" prefWidth="77.0" />
+                  <Label layoutX="15.0" layoutY="30.0" prefHeight="17.0" prefWidth="47.0" text="Desde" />
+                  <ComboBox layoutX="476.0" layoutY="26.0" prefHeight="25.0" prefWidth="193.0" />
+                  <TextField layoutX="396.0" layoutY="26.0" prefHeight="25.0" prefWidth="77.0" />
+                  <Label layoutX="346.0" layoutY="30.0" prefHeight="17.0" prefWidth="47.0" text="Hasta" />
+                  <CheckBox layoutX="15.0" layoutY="72.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="372.0" text="Indicar el promedio correcto del costo en notas de inventarios." />
+                  <CheckBox layoutX="398.0" layoutY="73.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="222.0" text="Primero las compras de cada mes." />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="616.0" layoutY="148.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="67.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="413.0" layoutY="148.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="193.0" text="Procesa Costo de Ventas">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/disco-duro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

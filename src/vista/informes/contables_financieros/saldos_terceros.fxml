@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.informes.contables_financieros.Saldos_tercerosController">
+    <stylesheets>
+        <URL value="@/style/informes/contables_financieros/saldos_terceros.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="597.0" prefWidth="623.0">
+         <children>
+            <Button contentDisplay="TOP" layoutX="527.0" layoutY="464.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="69.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="453.0" layoutY="464.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="69.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="377.0" layoutY="464.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="69.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane layoutX="6.0" layoutY="7.0" prefHeight="445.0" prefWidth="610.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="19.0" layoutY="17.0" prefHeight="17.0" prefWidth="164.0" text="Cuenta">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="197.0" layoutY="92.0" prefHeight="17.0" prefWidth="113.0" text="Filtrar Terceros">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="196.0" layoutY="111.0" prefHeight="17.0" prefWidth="68.0" text="Desde" />
+                  <Label layoutX="196.0" layoutY="137.0" prefHeight="17.0" prefWidth="68.0" text="Hasta" />
+                  <TextField layoutX="247.0" layoutY="134.0" prefHeight="25.0" prefWidth="230.0" />
+                  <TextField layoutX="246.0" layoutY="108.0" prefHeight="25.0" prefWidth="230.0" />
+                  <Button layoutX="482.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0" text="..." />
+                  <Pane layoutX="14.0" layoutY="91.0" prefHeight="68.0" prefWidth="151.0" style="-fx-border-color: white;">
+                     <children>
+                        <RadioButton layoutX="11.0" layoutY="11.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="113.0" text="Nombres" />
+                        <RadioButton layoutX="12.0" layoutY="34.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Nit" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="42.0" layoutY="76.0" prefHeight="17.0" prefWidth="73.0" text="Ordenar por">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="18.0" layoutY="33.0" prefHeight="25.0" prefWidth="160.0" />
+                  <Button layoutX="181.0" layoutY="32.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="482.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0" text="..." />
+                  <Pane layoutX="232.0" layoutY="19.0" prefHeight="68.0" prefWidth="174.0" style="-fx-border-color: white;">
+                     <children>
+                        <RadioButton layoutX="11.0" layoutY="11.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="113.0" text="Un Periodo" />
+                        <RadioButton layoutX="12.0" layoutY="34.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="135.0" text="Rango por fechas" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="260.0" layoutY="4.0" prefHeight="17.0" prefWidth="120.0" text="Selecc Periodo">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="420.0" layoutY="16.0" prefHeight="68.0" prefWidth="185.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" prefHeight="17.0" prefWidth="96.0" text="Periodo" />
+                        <ComboBox layoutX="11.0" layoutY="28.0" prefHeight="25.0" prefWidth="89.0" />
+                        <TextField layoutX="104.0" layoutY="28.0" prefHeight="25.0" prefWidth="68.0" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="197.0" layoutY="170.0" prefHeight="17.0" prefWidth="135.0" text="Filtrar clientes por">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="197.0" layoutY="191.0" prefHeight="17.0" prefWidth="82.0" text="Vendedor" />
+                  <ComboBox layoutX="258.0" layoutY="185.0" prefHeight="25.0" prefWidth="248.0" />
+                  <Label layoutX="197.0" layoutY="216.0" prefHeight="17.0" prefWidth="82.0" text="Zona" />
+                  <ComboBox layoutX="258.0" layoutY="210.0" prefHeight="25.0" prefWidth="248.0" />
+                  <Label layoutX="196.0" layoutY="241.0" prefHeight="17.0" prefWidth="82.0" text="Ciudad" />
+                  <ComboBox layoutX="257.0" layoutY="235.0" prefHeight="25.0" prefWidth="248.0" />
+                  <CheckBox layoutX="14.0" layoutY="191.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" style="-fx-background-color: white;" text="Especificar">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox layoutX="15.0" layoutY="218.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="82.0" text="Clientes" />
+                  <CheckBox layoutX="15.0" layoutY="238.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Proveedores" />
+                  <CheckBox layoutX="15.0" layoutY="259.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Vendedores" />
+                  <CheckBox layoutX="15.0" layoutY="279.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Otros" />
+                  <CheckBox layoutX="110.0" layoutY="217.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="82.0" text="Inactivos" />
+                  <CheckBox layoutX="110.0" layoutY="237.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Activos" />
+                  <Label layoutX="17.0" layoutY="303.0" prefHeight="17.0" prefWidth="135.0" text="Filtrar por saldos">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <CheckBox layoutX="117.0" layoutY="303.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Saldos débito" />
+                  <CheckBox layoutX="216.0" layoutY="303.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Saldos crédito" />
+                  <CheckBox layoutX="320.0" layoutY="303.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="En cero" />
+                  <Label layoutX="17.0" layoutY="326.0" prefHeight="17.0" prefWidth="185.0" text="Datos anexos del informe">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="350.0" prefHeight="17.0" prefWidth="68.0" text="Titulo" />
+                  <TextField layoutX="56.0" layoutY="346.0" prefHeight="25.0" prefWidth="449.0" />
+                  <Label layoutX="18.0" layoutY="377.0" prefHeight="17.0" prefWidth="68.0" text="Anexo" />
+                  <TextArea layoutX="55.0" layoutY="380.0" prefHeight="51.0" prefWidth="449.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

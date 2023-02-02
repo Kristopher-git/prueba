@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.menu-bar{
+    -fx-font-size: 15.0 pt;
+    -fx-font-family: "System";
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+}
+
+

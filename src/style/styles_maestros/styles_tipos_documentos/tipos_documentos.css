@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    .root{
+        .table-view .table-cell{
+            -fx-border-color: transparent;
+        }
+        .table-row-cell{
+            -fx-cell-size: 58px;
+               
+        }
+        .table-row{
+            -fx-border-color: black;
+            
+        }
+
+    }
+}

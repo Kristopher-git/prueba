@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="377.0" prefWidth="376.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.tesoreria.Relacion_chequesController">
+    <stylesheets>
+        <URL value="@/style/informes/tesoreria/relacion_cheques.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="-2.0" layoutY="-8.0" prefHeight="382.0" prefWidth="378.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="7.0" layoutY="14.0" prefHeight="278.0" prefWidth="361.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Pane layoutX="10.0" layoutY="19.0" prefHeight="87.0" prefWidth="342.0" style="-fx-border-color: white;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="14.0" prefHeight="17.0" prefWidth="53.0" text="Periodo" />
+                        <ComboBox layoutX="60.0" layoutY="10.0" prefHeight="25.0" prefWidth="102.0" />
+                        <TextField layoutX="164.0" layoutY="11.0" prefHeight="25.0" prefWidth="86.0" />
+                        <Label layoutX="7.0" layoutY="44.0" prefHeight="17.0" prefWidth="53.0" text="del dia" />
+                        <TextField layoutX="60.0" layoutY="40.0" prefHeight="25.0" prefWidth="53.0" />
+                        <Label layoutX="118.0" layoutY="44.0" prefHeight="17.0" prefWidth="53.0" text="al dia" />
+                        <TextField layoutX="171.0" layoutY="40.0" prefHeight="25.0" prefWidth="53.0" />
+                        <Label layoutX="16.0" layoutY="-9.0" prefHeight="17.0" prefWidth="150.0" text="Seleccione los dias">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="187.0" prefHeight="76.0" prefWidth="342.0" style="-fx-border-color: white;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="-8.0" prefHeight="17.0" prefWidth="126.0" text="Filtrar">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="9.0" layoutY="13.0" prefHeight="17.0" prefWidth="150.0" text="Tipo de movimiento" />
+                        <ComboBox layoutX="171.0" layoutY="9.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Label layoutX="9.0" layoutY="38.0" prefHeight="17.0" prefWidth="150.0" text="Usuario" />
+                        <ComboBox layoutX="57.0" layoutY="34.0" prefHeight="25.0" prefWidth="265.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="114.0" prefHeight="65.0" prefWidth="342.0" style="-fx-border-color: white;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="21.0" prefHeight="17.0" prefWidth="53.0" text="Cuenta" />
+                        <TextField layoutX="55.0" layoutY="17.0" prefHeight="25.0" prefWidth="150.0" />
+                        <Label layoutX="16.0" layoutY="-9.0" prefHeight="17.0" prefWidth="150.0" text="Caja">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="209.0" layoutY="18.0" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="11.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../img/botones/lupa.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="306.0" layoutY="299.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="239.0" layoutY="299.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="171.0" layoutY="299.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

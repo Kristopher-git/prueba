@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="617.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.informes.fiscales.Comprobante_informe_diario_facturacionController">
+    <stylesheets>
+        <URL value="@/style/informes/fiscales/comprobante_informe_diario_facturacion.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="1.0" layoutY="-5.0" prefHeight="359.0" prefWidth="616.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="4.0" layoutY="10.0" prefHeight="272.0" prefWidth="607.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="27.0" layoutY="39.0" prefHeight="17.0" prefWidth="53.0" text="Desde" />
+                  <Label layoutX="205.0" layoutY="39.0" prefHeight="17.0" prefWidth="53.0" text="Hasta" />
+                  <TextField layoutX="66.0" layoutY="35.0" prefHeight="25.0" prefWidth="110.0" />
+                  <TextField layoutX="242.0" layoutY="35.0" prefHeight="25.0" prefWidth="110.0" />
+                  <Label layoutX="81.0" layoutY="14.0" prefHeight="17.0" prefWidth="102.0" text="(mm/dd/aaaa)" />
+                  <Label layoutX="251.0" layoutY="14.0" prefHeight="17.0" prefWidth="102.0" text="(mm/dd/aaaa)" />
+                  <Label layoutX="371.0" layoutY="39.0" prefHeight="17.0" prefWidth="110.0" text="Tipo Factura" />
+                  <ComboBox layoutX="443.0" layoutY="35.0" prefHeight="25.0" prefWidth="126.0" />
+                  <CheckBox layoutX="19.0" layoutY="67.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="169.0" text="Detallado por facturas" />
+                  <CheckBox layoutX="183.0" layoutY="67.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="169.0" text="Solo facturación POS" />
+                  <CheckBox layoutX="330.0" layoutY="67.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" text="Descuentos" />
+                  <CheckBox layoutX="430.0" layoutY="67.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="126.0" text="Det x articulos" />
+                  <CheckBox layoutX="430.0" layoutY="103.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="126.0" text="Máquina/pc" />
+                  <Label layoutX="30.0" layoutY="167.0" prefHeight="17.0" prefWidth="102.0" style="-fx-background-color: white;" text="Imprimir en">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="19.0" layoutY="190.0" prefHeight="67.0" prefWidth="578.0" style="-fx-border-color: white;">
+                     <children>
+                        <RadioButton layoutX="14.0" layoutY="25.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="155.0" text="Hoja tamaño carta" />
+                        <RadioButton layoutX="158.0" layoutY="25.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="155.0" text="Rollo tiquete Impresora" />
+                        <RadioButton layoutX="320.0" layoutY="25.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="155.0" text="Rollo tiquete en pantalla" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="549.0" layoutY="289.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="415.0" layoutY="289.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="482.0" layoutY="289.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="62.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="348.0" layoutY="289.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="62.0" text="Especial">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/caja-registradora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
