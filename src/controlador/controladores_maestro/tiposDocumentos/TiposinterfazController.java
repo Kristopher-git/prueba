@@ -28,6 +28,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import modelo.maestros.tipos_documentos.modelo_tipos_documentos;
+import modelo.maestros.centro_costos.centroCostoModel;
 
 /**
  * FXML Controller class
@@ -57,7 +58,7 @@ public class TiposinterfazController implements Initializable {
     @FXML
     public Label principal_label_scosto;
     @FXML
-    public ComboBox<?> principal_combo_ccosto;
+    public ComboBox<centroCostoModel> principal_combo_ccosto;
     @FXML
     public ComboBox<?> principal_combo_scosto;
     @FXML
@@ -65,11 +66,11 @@ public class TiposinterfazController implements Initializable {
     @FXML
     public Label principal_label_bodega;
     @FXML
-    public ComboBox<?> principal_combo_bodega;
+    public ComboBox<modelo_tipos_documentos> principal_combo_bodega;
     @FXML
     public Label principal_label_modo_pago;
     @FXML
-    public ComboBox<?> principal_cmb_modo_pago;
+    public ComboBox<modelo_tipos_documentos> principal_cmb_modo_pago;
     @FXML
     public CheckBox principal_check_preciosPDV;
     @FXML
@@ -357,6 +358,9 @@ public class TiposinterfazController implements Initializable {
         // TODO
         comboClase.setVisible(false);
         initComboBox();
+        comboMetodoPago();
+        comboBodegas();
+        comboCentroCosto();
     }
 
     private void initComboBox() {
@@ -375,7 +379,56 @@ public class TiposinterfazController implements Initializable {
             }
         });
     }
+    private void comboMetodoPago(){
+        modelo_tipos_documentos medpago = new modelo_tipos_documentos();
+        ObservableList<modelo_tipos_documentos> obs = medpago.get_metodos_pago();
+        this.principal_cmb_modo_pago.setItems(obs);
+        this.principal_cmb_modo_pago.setConverter(new StringConverter<modelo_tipos_documentos>() {
+            @Override
+            public String toString(modelo_tipos_documentos object) {
+                return object.getNombre_metodo_pago().toUpperCase();
+            }
 
+            @Override
+            public modelo_tipos_documentos fromString(String string) {
+                return null;
+            }
+        });
+    }
+
+    private void comboBodegas(){
+        modelo_tipos_documentos bodega = new modelo_tipos_documentos();
+        ObservableList<modelo_tipos_documentos> obs = bodega.get_bodegas();
+        this.principal_combo_bodega.setItems(obs);
+        this.principal_combo_bodega.setConverter(new StringConverter<modelo_tipos_documentos>() {
+            @Override
+            public String toString(modelo_tipos_documentos object) {
+                return object.getNombre_bodega().toUpperCase();
+            }
+
+            @Override
+            public modelo_tipos_documentos fromString(String string) {
+                return null;
+            }
+        });
+    }
+    
+    private void comboCentroCosto(){
+        centroCostoModel centro_costo = new centroCostoModel();
+        ObservableList<centroCostoModel> obs = centro_costo.getCentroCostos();
+        this.principal_combo_ccosto.setItems(obs);
+        this.principal_combo_ccosto.setConverter(new StringConverter<centroCostoModel>() {
+            @Override
+            public String toString(centroCostoModel object) {
+                return object.getNombre().toUpperCase();
+            }
+
+            @Override
+            public centroCostoModel fromString(String string) {
+                return null;
+            }
+        });
+    }
     @FXML
     private void click_docs(ActionEvent event) {
         try {

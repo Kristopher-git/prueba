@@ -674,20 +674,20 @@
                           <items>
                               <Menu mnemonicParsing="false" text="Facturación">
                                 <items>
-                                  <MenuItem mnemonicParsing="false" text="Informes de Facturación" />
-                                    <MenuItem mnemonicParsing="false" text="Informes de Facturación nuevo" />
-                                    <MenuItem mnemonicParsing="false" text="Comparativo Facturación" />
-                                    <MenuItem mnemonicParsing="false" text="Descuentos comerciales" />
-                                    <MenuItem mnemonicParsing="false" text="Informe Nuevos clientes" />
-                                    <MenuItem mnemonicParsing="false" text="Informes de Pedidos - Servicios" />
-                                    <MenuItem mnemonicParsing="false" text="Comisiones a la venta" />
-                                    <MenuItem mnemonicParsing="false" text="Comisiones al recaudo" />
-                                    <MenuItem mnemonicParsing="false" text="Informe de puntos" />
-                                    <MenuItem mnemonicParsing="false" text="Facturas por Pedido" />
-                                    <MenuItem mnemonicParsing="false" text="Informe de Remisiones" />
-                                    <MenuItem mnemonicParsing="false" text="Informe de Facturación x marcas - segmentos" />
-                                    <MenuItem mnemonicParsing="false" text="Comisiones a la venta - Listado por documentos" />
-                                    <MenuItem mnemonicParsing="false" text="Informes de Cotizaciones" />
+                                  <MenuItem mnemonicParsing="false" onAction="#click_informe_facturacion" text="Informes de Facturación" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informes_fact_nuevo" text="Informes de Facturación nuevo" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_comparativo_facturacion" text="Comparativo Facturación" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_desc_comerciales" text="Descuentos comerciales" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_nuevos_clientes" text="Informe Nuevos clientes" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informe_pedidos" text="Informes de Pedidos - Servicios" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_comisiones_venta" text="Comisiones a la venta" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_comisiones_recaudo" text="Comisiones al recaudo" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informe_puntos" text="Informe de puntos" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_facturas_pedido" text="Facturas por Pedido" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informe_remisiones" text="Informe de Remisiones" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informe_factura_marca_seg" text="Informe de Facturación x marcas - segmentos" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_comisiones_venta_list_doc" text="Comisiones a la venta - Listado por documentos" />
+                                    <MenuItem mnemonicParsing="false" onAction="#click_informes_cotizacion" text="Informes de Cotizaciones" />
                                     <MenuItem mnemonicParsing="false" onAction="#click_ver_trazabilidad_pedido" text="ver trazabilidad de pedidos" />
                                 </items>
                                  <graphic>
@@ -854,7 +854,7 @@
                         </Menu>
                         <Menu mnemonicParsing="false" text="Mantenimiento">
                           <items>
-                            <MenuItem mnemonicParsing="false" text="Parámetrización">
+                            <MenuItem mnemonicParsing="false" onAction="#click_parametrizacion" text="Parámetrización">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes279466610" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -862,7 +862,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Mantenimiento Base de datos">
+                              <MenuItem mnemonicParsing="false" onAction="#click_mantenimiento_bd" text="Mantenimiento Base de datos">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes279466611" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -870,7 +870,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Usuarios y Permisos">
+                              <MenuItem mnemonicParsing="false" onAction="#click_usuarios_permisos" text="Usuarios y Permisos">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666111" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -878,7 +878,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Bloquear temporalmente      F12">
+                              <MenuItem mnemonicParsing="false" onAction="#click_bloquear_temporalmente" text="Bloquear temporalmente      F12">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666112" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -886,7 +886,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Cambio de Password">
+                              <MenuItem mnemonicParsing="false" onAction="#click_cambio_password" text="Cambio de Password">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes27946661121" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -894,7 +894,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Exportar información">
+                              <MenuItem mnemonicParsing="false" onAction="#click_exportar_informacion" text="Exportar información">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666101" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -902,7 +902,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Importar información">
+                              <MenuItem mnemonicParsing="false" onAction="#click_importar_informacion" text="Importar información">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666102" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -910,7 +910,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Examinar fallas en información">
+                              <MenuItem mnemonicParsing="false" onAction="#click_examinar_fallas_informacion" text="Examinar fallas en información">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666103" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -918,7 +918,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Historial de operaciones">
+                              <MenuItem mnemonicParsing="false" onAction="#click_historial_operaciones" text="Historial de operaciones">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666104" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -934,7 +934,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Envio de e-mail">
+                              <MenuItem mnemonicParsing="false" onAction="#click_email" text="Envio de e-mail">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes27946661042" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -954,7 +954,7 @@
                         </Menu>
                         <Menu mnemonicParsing="false" text="CRM Clientes">
                           <items>
-                            <MenuItem mnemonicParsing="false" text="Seguimiento de Cotizaciones">
+                            <MenuItem mnemonicParsing="false" onAction="#click_seguimiento_cotizaciones" text="Seguimiento de Cotizaciones">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666105" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -962,7 +962,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Seguimiento de clientes">
+                              <MenuItem mnemonicParsing="false" onAction="#click_seguimiento_clientes" text="Seguimiento de clientes">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666106" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -970,7 +970,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Ventas por cliente">
+                              <MenuItem mnemonicParsing="false" onAction="#click_ventas_x_clientes" text="Ventas por cliente">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666107" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -978,7 +978,7 @@
                                        </image>
                                     </ImageView>
                                  </graphic></MenuItem>
-                              <MenuItem mnemonicParsing="false" text="Acerca de...">
+                              <MenuItem mnemonicParsing="false" onAction="#click_acerca_de" text="Acerca de...">
                                  <graphic>
                                     <ImageView fx:id="imgCambiomes2794666108" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                        <image>

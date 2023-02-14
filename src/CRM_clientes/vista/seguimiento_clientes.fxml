@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="CRM_clientes.controlador.Seguimiento_clientesController">
+    <stylesheets>
+        <URL value="@/CRM_clientes/style/seguimiento_clientes.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="661.0" prefWidth="977.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="179.0" layoutY="18.0" prefHeight="17.0" prefWidth="80.0" text="Tercero" />
+            <ComboBox layoutX="257.0" layoutY="14.0" prefHeight="25.0" prefWidth="186.0" />
+            <Label layoutX="179.0" layoutY="45.0" prefHeight="17.0" prefWidth="80.0" text="Teléfono" />
+            <Button layoutX="447.0" layoutY="14.0" mnemonicParsing="false" text="Buscar.." />
+            <TextField layoutX="257.0" layoutY="41.0" prefHeight="25.0" prefWidth="105.0" />
+            <Label layoutX="365.0" layoutY="45.0" prefHeight="17.0" prefWidth="42.0" text="Movil" />
+            <TextField layoutX="405.0" layoutY="43.0" prefHeight="25.0" prefWidth="98.0" />
+            <Label layoutX="179.0" layoutY="72.0" prefHeight="17.0" prefWidth="80.0" text="Dirección" />
+            <TextField layoutX="257.0" layoutY="68.0" prefHeight="25.0" prefWidth="246.0" />
+            <Label layoutX="180.0" layoutY="99.0" prefHeight="17.0" prefWidth="80.0" text="Observaciones" />
+            <TextArea layoutX="275.0" layoutY="94.0" prefHeight="54.0" prefWidth="228.0" />
+            <Button contentDisplay="TOP" layoutX="912.0" layoutY="6.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="54.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="819.0" layoutY="6.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="90.0" text="Pendientes">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/binoculares.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="714.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="714.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Definir estados">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="14.0" layoutY="169.0" prefHeight="17.0" prefWidth="133.0" text="Actuales seguimientos" />
+            <CheckBox layoutX="143.0" layoutY="169.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="105.0" text="Ver solo activos" />
+            <Button layoutX="256.0" layoutY="167.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/anadir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="290.0" layoutY="167.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/menos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView layoutX="9.0" layoutY="195.0" prefHeight="124.0" prefWidth="963.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="Activo" />
+                  <TableColumn prefWidth="176.0" text="Detalle" />
+                  <TableColumn prefWidth="147.0" text="Ultimo Estado" />
+                  <TableColumn prefWidth="136.0" text="Fecha Inicio" />
+                  <TableColumn prefWidth="206.0" text="Fecha Finalizó" />
+                  <TableColumn prefWidth="222.0" text="Próximo compromiso" />
+               </columns>
+            </TableView>
+            <Label layoutX="10.0" layoutY="325.0" prefHeight="17.0" prefWidth="133.0" text="Detalles del seguimiento" />
+            <Button layoutX="145.0" layoutY="323.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/anadir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="179.0" layoutY="323.0" mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="15.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/menos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView layoutX="9.0" layoutY="344.0" prefHeight="124.0" prefWidth="963.0">
+               <columns>
+                  <TableColumn prefWidth="124.0" text="Fecha y Hora" />
+                  <TableColumn prefWidth="127.0" text="Estado" />
+                  <TableColumn prefWidth="222.0" text="Detalles" />
+                  <TableColumn prefWidth="131.0" text="Registro" />
+                  <TableColumn prefWidth="136.0" text="Ejecuto" />
+                  <TableColumn prefWidth="222.0" text="Próximo compromiso" />
+               </columns>
+            </TableView>
+            <TabPane layoutX="9.0" layoutY="476.0" prefHeight="174.0" prefWidth="963.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Cartera actual">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView prefHeight="143.0" prefWidth="963.0">
+                                 <columns>
+                                    <TableColumn prefWidth="124.0" text="Número" />
+                                    <TableColumn prefWidth="72.0" text="Cuota" />
+                                    <TableColumn prefWidth="93.0" text="Num.Externo" />
+                                    <TableColumn prefWidth="108.0" text="Saldo" />
+                                    <TableColumn minWidth="5.0" prefWidth="85.0" text="Fecha" />
+                                    <TableColumn prefWidth="94.0" text="Vence" />
+                                    <TableColumn prefWidth="120.0" text="Total" />
+                                    <TableColumn prefWidth="210.0" text="Detalle" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Ventas">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView prefHeight="143.0" prefWidth="963.0">
+                                 <columns>
+                                    <TableColumn prefWidth="59.0" text="Tipo" />
+                                    <TableColumn prefWidth="93.0" text="Número" />
+                                    <TableColumn prefWidth="93.0" text="Fecha" />
+                                    <TableColumn prefWidth="109.0" text="Vendedor" />
+                                    <TableColumn minWidth="5.0" prefWidth="117.0" text="Vr/Total" />
+                                    <TableColumn prefWidth="105.0" text="F.Pago" />
+                                    <TableColumn prefWidth="120.0" text="Ultimo Pago" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <ImageView fitHeight="150.0" fitWidth="154.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/clientes.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

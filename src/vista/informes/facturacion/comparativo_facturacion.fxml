@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.facturacion.Comparativo_facturacionController">
+    <stylesheets>
+        <URL value="@/style/informes/facturacion/comparativo_facturacion.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="594.0" prefWidth="782.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="3.0" layoutY="3.0" prefHeight="515.0" prefWidth="775.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="20.0" layoutY="60.0" prefHeight="17.0" prefWidth="81.0" text="Filtrar">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="83.0" prefHeight="17.0" prefWidth="81.0" text="Vendedor" />
+                  <ComboBox layoutX="94.0" layoutY="79.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Label layoutX="21.0" layoutY="108.0" prefHeight="17.0" prefWidth="81.0" text="Cliente" />
+                  <ComboBox layoutX="94.0" layoutY="104.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Label layoutX="21.0" layoutY="133.0" prefHeight="17.0" prefWidth="81.0" text="Zona" />
+                  <ComboBox layoutX="94.0" layoutY="129.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Label layoutX="21.0" layoutY="158.0" prefHeight="17.0" prefWidth="81.0" text="Clasificación" />
+                  <ComboBox layoutX="94.0" layoutY="154.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Label layoutX="21.0" layoutY="182.0" prefHeight="17.0" prefWidth="81.0" text="Referencias" />
+                  <TextField layoutX="95.0" layoutY="179.0" prefHeight="25.0" prefWidth="113.0" />
+                  <Label layoutX="218.0" layoutY="182.0" prefHeight="17.0" prefWidth="81.0" text="Servicios" />
+                  <TextField layoutX="273.0" layoutY="178.0" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: cacef4; -fx-border-color: grey;" />
+                  <Label layoutX="41.0" layoutY="6.0" prefHeight="17.0" prefWidth="81.0" text="Tipo de venta">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="21.0" layoutY="23.0" prefHeight="25.0" prefWidth="127.0" />
+                  <Label layoutX="179.0" layoutY="6.0" prefHeight="17.0" prefWidth="81.0" text="Grupo 1:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="177.0" layoutY="23.0" prefHeight="25.0" prefWidth="127.0" />
+                  <Label layoutX="340.0" layoutY="7.0" prefHeight="17.0" prefWidth="81.0" text="Grupo 2:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="338.0" layoutY="24.0" prefHeight="25.0" prefWidth="127.0" />
+                  <Label layoutX="503.0" layoutY="8.0" prefHeight="17.0" prefWidth="81.0" text="Detallar por">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="501.0" layoutY="25.0" prefHeight="25.0" prefWidth="127.0" />
+                  <Pane layoutX="634.0" layoutY="22.0" prefHeight="65.0" prefWidth="127.0" style="-fx-border-color: grey;">
+                     <children>
+                        <Label layoutX="17.0" layoutY="-9.0" prefHeight="17.0" prefWidth="81.0" text="Comparar">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <RadioButton layoutX="11.0" layoutY="14.0" mnemonicParsing="false" text="Valores" />
+                        <RadioButton layoutX="11.0" layoutY="33.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="81.0" text="Cantidades" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="479.0" layoutY="71.0" prefHeight="17.0" prefWidth="127.0" text="Comparar periodos">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="421.0" layoutY="96.0" prefHeight="17.0" prefWidth="60.0" text="Columna" />
+                  <Label layoutX="494.0" layoutY="96.0" prefHeight="17.0" prefWidth="37.0" text="Día" />
+                  <Label layoutX="551.0" layoutY="96.0" prefHeight="17.0" prefWidth="53.0" text="Hasta" />
+                  <Label layoutX="437.0" layoutY="125.0" prefHeight="17.0" prefWidth="30.0" text="1." />
+                  <TextField layoutX="469.0" layoutY="121.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="542.0" layoutY="121.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="437.0" layoutY="150.0" prefHeight="17.0" prefWidth="30.0" text="2." />
+                  <TextField layoutX="469.0" layoutY="146.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="542.0" layoutY="146.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="437.0" layoutY="175.0" prefHeight="17.0" prefWidth="30.0" text="3." />
+                  <TextField layoutX="469.0" layoutY="171.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="542.0" layoutY="171.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="437.0" layoutY="200.0" prefHeight="17.0" prefWidth="30.0" text="4." />
+                  <TextField layoutX="469.0" layoutY="196.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="542.0" layoutY="196.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="437.0" layoutY="225.0" prefHeight="17.0" prefWidth="30.0" text="5." />
+                  <TextField layoutX="469.0" layoutY="221.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="542.0" layoutY="221.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="438.0" layoutY="250.0" prefHeight="17.0" prefWidth="30.0" text="6." />
+                  <TextField layoutX="470.0" layoutY="246.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="543.0" layoutY="246.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="438.0" layoutY="275.0" prefHeight="17.0" prefWidth="30.0" text="7." />
+                  <TextField layoutX="470.0" layoutY="271.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="543.0" layoutY="271.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="439.0" layoutY="300.0" prefHeight="17.0" prefWidth="30.0" text="8." />
+                  <TextField layoutX="471.0" layoutY="296.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="544.0" layoutY="296.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="439.0" layoutY="325.0" prefHeight="17.0" prefWidth="30.0" text="9." />
+                  <TextField layoutX="471.0" layoutY="321.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="544.0" layoutY="321.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="439.0" layoutY="350.0" prefHeight="17.0" prefWidth="30.0" text="10." />
+                  <TextField layoutX="471.0" layoutY="346.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="544.0" layoutY="346.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="439.0" layoutY="375.0" prefHeight="17.0" prefWidth="30.0" text="11." />
+                  <TextField layoutX="471.0" layoutY="371.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="544.0" layoutY="371.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="439.0" layoutY="400.0" prefHeight="17.0" prefWidth="30.0" text="12." />
+                  <TextField layoutX="471.0" layoutY="396.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="544.0" layoutY="396.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="440.0" layoutY="425.0" prefHeight="17.0" prefWidth="30.0" text="13." />
+                  <TextField layoutX="471.0" layoutY="421.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="544.0" layoutY="421.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="439.0" layoutY="450.0" prefHeight="17.0" prefWidth="30.0" text="14." />
+                  <TextField layoutX="471.0" layoutY="446.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="544.0" layoutY="446.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="439.0" layoutY="476.0" prefHeight="17.0" prefWidth="30.0" text="15." />
+                  <TextField layoutX="471.0" layoutY="472.0" prefHeight="25.0" prefWidth="70.0" />
+                  <TextField layoutX="544.0" layoutY="472.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Button layoutX="628.0" layoutY="121.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="81.0" text="Por dias" />
+                  <Button layoutX="628.0" layoutY="176.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="81.0" text="Por meses" />
+                  <CheckBox layoutX="20.0" layoutY="417.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="210.0" text="Discriminar ventas y devoluciones." />
+                  <Label layoutX="21.0" layoutY="209.0" prefHeight="17.0" prefWidth="81.0" text="Marca" />
+                  <ComboBox layoutX="94.0" layoutY="205.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Label layoutX="22.0" layoutY="234.0" prefHeight="17.0" prefWidth="81.0" text="Grupo" />
+                  <ComboBox layoutX="95.0" layoutY="230.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Label layoutX="21.0" layoutY="260.0" prefHeight="17.0" prefWidth="81.0" text="Grupo Prod" />
+                  <ComboBox layoutX="94.0" layoutY="256.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Label layoutX="10.0" layoutY="285.0" prefHeight="17.0" prefWidth="93.0" text="Grupo Tercero" />
+                  <ComboBox layoutX="95.0" layoutY="281.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Label layoutX="22.0" layoutY="311.0" prefHeight="17.0" prefWidth="81.0" text="Bodega" />
+                  <ComboBox layoutX="95.0" layoutY="307.0" prefHeight="25.0" prefWidth="315.0" />
+                  <Label layoutX="23.0" layoutY="336.0" prefHeight="17.0" prefWidth="81.0" text="Categoria" />
+                  <TextField layoutX="95.0" layoutY="334.0" prefHeight="25.0" prefWidth="113.0" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="696.0" layoutY="522.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="630.0" layoutY="522.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="563.0" layoutY="522.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

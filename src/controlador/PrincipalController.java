@@ -4,6 +4,10 @@
  */
 package controlador;
 
+import CRM_clientes.controlador.Acerca_deController;
+import CRM_clientes.controlador.Seguimiento_clientesController;
+import CRM_clientes.controlador.Seguimiento_cotizacionesController;
+import CRM_clientes.controlador.Ventas_x_clientesController;
 import controlador.controladores_maestro.Impuesto_industria_y_comercioController;
 import controlador.controladores_maestro.Impuestro_sobre_ventasController;
 import controlador.controladores_maestro.Modos_de_pagoController;
@@ -58,6 +62,20 @@ import controlador.informes.deudores.ConsultaDocumentosController;
 import controlador.informes.deudores.Consulta_por_tercerosController;
 import controlador.informes.deudores.Listado_clientes_saldosController;
 import controlador.informes.deudores.Saldo_tercero_x_cuentasController;
+import controlador.informes.facturacion.Click_informe_facturacionController;
+import controlador.informes.facturacion.Comisiones_recaudoController;
+import controlador.informes.facturacion.Comisiones_ventaController;
+import controlador.informes.facturacion.Comisiones_venta_list_docController;
+import controlador.informes.facturacion.Comparativo_facturacionController;
+import controlador.informes.facturacion.Desc_comercialesController;
+import controlador.informes.facturacion.Facturas_pedidoController;
+import controlador.informes.facturacion.Informe_factura_marca_segController;
+import controlador.informes.facturacion.Informe_pedidosController;
+import controlador.informes.facturacion.Informe_puntosController;
+import controlador.informes.facturacion.Informe_remisionesController;
+import controlador.informes.facturacion.Informes_cotizacionController;
+import controlador.informes.facturacion.Informes_fact_nuevoController;
+import controlador.informes.facturacion.Nuevos_clientesController;
 import controlador.informes.facturacion.Ver_trazabilidad_pedidoController;
 import controlador.informes.fiscales.Certificado_retencionController;
 import controlador.informes.fiscales.Comprobante_informe_diario_comprasController;
@@ -128,6 +146,16 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import mantenimiento.controlador.Bloquear_temporalmenteController;
+import mantenimiento.controlador.Cambio_passwordController;
+import mantenimiento.controlador.EmailController;
+import mantenimiento.controlador.Examinar_fallas_informacionController;
+import mantenimiento.controlador.Exportar_informacionController;
+import mantenimiento.controlador.Historial_operacionesController;
+import mantenimiento.controlador.Importar_informacionController;
+import mantenimiento.controlador.Mantenimiento_bdController;
+import mantenimiento.controlador.ParametrizacionController;
+import mantenimiento.controlador.Usuarios_permisosController;
 import modelo.AbrirVentanas;
 import periodos.cambio_mes.controlador.Cambio_mesController;
 import periodos.meses_abiertos.controlador.Meses_abiertosController;
@@ -4022,6 +4050,790 @@ public class PrincipalController implements Initializable {
             Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    //informes_cotizacion
+    private void AbrirInformesCotizacion() {
+        try {
+            FXMLLoader informes_cotizacion = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/informes_cotizacion.fxml"));
+
+            Parent roots = informes_cotizacion.load();
+
+            Informes_cotizacionController controlador = informes_cotizacion.getController();
+
+            String titulo = "Listar Cotizaciones";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //comisiones_venta_list_doc
+    private void AbrirComisionesVentaListDoc() {
+        try {
+            FXMLLoader comisiones_venta_list_doc = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/comisiones_venta_list_doc.fxml"));
+
+            Parent roots = comisiones_venta_list_doc.load();
+
+            Comisiones_venta_list_docController controlador = comisiones_venta_list_doc.getController();
+
+            String titulo = "Calculo de Comisiones en Ventas";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //informe_factura_marca_seg
+    private void AbrirInformeFacturaMarcaSeg() {
+        try {
+            FXMLLoader informe_factura_marca_seg = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/informe_factura_marca_seg.fxml"));
+
+            Parent roots = informe_factura_marca_seg.load();
+
+            Informe_factura_marca_segController controlador = informe_factura_marca_seg.getController();
+
+            String titulo = "Ventas";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //informe_remisiones
+    private void AbrirInformeRemisiones() {
+        try {
+            FXMLLoader informe_remisiones = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/informe_remisiones.fxml"));
+
+            Parent roots = informe_remisiones.load();
+
+            Informe_remisionesController controlador = informe_remisiones.getController();
+
+            String titulo = "Listar Remisiones";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //facturas_pedido
+    private void AbrirFacturasPedidos() {
+        try {
+            FXMLLoader facturas_pedido = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/facturas_pedido.fxml"));
+
+            Parent roots = facturas_pedido.load();
+
+            Facturas_pedidoController controlador = facturas_pedido.getController();
+
+            String titulo = "FACTURAS POR PEDIDO";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //informe_puntos
+    private void AbrirInformePuntos() {
+        try {
+            FXMLLoader informe_puntos = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/informe_puntos.fxml"));
+
+            Parent roots = informe_puntos.load();
+
+            Informe_puntosController controlador = informe_puntos.getController();
+
+            String titulo = "Informe de Puntos";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //comisiones_recaudo
+    private void AbrirComisionesRecaudo() {
+        try {
+            FXMLLoader comisiones_recaudo = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/comisiones_recaudo.fxml"));
+
+            Parent roots = comisiones_recaudo.load();
+
+            Comisiones_recaudoController controlador = comisiones_recaudo.getController();
+
+            String titulo = "Comisiones de Venta al Recaudo";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //comisiones_venta
+    private void AbrirComisionesVenta() {
+        try {
+            FXMLLoader comisiones_venta = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/comisiones_venta.fxml"));
+
+            Parent roots = comisiones_venta.load();
+
+            Comisiones_ventaController controlador = comisiones_venta.getController();
+
+            String titulo = "Calculo de Comisiones en Ventas";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //informe_pedidos
+    private void AbrirInformePedidos() {
+        try {
+            FXMLLoader informe_pedidos = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/informe_pedidos.fxml"));
+
+            Parent roots = informe_pedidos.load();
+
+            Informe_pedidosController controlador = informe_pedidos.getController();
+
+            String titulo = "Informe de Pedidos";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //nuevos_clientes
+    private void AbrirNuevosClientes() {
+        try {
+            FXMLLoader nuevos_clientes = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/nuevos_clientes.fxml"));
+
+            Parent roots = nuevos_clientes.load();
+
+            Nuevos_clientesController controlador = nuevos_clientes.getController();
+
+            String titulo = "Nuevos Clientes";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //desc_comerciales
+    private void AbrirDescComerciales() {
+        try {
+            FXMLLoader desc_comerciales = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/desc_comerciales.fxml"));
+
+            Parent roots = desc_comerciales.load();
+
+            Desc_comercialesController controlador = desc_comerciales.getController();
+
+            String titulo = "Descuentos en Facturación";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //comparativo_facturacion
+    private void AbrirComparativoFacturacion() {
+        try {
+            FXMLLoader comparativo_facturacion = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/comparativo_facturacion.fxml"));
+
+            Parent roots = comparativo_facturacion.load();
+
+            Comparativo_facturacionController controlador = comparativo_facturacion.getController();
+
+            String titulo = "Comparativo de Facturación";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //informes_fact_nuevo
+    private void AbrirInformesFactNuevo() {
+        try {
+            FXMLLoader informes_fact_nuevo = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/informes_fact_nuevo.fxml"));
+
+            Parent roots = informes_fact_nuevo.load();
+
+            Informes_fact_nuevoController controlador = informes_fact_nuevo.getController();
+
+            String titulo = "INFVENnew";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //click_informe_facturacion
+    private void AbrirInformeFacturacion() {
+        try {
+            FXMLLoader click_informe_facturacion = new FXMLLoader(getClass().getResource("/vista/informes/facturacion/click_informe_facturacion.fxml"));
+
+            Parent roots = click_informe_facturacion.load();
+
+            Click_informe_facturacionController controlador = click_informe_facturacion.getController();
+
+            String titulo = "Informes de Facturación";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //email
+    private void AbrirEviarEmail() {
+        try {
+            FXMLLoader email = new FXMLLoader(getClass().getResource("/mantenimiento/vista/email.fxml"));
+
+            Parent roots = email.load();
+
+            EmailController controlador = email.getController();
+
+            String titulo = "Enviar correo electronico";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //historial_operaciones
+    private void AbrirHistorialOperaciones() {
+        try {
+            FXMLLoader historial_operacioness = new FXMLLoader(getClass().getResource("/mantenimiento/vista/historial_operaciones.fxml"));
+
+            Parent roots = historial_operacioness.load();
+
+            Historial_operacionesController controlador = historial_operacioness.getController();
+
+            String titulo = "Historial de Operaciones";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //examinar_fallas_informacion
+    private void AbrirExaminarFallasInformacion() {
+        try {
+            FXMLLoader examinar_fallas_informacion = new FXMLLoader(getClass().getResource("/mantenimiento/vista/examinar_fallas_informacion.fxml"));
+
+            Parent roots = examinar_fallas_informacion.load();
+
+            Examinar_fallas_informacionController controlador = examinar_fallas_informacion.getController();
+
+            String titulo = "Busqueda de Inconsistencias";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //importar_informacion
+    private void AbrirImportarInformacion() {
+        try {
+            FXMLLoader importar_informacion = new FXMLLoader(getClass().getResource("/mantenimiento/vista/importar_informacion.fxml"));
+
+            Parent roots = importar_informacion.load();
+
+            Importar_informacionController controlador = importar_informacion.getController();
+
+            String titulo = "Importar Información desde otros Sistemas";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //exportar_informacion
+    private void AbrirExportarInformacion() {
+        try {
+            FXMLLoader exportar_informacion = new FXMLLoader(getClass().getResource("/mantenimiento/vista/exportar_informacion.fxml"));
+
+            Parent roots = exportar_informacion.load();
+
+            Exportar_informacionController controlador = exportar_informacion.getController();
+
+            String titulo = "Exportar Información";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //cambio_password
+    private void AbrirCambioContrasena() {
+        try {
+            FXMLLoader cambio_password = new FXMLLoader(getClass().getResource("/mantenimiento/vista/cambio_password.fxml"));
+
+            Parent roots = cambio_password.load();
+
+            Cambio_passwordController controlador = cambio_password.getController();
+
+            String titulo = "Cambio de Clave";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //usuarios_permisos
+    private void AbrirUsuariosPermisos() {
+        try {
+            FXMLLoader usuarios_permisos = new FXMLLoader(getClass().getResource("/mantenimiento/vista/usuarios_permisos.fxml"));
+
+            Parent roots = usuarios_permisos.load();
+
+            Usuarios_permisosController controlador = usuarios_permisos.getController();
+
+            String titulo = "Usuarios y Permisos";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //bloquear_temporalmente
+    private void AbrirBloqueoTemporal() {
+        try {
+            FXMLLoader bloquear_temporalmente = new FXMLLoader(getClass().getResource("/mantenimiento/vista/bloquear_temporalmente.fxml"));
+
+            Parent roots = bloquear_temporalmente.load();
+
+            Bloquear_temporalmenteController controlador = bloquear_temporalmente.getController();
+
+            String titulo = "Sistema bloqueado por el usuario";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //mantenimiento_bd
+    private void AbrirMantneimentoBd() {
+        try {
+            FXMLLoader mantenimiento_bd = new FXMLLoader(getClass().getResource("/mantenimiento/vista/mantenimiento_bd.fxml"));
+
+            Parent roots = mantenimiento_bd.load();
+
+            Mantenimiento_bdController controlador = mantenimiento_bd.getController();
+
+            String titulo = "Mantenimiento y Copia de Base de Datos";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //parametrizacion
+    private void AbrirParametrizacion() {
+        try {
+            FXMLLoader parametrizacion = new FXMLLoader(getClass().getResource("/mantenimiento/vista/parametrizacion.fxml"));
+
+            Parent roots = parametrizacion.load();
+
+            ParametrizacionController controlador = parametrizacion.getController();
+
+            String titulo = "Parametrización";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //seguimiento_cotizaciones
+    private void AbrirSeguiminetoCotizaciones() {
+        try {
+            FXMLLoader seguimiento_cotizaciones = new FXMLLoader(getClass().getResource("/CRM_clientes/vista/seguimiento_cotizaciones.fxml"));
+
+            Parent roots = seguimiento_cotizaciones.load();
+
+            Seguimiento_cotizacionesController controlador = seguimiento_cotizaciones.getController();
+
+            String titulo = "Seguimiento de Cotizaciones";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //seguimiento_clientes
+    private void AbrirSeguimientoClientes() {
+        try {
+            FXMLLoader seguimiento_clientes = new FXMLLoader(getClass().getResource("/CRM_clientes/vista/seguimiento_clientes.fxml"));
+
+            Parent roots = seguimiento_clientes.load();
+
+            Seguimiento_clientesController controlador = seguimiento_clientes.getController();
+
+            String titulo = "Seguimiento de Clientes";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //ventas_x_clientes
+    private void AbrirVentasPorClientes() {
+        try {
+            FXMLLoader ventas_x_clientes = new FXMLLoader(getClass().getResource("/CRM_clientes/vista/ventas_x_clientes.fxml"));
+
+            Parent roots = ventas_x_clientes.load();
+
+            Ventas_x_clientesController controlador = ventas_x_clientes.getController();
+
+            String titulo = "Ventas por Cliente";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //acerca_de
+    private void AbrirAcercaDe() {
+        try {
+            FXMLLoader acerca_de = new FXMLLoader(getClass().getResource("/CRM_clientes/vista/acerca_de.fxml"));
+
+            Parent roots = acerca_de.load();
+
+            Acerca_deController controlador = acerca_de.getController();
+
+            String titulo = "Acerca de Nosotros";
+
+            Scene scene = new Scene(roots);
+            Stage stage = new Stage();
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.setTitle(titulo);
+            scene.setOnKeyPressed(event -> {
+                if (event.getCode().toString().equals("ESCAPE")) {
+                    stage.close();
+                }
+            });
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     @FXML
     private void click_consultas_x_documento(ActionEvent event) {
         AbrirConsultDocumentosDeudores();
@@ -4060,5 +4872,145 @@ public class PrincipalController implements Initializable {
     @FXML
     private void click_ver_trazabilidad_pedido(ActionEvent event) {
         AbrirTrazabilidadPedido();
+    }
+
+    @FXML
+    private void click_informes_cotizacion(ActionEvent event) {
+        AbrirInformesCotizacion();
+    }
+
+    @FXML
+    private void click_comisiones_venta_list_doc(ActionEvent event) {
+        AbrirComisionesVentaListDoc();
+    }
+
+    @FXML
+    private void click_informe_factura_marca_seg(ActionEvent event) {
+        AbrirInformeFacturaMarcaSeg();
+    }
+
+    @FXML
+    private void click_informe_remisiones(ActionEvent event) {
+        AbrirInformeRemisiones();
+    }
+
+    @FXML
+    private void click_facturas_pedido(ActionEvent event) {
+        AbrirFacturasPedidos();
+    }
+
+    @FXML
+    private void click_informe_puntos(ActionEvent event) {
+        AbrirInformePuntos();
+    }
+
+    @FXML
+    private void click_comisiones_recaudo(ActionEvent event) {
+        AbrirComisionesRecaudo();
+    }
+
+    @FXML
+    private void click_comisiones_venta(ActionEvent event) {
+        AbrirComisionesVenta();
+    }
+
+    @FXML
+    private void click_informe_pedidos(ActionEvent event) {
+        AbrirInformePedidos();
+    }
+
+    @FXML
+    private void click_nuevos_clientes(ActionEvent event) {
+        AbrirNuevosClientes();
+    }
+
+    @FXML
+    private void click_desc_comerciales(ActionEvent event) {
+        AbrirDescComerciales();
+    }
+
+    @FXML
+    private void click_comparativo_facturacion(ActionEvent event) {
+        AbrirComparativoFacturacion();
+    }
+
+    @FXML
+    private void click_informes_fact_nuevo(ActionEvent event) {
+        AbrirInformesFactNuevo();
+    }
+
+    @FXML
+    private void click_informe_facturacion(ActionEvent event) {
+        AbrirInformeFacturacion();
+    }
+
+    @FXML
+    private void click_email(ActionEvent event) {
+        AbrirEviarEmail();
+    }
+
+    @FXML
+    private void click_historial_operaciones(ActionEvent event) {
+        AbrirHistorialOperaciones();
+    }
+
+    @FXML
+    private void click_examinar_fallas_informacion(ActionEvent event) {
+        AbrirExaminarFallasInformacion();
+    }
+
+    @FXML
+    private void click_importar_informacion(ActionEvent event) {
+        AbrirImportarInformacion();
+    }
+
+    @FXML
+    private void click_exportar_informacion(ActionEvent event) {
+        AbrirExportarInformacion();
+    }
+
+    @FXML
+    private void click_cambio_password(ActionEvent event) {
+        AbrirCambioContrasena();
+    }
+
+    @FXML
+    private void click_bloquear_temporalmente(ActionEvent event) {
+        AbrirBloqueoTemporal();
+    }
+
+    @FXML
+    private void click_usuarios_permisos(ActionEvent event) {
+        AbrirUsuariosPermisos();
+    }
+
+    @FXML
+    private void click_mantenimiento_bd(ActionEvent event) {
+        AbrirMantneimentoBd();
+    }
+
+    @FXML
+    private void click_parametrizacion(ActionEvent event) {
+        AbrirParametrizacion();
+    }
+
+    @FXML
+    private void click_seguimiento_cotizaciones(ActionEvent event) {
+        AbrirSeguiminetoCotizaciones();
+    }
+
+    @FXML
+    private void click_seguimiento_clientes(ActionEvent event) {
+        AbrirSeguimientoClientes();
+    }
+
+    @FXML
+    private void click_ventas_x_clientes(ActionEvent event) {
+        AbrirVentasPorClientes();
+    }
+
+    @FXML
+    private void click_acerca_de(ActionEvent event) {
+        AbrirAcercaDe();
     }
 }

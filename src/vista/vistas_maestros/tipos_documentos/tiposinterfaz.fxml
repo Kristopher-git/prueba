@@ -32,7 +32,7 @@
             <TextField fx:id="txtCodigo" layoutX="65.0" layoutY="94.0" prefHeight="25.0" prefWidth="71.0" />
             <Label layoutX="150.0" layoutY="98.0" prefHeight="17.0" prefWidth="71.0" text="Nombre" />
             <TextField fx:id="txtNombre" layoutX="200.0" layoutY="94.0" prefHeight="25.0" prefWidth="270.0" />
-            <TabPane layoutX="5.0" layoutY="134.0" prefHeight="436.0" prefWidth="482.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane layoutX="7.0" layoutY="134.0" prefHeight="436.0" prefWidth="482.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
                 <Tab fx:id="tab_principal" text="Principal">
                   <content>
@@ -295,7 +295,7 @@
                                     <CheckBox fx:id="refer_check_ref4" layoutX="28.0" layoutY="103.0" mnemonicParsing="false" />
                                     <TextField fx:id="refer_txt_ref2" layoutX="56.0" layoutY="49.0" prefHeight="25.0" prefWidth="378.0" />
                                     <TextField fx:id="refer_txt_ref3" layoutX="56.0" layoutY="76.0" prefHeight="25.0" prefWidth="378.0" />
-                                    <TextField fx:id="refer_txt_ref4" layoutX="57.0" layoutY="103.0" prefHeight="25.0" prefWidth="378.0" />
+                                    <TextField fx:id="refer_txt_ref4" layoutX="56.0" layoutY="103.0" prefHeight="25.0" prefWidth="378.0" />
                                  </children>
                               </Pane>
                            </children></AnchorPane>

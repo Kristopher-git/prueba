@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.facturacion.Comisiones_recaudoController">
+    <stylesheets>
+        <URL value="@/style/informes/facturacion/comisiones_recaudo.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="548.0" prefWidth="649.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="3.0" layoutY="3.0" prefHeight="463.0" prefWidth="287.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" prefHeight="17.0" prefWidth="149.0" style="-fx-background-color: white;" text="Calcular la comisiones a">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="16.0" layoutY="36.0" prefHeight="56.0" prefWidth="261.0" style="-fx-border-color: white;">
+                     <children>
+                        <RadioButton layoutX="14.0" layoutY="9.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="149.0" text="Vendedores" />
+                        <RadioButton layoutX="14.0" layoutY="29.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="149.0" text="Cobradores" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="16.0" layoutY="100.0" prefHeight="17.0" prefWidth="75.0" text="Vendedor" />
+                  <ComboBox layoutX="16.0" layoutY="117.0" prefHeight="25.0" prefWidth="251.0" />
+                  <Label layoutX="17.0" layoutY="153.0" prefHeight="17.0" prefWidth="179.0" style="-fx-background-color: white;" text="Periodo (MM-DD-AAAA)">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="178.0" prefHeight="17.0" prefWidth="65.0" text="Desde" />
+                  <TextField layoutX="54.0" layoutY="174.0" prefHeight="25.0" prefWidth="90.0" />
+                  <Label layoutX="17.0" layoutY="205.0" prefHeight="17.0" prefWidth="65.0" text="Hasta" />
+                  <TextField layoutX="54.0" layoutY="201.0" prefHeight="25.0" prefWidth="90.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="293.0" layoutY="45.0" prefHeight="236.0" prefWidth="351.0" style="-fx-background-color: ade4c9; -fx-border-color: grey;">
+               <children>
+                  <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="149.0" text="Unico % de comisión" />
+                  <RadioButton layoutX="16.0" layoutY="36.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="212.0" text="Depende de las edades al recaudo" />
+                  <TextField layoutX="224.0" layoutY="12.0" prefHeight="25.0" prefWidth="90.0" />
+                  <RadioButton layoutX="16.0" layoutY="212.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="212.0" text="Unico % al pago de notas débito" />
+                  <RadioButton layoutX="16.0" layoutY="193.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="315.0" text="Comisión fija y % de articulos a los abonos parciales" />
+                  <RadioButton layoutX="16.0" layoutY="174.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="315.0" text="Comisión fija y % de articulos a la cancelación total" />
+               </children>
+            </Pane>
+            <Pane layoutX="294.0" layoutY="4.0" prefHeight="36.0" prefWidth="351.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="8.0" layoutY="8.0" prefHeight="17.0" prefWidth="261.0" style="-fx-background-color: white;" text="Seleccione la forma de calcular la comisión">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="294.0" layoutY="285.0" prefHeight="182.0" prefWidth="351.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="12.0" layoutY="4.0" prefHeight="17.0" prefWidth="204.0" style="-fx-background-color: white;" text="Aplicar las siguientes condiciones:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <CheckBox layoutX="12.0" layoutY="28.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="326.0" text="Utilizar la fecha real de pago y no la del recibo de caja" />
+                  <CheckBox layoutX="12.0" layoutY="47.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="326.0" text="Ordenar por fecha de factura recaudada" />
+                  <CheckBox layoutX="12.0" layoutY="66.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="326.0" text="Descontar descto para calcular comisión" />
+                  <CheckBox layoutX="12.0" layoutY="86.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="326.0" text="Calcular comisiones con IVA incluido" />
+                  <CheckBox layoutX="12.0" layoutY="105.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="326.0" text="Calcular comisiones con IPOCONSUMO incluido" />
+                  <CheckBox layoutX="12.0" layoutY="124.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="326.0" text="Calcular comisiones al anticipo" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="573.0" layoutY="474.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="507.0" layoutY="474.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="438.0" layoutY="474.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
