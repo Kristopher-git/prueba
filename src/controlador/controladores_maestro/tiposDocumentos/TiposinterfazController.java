@@ -348,6 +348,28 @@ public class TiposinterfazController implements Initializable {
     public CheckBox otro_check_no_cambiar_ccost;
     @FXML
     public CheckBox otros_check_no_tener_cuenta_formula_mts2;
+    @FXML
+    
+    // PRINCIPAL TXT FALTANTES
+    public TextField txt_modo_pago;
+    @FXML
+    public TextField txt_bodega;
+    @FXML
+    public TextField txt_centro_costo;
+    @FXML
+    public TextField txt_subcentro_costo;
+    @FXML
+    public TextField txt_lista_precios;
+    @FXML
+    public TextField txt_bodega2;
+    @FXML
+    public TextField txt_nota_translado;
+    @FXML
+    public CheckBox principal_check_inactivo;
+    @FXML
+    public CheckBox imp1_check_generar_archivo;
+    @FXML
+    public CheckBox imp1_check_no_imprime;
     
 
     /**
@@ -361,8 +383,20 @@ public class TiposinterfazController implements Initializable {
         comboMetodoPago();
         comboBodegas();
         comboCentroCosto();
+        elementos_ocultos();
     }
 
+    private void elementos_ocultos(){
+        principal_combo_ccosto.setVisible(false);
+        principal_combo_scosto.setVisible(false);
+        principal_combo_bodega.setVisible(false);
+        principal_cmb_modo_pago.setVisible(false);
+        principal_combo_listaDePrecios.setVisible(false);
+        principal_cmb_bodega2.setVisible(false);
+        principal_cmb_nota_translado.setVisible(false);
+    }
+    
+    
     private void initComboBox() {
         modelo_tipos_documentos documents = new modelo_tipos_documentos();
         ObservableList<modelo_tipos_documentos> obs = documents.get_tipo_documentos();
@@ -473,16 +507,16 @@ public class TiposinterfazController implements Initializable {
         principal_check_no_cambiar_bodegas.setVisible(false);
         principal_check_utilizar_siempre_bodega.setVisible(false);
         principal_check_lista_precios.setVisible(false);
-        principal_combo_listaDePrecios.setVisible(false);
+        txt_lista_precios.setVisible(false);
         principal_label_lista_precios.setVisible(false);
-        principal_combo_bodega.setVisible(false);
+        txt_bodega.setVisible(false);
         principal_label_bodega.setVisible(false);
-        principal_cmb_modo_pago.setVisible(false);
+        txt_modo_pago.setVisible(false);
         principal_label_modo_pago.setVisible(false);
-        principal_cmb_bodega2.setVisible(false);
+        txt_bodega2.setVisible(false);
         principal_label_bodega2.setVisible(false);
         principal_label_nota_translado.setVisible(false);
-        principal_cmb_nota_translado.setVisible(false);
+        txt_nota_translado.setVisible(false);
         principal_txt_turno.setVisible(false);
         principal_lbl_turno.setVisible(false);
         
@@ -512,10 +546,10 @@ public class TiposinterfazController implements Initializable {
         principal_check_mostrar_interfaz_efectivo.setVisible(false);
         principal_check_puede_facturar_servicios.setVisible(false);
         principal_check_no_cambiar_bodegas.setVisible(false);
-        principal_cmb_bodega2.setVisible(false);
+        txt_bodega2.setVisible(false);
         principal_label_bodega2.setVisible(false);
         principal_label_nota_translado.setVisible(false);
-        principal_cmb_nota_translado.setVisible(false);
+        txt_nota_translado.setVisible(false);
         principal_txt_turno.setVisible(false);
         principal_lbl_turno.setVisible(false);
         
@@ -550,12 +584,12 @@ public class TiposinterfazController implements Initializable {
         principal_check_desactivar_desc_general.setVisible(false);
         principal_no_cambiar_lgeneral.setVisible(false);
         principal_label_bodega2.setVisible(false);
-        principal_cmb_bodega2.setVisible(false);
+        txt_bodega2.setVisible(false);
         principal_txt_turno.setVisible(false);
         principal_lbl_turno.setVisible(false);
-        principal_cmb_nota_translado.setVisible(false);
+        txt_nota_translado.setVisible(false);
         principal_label_nota_translado.setVisible(false);
-        principal_combo_listaDePrecios.setVisible(false);
+        txt_lista_precios.setVisible(false);
         principal_label_lista_precios.setVisible(false);
         
         // PANTALLA DE ITEMS1
@@ -608,9 +642,9 @@ public class TiposinterfazController implements Initializable {
         principal_no_cambiar_lgeneral.setVisible(false);
         principal_txt_turno.setVisible(false);
         principal_lbl_turno.setVisible(false);
-        principal_cmb_bodega2.setVisible(false);
+        txt_bodega2.setVisible(false);
         principal_label_bodega2.setVisible(false);
-        principal_cmb_nota_translado.setVisible(false);
+        txt_nota_translado.setVisible(false);
         principal_label_nota_translado.setVisible(false);
         
         // PANTALLA DE ITEMS1
@@ -660,9 +694,9 @@ public class TiposinterfazController implements Initializable {
         principal_no_cambiar_lgeneral.setVisible(false);
         principal_txt_turno.setVisible(false);
         principal_lbl_turno.setVisible(false);
-        principal_cmb_bodega2.setVisible(false);
+        txt_bodega2.setVisible(false);
         principal_label_bodega2.setVisible(false);
-        principal_cmb_nota_translado.setVisible(false);
+        txt_nota_translado.setVisible(false);
         principal_label_nota_translado.setVisible(false);
         
         // PANTALLA DE ITEMS1
@@ -705,8 +739,8 @@ public class TiposinterfazController implements Initializable {
     public void classEG(){
         // PANTALLA PRINCIPAL
         principal_label_bodega.setVisible(false);
-        principal_combo_bodega.setVisible(false);
-        principal_combo_listaDePrecios.setVisible(false);
+        txt_bodega.setVisible(false);
+        txt_lista_precios.setVisible(false);
         principal_label_lista_precios.setVisible(false);
         principal_check_lista_precios.setVisible(false);
         principal_check_utilizar_siempre_bodega.setVisible(false);
@@ -718,9 +752,9 @@ public class TiposinterfazController implements Initializable {
         principal_no_cambiar_lgeneral.setVisible(false);
         principal_txt_turno.setVisible(false);
         principal_lbl_turno.setVisible(false);
-        principal_cmb_bodega2.setVisible(false);
+        txt_bodega2.setVisible(false);
         principal_label_bodega2.setVisible(false);
-        principal_cmb_nota_translado.setVisible(false);
+        txt_nota_translado.setVisible(false);
         principal_label_nota_translado.setVisible(false);
         
         // PANTALLA DE ITEMS1
@@ -750,7 +784,7 @@ public class TiposinterfazController implements Initializable {
     
     public void claseFC(){
         // PANTALLA PRINCIPAL
-        principal_combo_listaDePrecios.setVisible(false);
+        txt_lista_precios.setVisible(false);
         principal_label_lista_precios.setVisible(false);
         principal_check_lista_precios.setVisible(false);
         principal_check_no_cambiar_bodegas.setVisible(false);
@@ -761,9 +795,9 @@ public class TiposinterfazController implements Initializable {
         principal_no_cambiar_lgeneral.setVisible(false);    
         principal_txt_turno.setVisible(false);
         principal_lbl_turno.setVisible(false);
-        principal_cmb_bodega2.setVisible(false);
+        txt_bodega2.setVisible(false);
         principal_label_bodega2.setVisible(false);
-        principal_cmb_nota_translado.setVisible(false);
+        txt_nota_translado.setVisible(false);
         principal_label_nota_translado.setVisible(false);
         
         // PANTALLA DE ITEMS1
@@ -819,7 +853,7 @@ public class TiposinterfazController implements Initializable {
         Label[] lbs = {
             principal_label_bodega2,principal_label_nota_translado
         };
-        TextField[] txts= {};
+        TextField[] txts= {txt_bodega2, txt_nota_translado};
         Button[] btns = {};
         
         
@@ -876,7 +910,7 @@ public class TiposinterfazController implements Initializable {
         };
         TextField[] txts= {
             principal_txt_turno,items1_txt_maximo_items_permitidos,otros_txt_valor1_buscar,
-            otros_txt_valor2_buscar
+            otros_txt_valor2_buscar, txt_bodega, txt_lista_precios, txt_bodega2, txt_nota_translado
         };
         Button[] btns = {
             otros_btn_buscar
@@ -916,7 +950,7 @@ public class TiposinterfazController implements Initializable {
         };
         TextField[] txts= {
             principal_txt_turno,items1_txt_maximo_items_permitidos,otros_txt_valor1_buscar,
-            otros_txt_valor2_buscar
+            otros_txt_valor2_buscar, txt_modo_pago, txt_lista_precios, txt_bodega2, txt_nota_translado
         };
         Button[] btns = {
             otros_btn_buscar
@@ -945,7 +979,7 @@ public class TiposinterfazController implements Initializable {
         ComboBox[] cmbs = {
             principal_combo_listaDePrecios,principal_cmb_bodega2,
             principal_cmb_nota_translado,fiscal_cmb_cree_s,fiscal_cmb_cree_p,
-            otros_cmb_documento_alterno, principal_cmb_modo_pago,
+            otros_cmb_documento_alterno, principal_cmb_modo_pago, 
             principal_combo_bodega
         };
         Label[] lbs = {
@@ -956,7 +990,7 @@ public class TiposinterfazController implements Initializable {
         };
         TextField[] txts= {
             principal_txt_turno,items1_txt_maximo_items_permitidos,otros_txt_valor1_buscar,
-            otros_txt_valor2_buscar
+            otros_txt_valor2_buscar, txt_bodega, txt_modo_pago, txt_lista_precios, txt_bodega2, txt_nota_translado
         };
         Button[] btns = {
             otros_btn_buscar
@@ -995,7 +1029,7 @@ public class TiposinterfazController implements Initializable {
         };
         TextField[] txts= {
             principal_txt_turno,items1_txt_maximo_items_permitidos,otros_txt_valor1_buscar,
-            otros_txt_valor2_buscar
+            otros_txt_valor2_buscar, txt_bodega, txt_lista_precios, txt_bodega2, txt_nota_translado
         };
         Button[] btns = {
             otros_btn_buscar
@@ -1032,7 +1066,7 @@ public class TiposinterfazController implements Initializable {
         };
         TextField[] txts= {
             principal_txt_turno,items1_txt_maximo_items_permitidos,otros_txt_valor1_buscar,
-            otros_txt_valor2_buscar
+            otros_txt_valor2_buscar, txt_bodega, txt_modo_pago, txt_lista_precios, txt_bodega2, txt_nota_translado
         };
         Button[] btns = {
             otros_btn_buscar
@@ -1067,7 +1101,7 @@ public class TiposinterfazController implements Initializable {
         };
         TextField[] txts= {
             principal_txt_turno,items1_txt_maximo_items_permitidos,otros_txt_valor1_buscar,
-            otros_txt_valor2_buscar
+            otros_txt_valor2_buscar, txt_lista_precios, txt_bodega2, txt_nota_translado
         };
         Button[] btns = {
             otros_btn_buscar
@@ -1101,7 +1135,7 @@ public class TiposinterfazController implements Initializable {
         };
         TextField[] txts= {
             principal_txt_turno,items1_txt_maximo_items_permitidos,otros_txt_valor1_buscar,
-            otros_txt_valor2_buscar
+            otros_txt_valor2_buscar, txt_modo_pago, txt_bodega2, txt_nota_translado
         };
         Button[] btns = {
             otros_btn_buscar

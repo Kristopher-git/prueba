@@ -89,6 +89,23 @@ public class Tipos_documentosController implements Initializable {
                     controlador.txtNumero.setText(model.getCodigo_cantidad());
                     controlador.txtClase.setText(m.getNombre_Clase());
                     controlador.claseDocs = clasedoc;
+                    controlador.txt_modo_pago.setText(model.getNombre_metodo_pago().toUpperCase());
+                    controlador.txt_bodega.setText(model.getNombre_bodega());
+                    controlador.txt_centro_costo.setText(model.getNombre_centro_costo());
+                    controlador.txt_subcentro_costo.setText(model.getNombre_subcentro_costo());
+                    controlador.txt_lista_precios.setText(model.getNombre_precio());
+                    controlador.txt_bodega2.setText(model.getNombre_bodega2());
+                    controlador.imp2_txt_encabezado1.setText(model.getEncabezado1());
+                    controlador.imp2_txt_encabezado2.setText(model.getEncabezado2());
+                    controlador.imp2_txt_encabezado3.setText(model.getEncabezado3());
+                    controlador.imp2_txt_encabezado4.setText(model.getEncabezado4());
+                    controlador.imp2_txt_encabezado5.setText(model.getEncabezado5());
+                    controlador.imp2_txt_pie_pagina1.setText(model.getPie_pagina1());
+                    controlador.imp2_txt_pie_pagina2.setText(model.getPie_pagina2());
+                    controlador.imp2_txt_pie_pagina3.setText(model.getPie_pagina3());
+                    controlador.imp2_txt_pie_pagina4.setText(model.getPie_pagina4());
+                    controlador.imp2_txt_pie_pagina5.setText(model.getPie_pagina5());
+                    controlador.imp3_txtarea_leyenda_pie_pagina.setText(model.getLeyenda_pie_pag_doc());
                     
                     
                     // PRINCIPAL
@@ -102,6 +119,15 @@ public class Tipos_documentosController implements Initializable {
                     boolean mostrar_interfaz_efectivo_new = false;
                     boolean modo_pago_fijo_new = false;
                     boolean no_cambiar_lgeneral_new = false;
+                    boolean inactivo_new = false;
+                    boolean formato_perso_new = false;
+                    boolean generar_archivo_new = false;
+                    boolean no_imprime_new = false;
+                    boolean permitir_sobrepasar_items_new = false;
+                    boolean nombre_documento_new = false;
+                    boolean si_Es_copia_new = false;
+                    boolean descuentos_factura_new = false;
+                    boolean seg_productos_new = false;
                     String turno_new = "";
                     
                     int list_precios = model.getList_prec_prede();
@@ -114,9 +140,45 @@ public class Tipos_documentosController implements Initializable {
                     int mostrar_interfaz_efectivo = model.getMostrar_interfaz_efectivo();
                     int modo_pago_fijo = model.getModo_pago_fijo();
                     int no_cambiar_lgeneral = model.getNo_cambiar_lgeneral();
+                    int inactivo = model.getInactivo();
+                    int formato_perso = model.getFormato_personalizado();
+                    int generar_archivo = model.getGenerar_archivo();
+                    int no_imprime = model.getNo_imprime();
+                    int permitir_sobrepasar_items = model.getPermitir_sobrep_items_usados();
                     String turno = model.getTurno();
+                    int nombre_documento = model.getNombre_documento();
+                    int si_Es_copia = model.getSi_es_copia();
+                    int descuentos_factura = model.getDesc_factura();
+                    int seg_productos = model.getSeg_productos();
                     
                     
+                    if(seg_productos == 1){
+                        seg_productos_new = true;
+                    }
+                    if(descuentos_factura == 1){
+                        descuentos_factura_new = true;
+                    }
+                    if(si_Es_copia == 1){
+                        si_Es_copia_new = true;
+                    }
+                    if(nombre_documento == 1){
+                        nombre_documento_new = true;
+                    }
+                    if(permitir_sobrepasar_items == 1){
+                        permitir_sobrepasar_items_new = true;
+                    }
+                    if(no_imprime == 1){
+                        no_imprime_new = true;
+                    }
+                    if(generar_archivo == 1){
+                        generar_archivo_new = true;
+                    }
+                    if(formato_perso == 1){
+                        formato_perso_new = true;
+                    }
+                    if(inactivo == 1){
+                        inactivo_new = true;
+                    }
                     if(!turno.equals("0")){
                         turno_new = turno;
                     }
@@ -161,6 +223,17 @@ public class Tipos_documentosController implements Initializable {
                     controlador.principal_check_modo_pago_fijo.setSelected(modo_pago_fijo_new);
                     controlador.principal_no_cambiar_lgeneral.setSelected(no_cambiar_lgeneral_new);
                     controlador.principal_txt_turno.setText(turno_new);
+                    controlador.principal_check_inactivo.setSelected(inactivo_new);
+                    controlador.imp1_check_formato_personalizado.setSelected(formato_perso_new);
+                    controlador.imp1_check_generar_archivo.setSelected(generar_archivo_new);
+                    controlador.imp1_check_no_imprime.setSelected(no_imprime_new);
+                    controlador.items1_txt_maximo_items_permitidos.setText(String.valueOf(model.getMax_items_permi_doc()));
+                    controlador.imp1_check_permitir_sobrepasar.setSelected(permitir_sobrepasar_items_new);
+                    controlador.imp2_check_nombre_documento.setSelected(nombre_documento_new);
+                    controlador.imp2_check_si_es_copia.setSelected(si_Es_copia_new);
+                    controlador.imp2_check_desc_factura.setSelected(descuentos_factura_new);
+                    controlador.imp2_check_segmento_productos.setSelected(seg_productos_new);
+                    
                     
                     if(clasedoc.equals("CC") || clasedoc.equals("CO")){
                         controlador.claseCC_CO();

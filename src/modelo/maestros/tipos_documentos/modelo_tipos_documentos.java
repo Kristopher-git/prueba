@@ -51,9 +51,14 @@ public class modelo_tipos_documentos {
     private int mostrar_interfaz_efectivo;
     private int no_cambiar_lgeneral;
     private int modo_pago_fijo;
+    private int inactivo;
     private String turno;
     private String bodega2;
     private String nota_translado;
+    private String nombre_centro_costo;
+    private String nombre_subcentro_costo;
+    private String nombre_precio;
+    private String nombre_bodega2;
     
     // IMP 1 - VARIABLES
     private int formato_personalizado;
@@ -201,6 +206,48 @@ public class modelo_tipos_documentos {
         this.id_bodega = id_bodega;
     }
 
+    public String getNombre_centro_costo() {
+        return nombre_centro_costo;
+    }
+
+    public void setNombre_centro_costo(String nombre_centro_costo) {
+        this.nombre_centro_costo = nombre_centro_costo;
+    }
+
+    public String getNombre_subcentro_costo() {
+        return nombre_subcentro_costo;
+    }
+
+    public void setNombre_subcentro_costo(String nombre_subcentro_costo) {
+        this.nombre_subcentro_costo = nombre_subcentro_costo;
+    }
+
+    public String getNombre_precio() {
+        return nombre_precio;
+    }
+
+    public void setNombre_precio(String nombre_precio) {
+        this.nombre_precio = nombre_precio;
+    }
+
+    public String getNombre_bodega2() {
+        return nombre_bodega2;
+    }
+
+    public void setNombre_bodega2(String nombre_bodega2) {
+        this.nombre_bodega2 = nombre_bodega2;
+    }
+
+    public int getInactivo() {
+        return inactivo;
+    }
+
+    public void setInactivo(int inactivo) {
+        this.inactivo = inactivo;
+    }
+
+    
+    
     
     
     // OTROS GETTERS AND SETTERS
@@ -995,7 +1042,7 @@ public class modelo_tipos_documentos {
         try {
             
             java.sql.Statement st = conexion.createStatement();
-            String sql = "SELECT * FROM tipodocs WHERE codigo='"+codigo+"'";
+            String sql = "SELECT t.detapie, t.impdivs, t.impridtos, t.infcopia, t.impnom, t.detpie1, t.detpie2, t.detpie3, t.detpie4, t.detpie5, t.encabe1, t.encabe2, t.encabe3, t.encabe4, t.encabe5, t.maxitemsx, t.maxitems, t.noimp, t.filealter, t.impper, t.inactivo, p.nombre_precio, b.nombre as bodega_nombre, b2.nombre as bodega2_nombre, cc.nombre_centro, sc.nombre as sc_nombre, m.nombre, t.caraefe, t.nolista, t.modoprm, t.turno, t.bodega2, t.docu2, t.codigo_cantidad, t.lprefij, t.forbodega, t.nocamb, t.maneserv, t.dtocli, t.preconiva, t.consecmanu FROM tipodocs as t left join medpago as m on t.fpago = m.id left join bodega as b on t.bodega = b.id left join centro_costo as cc on cc.id_centro_costo = t.ccosto left join subcentro_costo as sc on sc.id_subcentro = t.succosto left join precios as p on p.codigo = t.precio left join bodega as b2 on b2.codigo = t.bodega2 WHERE t.codigo='"+codigo+"'";
             ResultSet rs = st.executeQuery(sql);
             if(rs.next()){
                 String cantidad = rs.getString("codigo_cantidad");
@@ -1013,7 +1060,53 @@ public class modelo_tipos_documentos {
                 String turno = rs.getString("turno");
                 String bodega_2 = rs.getString("bodega2");
                 String documento_2 = rs.getString("docu2");
-
+                String modo_pago = rs.getString("nombre");
+                String bodega = rs.getString("bodega_nombre");
+                String centro_costo = rs.getString("nombre_centro");
+                String sc_nombre = rs.getString("sc_nombre");
+                String nombre_precio = rs.getString("nombre_precio");
+                String bodega2_nombre = rs.getString("bodega2_nombre");
+                int inactivo = rs.getInt("inactivo");
+                int formato_personalizado = rs.getInt("impper");
+                int generar_archivo = rs.getInt("filealter");
+                int no_imprime = rs.getInt("noimp");
+                int maximo_items_permitido_doc = rs.getInt("maxitems");
+                int permitir_sobrepasar_items = rs.getInt("maxitemsx");
+                String encabezado1 = rs.getString("encabe1");
+                String encabezado2 = rs.getString("encabe2");
+                String encabezado3 = rs.getString("encabe3");
+                String encabezado4 = rs.getString("encabe4");
+                String encabezado5 = rs.getString("encabe5");
+                String pie_pagina1 = rs.getString("detpie1");
+                String pie_pagina2 = rs.getString("detpie2");
+                String pie_pagina3 = rs.getString("detpie3");
+                String pie_pagina4 = rs.getString("detpie4");
+                String pie_pagina5 = rs.getString("detpie5");
+                int nombre_documento = rs.getInt("impnom");
+                int si_Es_copia = rs.getInt("infcopia");
+                int descuentos_factura = rs.getInt("impridtos");
+                int seg_productos = rs.getInt("impdivs");
+                String leyenda_pie_pagina = rs.getString("detapie");
+                
+                if (modo_pago == null){
+                    modo_pago = "";
+                }
+                if (bodega == null){
+                    bodega = "";
+                }
+                if (centro_costo == null){
+                    centro_costo = "";
+                }
+                if (sc_nombre == null){
+                    sc_nombre = "";
+                }
+                if (nombre_precio == null){
+                    nombre_precio = "";
+                }
+                if (bodega2_nombre == null){
+                    bodega2_nombre = "";
+                }
+                
                 setCodigo_cantidad(cantidad);
                 setList_prec_prede(lista_precio);
                 setUt_siem_bodeg_pred(utilizar_siemp_bodega_pred);
@@ -1028,12 +1121,39 @@ public class modelo_tipos_documentos {
                 setTurno(turno);
                 setBodega2(bodega_2);
                 setNota_translado(documento_2);
+                setNombre_metodo_pago(modo_pago);
+                setNombre_bodega(bodega);
+                setNombre_centro_costo(centro_costo);
+                setNombre_subcentro_costo(sc_nombre);
+                setNombre_precio(nombre_precio);
+                setNombre_bodega2(bodega2_nombre);
+                setInactivo(inactivo);
+                setFormato_personalizado(formato_personalizado);
+                setGenerar_archivo(generar_archivo);
+                setNo_imprime(no_imprime);
+                setMax_items_permi_doc(maximo_items_permitido_doc);
+                setPermitir_sobrep_items_usados(permitir_sobrepasar_items);
+                setEncabezado1(encabezado1);
+                setEncabezado2(encabezado2);
+                setEncabezado3(encabezado3);
+                setEncabezado4(encabezado4);
+                setEncabezado5(encabezado5);
+                setPie_pagina1(pie_pagina1);
+                setPie_pagina2(pie_pagina2);
+                setPie_pagina3(pie_pagina3);
+                setPie_pagina4(pie_pagina4);
+                setPie_pagina5(pie_pagina5);
+                setNombre_documento(nombre_documento);
+                setSi_es_copia(si_Es_copia);
+                setDesc_factura(descuentos_factura);
+                setSeg_productos(seg_productos);
+                setLeyenda_pie_pag_doc(leyenda_pie_pagina);
             }
             st.close();
             conexion.close();
             
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "No pudo encontrar centro"+e, "Mensaje", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "No pudo encontrar documento" +e, "Mensaje", JOptionPane.ERROR_MESSAGE);
         }    
     }
     public void get_un_clase(String clasedoc){

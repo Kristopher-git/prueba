@@ -27,7 +27,7 @@
             <Label layoutX="14.0" layoutY="18.0" prefHeight="17.0" prefWidth="56.0" text="Clase" />
             <Label layoutX="14.0" layoutY="56.0" prefHeight="17.0" prefWidth="101.0" text="Número vigente" />
             <TextField fx:id="txtNumero" layoutX="115.0" layoutY="52.0" prefHeight="25.0" prefWidth="120.0" />
-            <CheckBox layoutX="248.0" layoutY="56.0" mnemonicParsing="false" text="Inactivo" />
+            <CheckBox fx:id="principal_check_inactivo" layoutX="248.0" layoutY="56.0" mnemonicParsing="false" text="Inactivo" />
             <Label layoutX="14.0" layoutY="98.0" prefHeight="17.0" prefWidth="71.0" text="Código" />
             <TextField fx:id="txtCodigo" layoutX="65.0" layoutY="94.0" prefHeight="25.0" prefWidth="71.0" />
             <Label layoutX="150.0" layoutY="98.0" prefHeight="17.0" prefWidth="71.0" text="Nombre" />
@@ -69,6 +69,13 @@
                               <ComboBox fx:id="principal_cmb_bodega2" layoutX="284.0" layoutY="322.0" prefHeight="25.0" prefWidth="174.0" />
                               <Label fx:id="principal_label_nota_translado" layoutX="204.0" layoutY="359.0" prefHeight="17.0" prefWidth="89.0" text="Nota translado" />
                               <ComboBox fx:id="principal_cmb_nota_translado" layoutX="285.0" layoutY="355.0" prefHeight="25.0" prefWidth="174.0" />
+                              <TextField fx:id="txt_modo_pago" layoutX="143.0" layoutY="54.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_bodega" layoutX="142.0" layoutY="82.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_centro_costo" layoutX="142.0" layoutY="111.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_subcentro_costo" layoutX="142.0" layoutY="139.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_lista_precios" layoutX="142.0" layoutY="167.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_bodega2" layoutX="284.0" layoutY="322.0" prefHeight="25.0" prefWidth="177.0" />
+                              <TextField fx:id="txt_nota_translado" layoutX="284.0" layoutY="355.0" prefHeight="25.0" prefWidth="179.0" />
                            </children>
                         </AnchorPane>
                   </content>
@@ -97,8 +104,8 @@
                                           <Font name="System Bold" size="15.0" />
                                        </font>
                                     </Label>
-                                    <CheckBox layoutX="14.0" layoutY="25.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="132.0" text="Generar archivo" />
-                                    <CheckBox layoutX="139.0" layoutY="27.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="132.0" text="No imprime" />
+                                    <CheckBox fx:id="imp1_check_generar_archivo" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="132.0" text="Generar archivo" />
+                                    <CheckBox fx:id="imp1_check_no_imprime" layoutX="139.0" layoutY="27.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="132.0" text="No imprime" />
                                  </children>
                               </Pane>
                               <Pane layoutX="15.0" layoutY="238.0" prefHeight="88.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
@@ -165,7 +172,7 @@
                                           <Font name="System Bold" size="15.0" />
                                        </font>
                                     </Label>
-                                    <TextArea fx:id="imp3_txtarea_leyenda_pie_pagina" layoutX="12.0" layoutY="17.0" prefHeight="273.0" prefWidth="424.0" />
+                                    <TextArea fx:id="imp3_txtarea_leyenda_pie_pagina" layoutX="12.0" layoutY="17.0" prefHeight="273.0" prefWidth="424.0" wrapText="true" />
                                  </children>
                               </Pane>
                            </children>
