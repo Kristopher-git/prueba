@@ -1354,7 +1354,7 @@ public class PrincipalController implements Initializable {
             Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+//    
     private void AbrirCierreLapsoVentas() {
         try {
             FXMLLoader cierre_lapso_venta = new FXMLLoader(getClass().getResource("/vista/procesos/procesos_ventas/cierre_lapso_venta.fxml"));
