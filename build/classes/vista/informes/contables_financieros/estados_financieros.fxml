@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.contables_financieros.Estados_financierosController">
+    <stylesheets>
+        <URL value="@/style/informes/contables_financieros/estados_financieros.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="624.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="247.0" layoutY="3.0" prefHeight="527.0" prefWidth="346.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Button layoutX="36.0" layoutY="8.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Balance de Comprobación" />
+                  <Button layoutX="36.0" layoutY="44.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Estado de Resultados" />
+                  <Button layoutX="36.0" layoutY="80.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Balance General" />
+                  <Button layoutX="36.0" layoutY="116.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Estado de cambios en el patrimonio" />
+                  <Button layoutX="36.0" layoutY="153.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Flujo de Efectivo - Acumulado" />
+                  <Button layoutX="36.0" layoutY="189.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Flujo de Efectivo - Boletín de Caja" />
+                  <Button layoutX="36.0" layoutY="225.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Estados de resultados comparativos" />
+                  <Button layoutX="36.0" layoutY="261.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Balance Comparativo - Centros de Costos" />
+                  <Button layoutX="36.0" layoutY="298.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Comparativo x centros de costo" />
+                  <Button layoutX="36.0" layoutY="334.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Presúpuesto General - Cta" />
+                  <Button layoutX="36.0" layoutY="370.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Presupuesto Cta - Centro de Costos" />
+                  <Button layoutX="36.0" layoutY="406.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Estado de Resultados nuevos" />
+                  <Button layoutX="37.0" layoutY="442.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="289.0" text="Presupuesto General - Centro de costos" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="513.0" layoutY="541.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="63.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="337.0" fitWidth="222.0" layoutX="14.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/botones/impresora.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

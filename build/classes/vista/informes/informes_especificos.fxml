@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.informes.Informes_especificosController">
+    <stylesheets>
+        <URL value="@/style/informes/informes_especificos.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="669.0" prefWidth="698.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="173.0" layoutY="4.0" prefHeight="55.0" prefWidth="514.0" style="-fx-background-color: f0f0f0;">
+               <children>
+                  <Label layoutX="4.0" layoutY="3.0" prefHeight="17.0" prefWidth="467.0" text="Nota: Estos informes/Procesos solo aplican para quien los ha solicitado, Su" />
+                  <Label layoutX="4.0" layoutY="19.0" prefHeight="17.0" prefWidth="467.0" text="ejecución es responsabilidad total del usuario." />
+               </children>
+            </Pane>
+            <Pane layoutX="173.0" layoutY="64.0" prefHeight="493.0" prefWidth="514.0" style="-fx-background-color: f0f0f0;">
+               <children>
+                  <RadioButton layoutX="11.0" layoutY="5.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Informes varios a Excel" />
+                  <RadioButton layoutX="11.0" layoutY="24.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Kardex por bodegas mercancia en consignación" />
+                  <RadioButton layoutX="11.0" layoutY="42.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Articulos x Factura x Pedido" />
+                  <RadioButton layoutX="11.0" layoutY="61.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Kardex general por unidades - Hucana" />
+                  <RadioButton layoutX="11.0" layoutY="79.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Kardex por unidad x bodegas - Hucana" />
+                  <RadioButton layoutX="11.0" layoutY="98.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Informes de lotes">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></RadioButton>
+                  <RadioButton layoutX="13.0" layoutY="120.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Kardex General - Vidrios Suarez" />
+                  <RadioButton layoutX="13.0" layoutY="139.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Kardex Bodegas - Vidrios Suarez" />
+                  <RadioButton layoutX="13.0" layoutY="158.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Saldos de Inventario - Vidrios Suarez" />
+                  <RadioButton layoutX="14.0" layoutY="177.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="286.0" text="Terceros - Version Anterior" />
+                  <RadioButton layoutX="14.0" layoutY="195.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="366.0" text="Listado de Mov. por cuenta - Ciudad - Electricos del Ruiz Ltda." />
+                  <RadioButton layoutX="14.0" layoutY="214.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Importar información Contable - Comercializadora Bedoya Giraldo S.A" />
+                  <RadioButton layoutX="14.0" layoutY="232.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Informe Supersalud" />
+                  <RadioButton layoutX="14.0" layoutY="250.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Importar Facturas de venta - BIALCO" />
+                  <RadioButton layoutX="14.0" layoutY="269.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Saldos de inventario - lotes" />
+                  <RadioButton layoutX="14.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Repara afecta en remisi (base anexo faventa)" />
+                  <RadioButton layoutX="14.0" layoutY="306.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Entregas parciales Pedido --&gt; remisión" />
+                  <RadioButton layoutX="14.0" layoutY="325.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Origenes en OC-FC" />
+                  <RadioButton layoutX="14.0" layoutY="343.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Agenda" />
+                  <RadioButton layoutX="14.0" layoutY="361.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Option20" />
+                  <RadioButton layoutX="14.0" layoutY="378.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Option21" />
+                  <RadioButton layoutX="14.0" layoutY="395.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Seguimiento de cotizaciones" />
+                  <RadioButton layoutX="14.0" layoutY="412.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Opciones Varias de Facturación electronica" />
+                  <RadioButton layoutX="14.0" layoutY="430.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Listado de facturas electronicas" />
+                  <RadioButton layoutX="14.0" layoutY="449.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="401.0" text="Enviar Nómina electronica" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="142.0" fitWidth="150.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../img/botones/impresora.png" />
+               </image>
+            </ImageView>
+            <Button contentDisplay="TOP" layoutX="609.0" layoutY="570.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="77.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="527.0" layoutY="570.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="77.0" text="Ok">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/aceptar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

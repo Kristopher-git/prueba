@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.facturacion.Comisiones_ventaController">
+    <stylesheets>
+        <URL value="@/style/informes/facturacion/comisiones_venta.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="486.0" prefWidth="714.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="3.0" layoutY="3.0" prefHeight="398.0" prefWidth="352.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="77.0" text="Vendedor" />
+                  <ComboBox layoutX="78.0" layoutY="10.0" prefHeight="25.0" prefWidth="264.0" />
+                  <Pane layoutX="11.0" layoutY="52.0" prefHeight="71.0" prefWidth="175.0" style="-fx-background-color: f0f0f0;">
+                     <children>
+                        <Label layoutX="10.0" layoutY="-11.0" prefHeight="17.0" prefWidth="61.0" style="-fx-background-color: f0f0f0;" text="Ventas de">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Productos" />
+                        <RadioButton layoutX="14.0" layoutY="35.0" mnemonicParsing="false" text="Servicios" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="30.0" layoutY="135.0" prefHeight="17.0" prefWidth="61.0" style="-fx-background-color: f0f0f0;" text="Periodo">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="99.0" layoutY="135.0" prefHeight="17.0" prefWidth="61.0" text="Desde" />
+                  <TextField layoutX="97.0" layoutY="152.0" prefHeight="25.0" prefWidth="96.0" />
+                  <Label layoutX="224.0" layoutY="136.0" prefHeight="17.0" prefWidth="61.0" text="Hasta" />
+                  <TextField layoutX="222.0" layoutY="152.0" prefHeight="25.0" prefWidth="96.0" />
+                  <Label layoutX="22.0" layoutY="191.0" prefHeight="17.0" prefWidth="61.0" text="Facturas" />
+                  <ComboBox layoutX="78.0" layoutY="187.0" prefHeight="25.0" prefWidth="241.0" />
+                  <Label layoutX="23.0" layoutY="216.0" prefHeight="17.0" prefWidth="61.0" text="Devoluc." />
+                  <ComboBox layoutX="78.0" layoutY="212.0" prefHeight="25.0" prefWidth="241.0" />
+                  <Label layoutX="22.0" layoutY="241.0" prefHeight="17.0" prefWidth="61.0" text="Linea" />
+                  <ComboBox layoutX="78.0" layoutY="237.0" prefHeight="25.0" prefWidth="241.0" />
+                  <Label layoutX="23.0" layoutY="266.0" prefHeight="17.0" prefWidth="61.0" text="Marca" />
+                  <ComboBox layoutX="78.0" layoutY="262.0" prefHeight="25.0" prefWidth="241.0" />
+                  <Label layoutX="22.0" layoutY="291.0" prefHeight="17.0" prefWidth="61.0" text="Grupo" />
+                  <ComboBox layoutX="78.0" layoutY="287.0" prefHeight="25.0" prefWidth="241.0" />
+                  <Label layoutX="23.0" layoutY="316.0" prefHeight="17.0" prefWidth="61.0" text="Subgrupo" />
+                  <ComboBox layoutX="78.0" layoutY="312.0" prefHeight="25.0" prefWidth="241.0" />
+                  <Label layoutX="22.0" layoutY="341.0" prefHeight="17.0" prefWidth="61.0" text="Forma de" />
+                  <ComboBox layoutX="77.0" layoutY="337.0" prefHeight="25.0" prefWidth="241.0" />
+                  <Label layoutX="23.0" layoutY="357.0" prefHeight="17.0" prefWidth="61.0" text="Pago" />
+               </children>
+            </Pane>
+            <Pane layoutX="358.0" layoutY="3.0" prefHeight="398.0" prefWidth="352.0" style="-fx-background-color: c4e1ff; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="10.0" layoutY="-5.0" prefHeight="17.0" prefWidth="129.0" style="-fx-background-color: f0f0f0;" text="Calcular la comisión">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="12.0" layoutY="16.0" mnemonicParsing="false" text="Unico % de comisión" />
+                  <TextField layoutX="151.0" layoutY="12.0" prefHeight="25.0" prefWidth="75.0" />
+                  <RadioButton layoutX="12.0" layoutY="46.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="310.0" text="El % de comisión depende de los % de descuentos" />
+                  <Label layoutX="56.0" layoutY="72.0" prefHeight="17.0" prefWidth="53.0" text="Desde" />
+                  <Label layoutX="120.0" layoutY="72.0" prefHeight="17.0" prefWidth="53.0" text="Hasta" />
+                  <Label layoutX="176.0" layoutY="72.0" prefHeight="17.0" prefWidth="67.0" text="\%Comisión" />
+                  <TextField layoutX="56.0" layoutY="89.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="117.0" layoutY="89.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="178.0" layoutY="89.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="57.0" layoutY="114.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="118.0" layoutY="114.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="179.0" layoutY="114.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="57.0" layoutY="139.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="118.0" layoutY="139.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="179.0" layoutY="139.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="57.0" layoutY="164.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="118.0" layoutY="164.0" prefHeight="25.0" prefWidth="61.0" />
+                  <TextField layoutX="179.0" layoutY="164.0" prefHeight="25.0" prefWidth="61.0" />
+                  <RadioButton layoutX="10.0" layoutY="193.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="310.0" text="\% comisión individual de cada Producto/servicio." />
+                  <RadioButton layoutX="10.0" layoutY="212.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="310.0" text="Valor fijo de comisión de cada Producto/servicio." />
+                  <CheckBox layoutX="10.0" layoutY="242.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="241.0" text="Calcular comisiones con IVA incluido" />
+                  <CheckBox layoutX="10.0" layoutY="262.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="292.0" text="Calcular comisiones con IPOCONSUMO incluido" />
+                  <RadioButton layoutX="12.0" layoutY="293.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="188.0" text="Comisión lista de precios" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="638.0" layoutY="408.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="572.0" layoutY="408.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="505.0" layoutY="408.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

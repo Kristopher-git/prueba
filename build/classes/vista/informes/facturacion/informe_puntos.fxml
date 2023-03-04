@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="224.0" prefWidth="631.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.informes.facturacion.Informe_puntosController">
+    <stylesheets>
+        <URL value="@/style/informes/facturacion/informe_puntos.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="5.0" layoutY="1.0" prefHeight="226.0" prefWidth="626.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="4.0" layoutY="2.0" prefHeight="137.0" prefWidth="617.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="258.0" layoutY="26.0" prefHeight="17.0" prefWidth="81.0" text="Cliente" />
+                  <ComboBox layoutX="303.0" layoutY="22.0" prefHeight="25.0" prefWidth="186.0" />
+                  <Pane layoutX="11.0" layoutY="8.0" prefHeight="53.0" prefWidth="234.0" style="-fx-border-color: white;">
+                     <children>
+                        <RadioButton layoutX="14.0" layoutY="18.0" mnemonicParsing="false" text="Vendedores" />
+                        <RadioButton layoutX="135.0" layoutY="18.0" mnemonicParsing="false" text="Clientes" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="14.0" layoutY="83.0" prefHeight="17.0" prefWidth="202.0" text="Valor en pesos cada punto" />
+                  <TextField layoutX="171.0" layoutY="79.0" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="558.0" layoutY="147.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="492.0" layoutY="147.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="425.0" layoutY="147.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="167.0" prefWidth="349.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.fiscales.Comprobante_informe_diario_comprasController">
+    <stylesheets>
+        <URL value="@/style/informes/contables_financieros/comprobante_informe_diario_compras.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="3.0" layoutY="-5.0" prefHeight="169.0" prefWidth="346.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="7.0" layoutY="14.0" prefHeight="146.0" prefWidth="264.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="27.0" layoutY="39.0" prefHeight="17.0" prefWidth="53.0" text="Desde" />
+                  <Label layoutX="29.0" layoutY="67.0" prefHeight="17.0" prefWidth="53.0" text="Hasta" />
+                  <TextField layoutX="66.0" layoutY="35.0" prefHeight="25.0" prefWidth="110.0" />
+                  <TextField layoutX="66.0" layoutY="63.0" prefHeight="25.0" prefWidth="110.0" />
+                  <Label layoutX="81.0" layoutY="14.0" prefHeight="17.0" prefWidth="102.0" text="(mm/dd/aaaa)" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="278.0" layoutY="79.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="279.0" layoutY="18.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

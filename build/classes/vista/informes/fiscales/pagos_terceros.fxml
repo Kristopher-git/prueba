@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="495.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.fiscales.Pagos_tercerosController">
+    <stylesheets>
+        <URL value="@/style/informes/fiscales/pagos_terceros.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="2.0" layoutY="-3.0" prefHeight="314.0" prefWidth="493.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="7.0" layoutY="14.0" prefHeight="199.0" prefWidth="475.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="8.0" layoutY="13.0" prefHeight="17.0" prefWidth="53.0" text="Desde" />
+                  <TextField layoutX="161.0" layoutY="10.0" prefHeight="25.0" prefWidth="60.0" />
+                  <Label layoutX="10.0" layoutY="41.0" prefHeight="17.0" prefWidth="53.0" text="Hasta" />
+                  <ComboBox layoutX="47.0" layoutY="10.0" prefHeight="25.0" prefWidth="110.0" />
+                  <TextField layoutX="161.0" layoutY="38.0" prefHeight="25.0" prefWidth="60.0" />
+                  <ComboBox layoutX="47.0" layoutY="37.0" prefHeight="25.0" prefWidth="110.0" />
+                  <Label layoutX="10.0" layoutY="75.0" prefHeight="17.0" prefWidth="139.0" text="Cuentas" />
+                  <TextField layoutX="9.0" layoutY="93.0" prefHeight="25.0" prefWidth="448.0" />
+                  <Label layoutX="10.0" layoutY="126.0" prefHeight="17.0" prefWidth="60.0" text="Notas:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="61.0" layoutY="126.0" prefHeight="17.0" prefWidth="374.0" text="Indique los grupos o cuentas separados por comas" />
+                  <CheckBox layoutX="11.0" layoutY="151.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="188.0" text="Agregar dirección del tercero" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="417.0" layoutY="228.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="351.0" layoutY="228.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="285.0" layoutY="228.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

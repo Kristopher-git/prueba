@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="578.0" prefWidth="415.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladores_maestro.tiposDocumentos.Tipos_documentosController">
+    <stylesheets>
+        <URL value="@/style/styles_maestros/styles_tipos_documentos/tipos_documentos.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="table" onMouseClicked="#clicked_table" prefHeight="578.0" prefWidth="442.0">
+         <columns>
+            <TableColumn fx:id="colImage" prefWidth="31.0" text="Image" />
+            <TableColumn fx:id="colCodigo" prefWidth="46.0" text="codigo" />
+            <TableColumn id="colNombreTable" fx:id="colNombre" prefWidth="364.0" text="nombre" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Pane prefHeight="24.0" prefWidth="442.0" style="-fx-background-color: blue;" />
+   </children>
+</AnchorPane>

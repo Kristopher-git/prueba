@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.contables_financieros.AuxiliaresController">
+    <stylesheets>
+        <URL value="@/style/informes/contables_financieros/auxiliares.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="477.0" prefWidth="895.0" style="-fx-background-color: white;">
+         <children>
+            <Button contentDisplay="TOP" layoutX="822.0" layoutY="383.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="69.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="746.0" layoutY="385.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="69.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="670.0" layoutY="384.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="69.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="2.0" layoutY="6.0" prefHeight="354.0" prefWidth="887.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+         <children>
+            <Label layoutX="19.0" layoutY="17.0" prefHeight="17.0" prefWidth="164.0" text="Selección de cuentas">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="141.0" prefHeight="17.0" prefWidth="68.0" text="Cuenta" />
+            <TextField layoutX="312.0" layoutY="205.0" prefHeight="25.0" prefWidth="160.0" />
+            <TextField layoutX="311.0" layoutY="179.0" prefHeight="25.0" prefWidth="160.0" />
+            <Button layoutX="474.0" layoutY="205.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0" text="..." />
+            <Button layoutX="474.0" layoutY="178.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" text="..." />
+            <ComboBox layoutX="46.0" layoutY="179.0" prefHeight="25.0" prefWidth="123.0" />
+            <ComboBox layoutX="46.0" layoutY="205.0" prefHeight="25.0" prefWidth="123.0" />
+            <Label layoutX="253.0" layoutY="162.0" prefHeight="17.0" prefWidth="73.0" text="Terceros">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TabPane layoutX="14.0" layoutY="35.0" prefHeight="122.0" prefWidth="297.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Rango">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="81.0" prefWidth="297.0">
+                           <children>
+                              <Label layoutX="12.0" layoutY="14.0" prefHeight="17.0" prefWidth="68.0" text="Desde" />
+                              <TextField layoutX="59.0" layoutY="11.0" prefHeight="25.0" prefWidth="160.0" />
+                              <Button layoutX="222.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/botones/lupa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label layoutX="13.0" layoutY="40.0" prefHeight="17.0" prefWidth="68.0" text="Hasta" />
+                              <TextField layoutX="60.0" layoutY="37.0" prefHeight="25.0" prefWidth="160.0" />
+                              <Button layoutX="223.0" layoutY="36.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/botones/lupa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Selección">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField layoutX="8.0" layoutY="8.0" />
+                              <Button layoutX="160.0" layoutY="7.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/botones/lupa.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="160.0" layoutY="34.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/botones/flecha-correcta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button layoutX="160.0" layoutY="62.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+                                 <graphic>
+                                    <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../img/botones/girar-a-la-izquierda.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <TextArea layoutX="197.0" layoutY="2.0" prefHeight="83.0" prefWidth="98.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Label layoutX="14.0" layoutY="162.0" prefHeight="17.0" prefWidth="164.0" text="Periodos">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="182.0" prefHeight="17.0" prefWidth="68.0" text="Desde" />
+            <TextField layoutX="172.0" layoutY="179.0" prefHeight="25.0" prefWidth="73.0" />
+            <Label layoutX="13.0" layoutY="208.0" prefHeight="17.0" prefWidth="68.0" text="Hasta" />
+            <TextField layoutX="173.0" layoutY="205.0" prefHeight="25.0" prefWidth="73.0" />
+            <Label layoutX="254.0" layoutY="183.0" prefHeight="17.0" prefWidth="68.0" text="Desde" />
+            <Label layoutX="255.0" layoutY="209.0" prefHeight="17.0" prefWidth="68.0" text="Hasta" />
+            <Label layoutX="356.0" layoutY="36.0" prefHeight="17.0" prefWidth="73.0" text="Filtrar">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="356.0" layoutY="53.0" prefHeight="17.0" prefWidth="68.0" text="CCosto" />
+            <ComboBox layoutX="356.0" layoutY="70.0" prefHeight="25.0" prefWidth="123.0" />
+            <Button layoutX="450.0" layoutY="100.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/flecha-correcta.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="417.0" layoutY="99.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/girar-a-la-izquierda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextArea layoutX="488.0" layoutY="48.0" prefHeight="83.0" prefWidth="98.0" />
+            <Label layoutX="592.0" layoutY="52.0" prefHeight="17.0" prefWidth="68.0" text="Subcentro" />
+            <ComboBox layoutX="592.0" layoutY="69.0" prefHeight="25.0" prefWidth="123.0" />
+            <Button layoutX="685.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/flecha-correcta.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="652.0" layoutY="100.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/girar-a-la-izquierda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextArea layoutX="727.0" layoutY="48.0" prefHeight="83.0" prefWidth="98.0" />
+            <Label layoutX="14.0" layoutY="237.0" prefHeight="17.0" prefWidth="164.0" text="Opciones">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <CheckBox layoutX="10.0" layoutY="259.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="241.0" text="Ocultar saldos de cuentas mayores" />
+            <CheckBox layoutX="10.0" layoutY="278.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="241.0" text="Cambiar hoja entre ctas" />
+            <CheckBox layoutX="10.0" layoutY="299.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="241.0" text="Ocultar saldos de terceros" />
+            <CheckBox layoutX="245.0" layoutY="258.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="241.0" text="Ocultar saldos de centros de costo" />
+            <CheckBox layoutX="245.0" layoutY="277.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="241.0" text="Ocultar saldos parciales" />
+            <CheckBox layoutX="245.0" layoutY="298.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="241.0" text="Ocultar saldos de ctas sin mov." />
+            <CheckBox layoutX="472.0" layoutY="258.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="241.0" text="Ocultar movimientos anulados" />
+            <CheckBox layoutX="472.0" layoutY="277.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="278.0" text="Ordenar mov. por No cheque o Num.Externo" />
+            <CheckBox layoutX="472.0" layoutY="298.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="241.0" text="Ordenar por rango de fechas" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="613.0" prefWidth="511.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.inventarios.Rotacion_inventarioController">
+    <stylesheets>
+        <URL value="@/style/informes/inventarios/rotacion_inventario.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="3.0" layoutY="5.0" prefHeight="608.0" prefWidth="508.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="9.0" layoutY="35.0" prefHeight="99.0" prefWidth="146.0" style="-fx-border-color: grey;">
+               <children>
+                  <Label layoutX="9.0" layoutY="-11.0" prefHeight="17.0" prefWidth="80.0" text="Periodo">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="12.0" prefHeight="17.0" prefWidth="80.0" text="Desde" />
+                  <TextField layoutX="46.0" layoutY="8.0" prefHeight="25.0" prefWidth="90.0" />
+                  <Label layoutX="7.0" layoutY="41.0" prefHeight="17.0" prefWidth="80.0" text="Hasta" />
+                  <TextField layoutX="46.0" layoutY="37.0" prefHeight="25.0" prefWidth="90.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="165.0" layoutY="35.0" prefHeight="99.0" prefWidth="146.0" style="-fx-border-color: grey;">
+               <children>
+                  <Label layoutX="9.0" layoutY="-11.0" prefHeight="17.0" prefWidth="80.0" text="Ordenado por">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <RadioButton layoutX="9.0" layoutY="11.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="131.0" text="Cantidades" />
+                  <RadioButton layoutX="10.0" layoutY="34.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="131.0" text="Valores Totales" />
+               </children>
+            </Pane>
+            <Pane layoutX="319.0" layoutY="34.0" prefHeight="99.0" prefWidth="179.0" style="-fx-border-color: grey;">
+               <children>
+                  <Label layoutX="9.0" layoutY="-11.0" prefHeight="17.0" prefWidth="131.0" text="Acumulado por">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="19.0" prefHeight="17.0" prefWidth="25.0" text="1." />
+                  <ComboBox layoutX="35.0" layoutY="14.0" prefHeight="25.0" prefWidth="131.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="151.0" prefHeight="190.0" prefWidth="488.0" style="-fx-border-color: grey;">
+               <children>
+                  <Label layoutX="9.0" layoutY="-11.0" prefHeight="17.0" prefWidth="80.0" text="Filtrar por">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="21.0" prefHeight="17.0" prefWidth="80.0" text="Linea" />
+                  <ComboBox layoutX="85.0" layoutY="17.0" prefHeight="25.0" prefWidth="279.0" />
+                  <Label layoutX="16.0" layoutY="49.0" prefHeight="17.0" prefWidth="80.0" text="Linea" />
+                  <ComboBox layoutX="85.0" layoutY="45.0" prefHeight="25.0" prefWidth="279.0" />
+                  <Label layoutX="16.0" layoutY="78.0" prefHeight="17.0" prefWidth="80.0" text="Linea" />
+                  <ComboBox layoutX="86.0" layoutY="74.0" prefHeight="25.0" prefWidth="279.0" />
+                  <Label layoutX="16.0" layoutY="106.0" prefHeight="17.0" prefWidth="80.0" text="Marca" />
+                  <ComboBox layoutX="86.0" layoutY="102.0" prefHeight="25.0" prefWidth="279.0" />
+               </children>
+            </Pane>
+            <CheckBox layoutX="12.0" layoutY="357.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="240.0" text="Especificar que tipos de comprobantes" />
+            <Button contentDisplay="TOP" layoutX="440.0" layoutY="531.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="375.0" layoutY="531.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="309.0" layoutY="531.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

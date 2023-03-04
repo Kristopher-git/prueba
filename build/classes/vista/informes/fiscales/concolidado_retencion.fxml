@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="156.0" prefWidth="482.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.fiscales.Concolidado_retencionController">
+    <stylesheets>
+        <URL value="@/style/informes/fiscales/concolidado_retencion.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="3.0" layoutY="-3.0" prefHeight="161.0" prefWidth="479.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="7.0" layoutY="14.0" prefHeight="122.0" prefWidth="362.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="181.0" layoutY="20.0" prefHeight="17.0" prefWidth="53.0" text="Desde" />
+                  <Label layoutX="183.0" layoutY="48.0" prefHeight="17.0" prefWidth="53.0" text="Hasta" />
+                  <ComboBox layoutX="220.0" layoutY="17.0" prefHeight="25.0" prefWidth="110.0" />
+                  <ComboBox layoutX="220.0" layoutY="44.0" prefHeight="25.0" prefWidth="110.0" />
+                  <Label layoutX="5.0" layoutY="40.0" prefHeight="17.0" prefWidth="69.0" text="Para el año:" />
+                  <TextField layoutX="89.0" layoutY="32.0" prefHeight="25.0" prefWidth="76.0" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="403.0" layoutY="71.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="62.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="403.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

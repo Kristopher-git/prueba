@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="626.0" prefWidth="495.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladores_maestro.tiposDocumentos.TiposinterfazController">
+    <stylesheets>
+        <URL value="@/style/styles_maestros/styles_tipos_documentos/tiposinterfaz.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="658.0" prefWidth="495.0">
+         <children>
+            <ComboBox fx:id="comboClase" layoutX="81.0" layoutY="14.0" prefHeight="25.0" prefWidth="239.0" />
+            <Label layoutX="14.0" layoutY="18.0" prefHeight="17.0" prefWidth="56.0" text="Clase" />
+            <Label layoutX="14.0" layoutY="56.0" prefHeight="17.0" prefWidth="101.0" text="Número vigente" />
+            <TextField fx:id="txtNumero" layoutX="115.0" layoutY="52.0" prefHeight="25.0" prefWidth="120.0" />
+            <CheckBox fx:id="principal_check_inactivo" layoutX="248.0" layoutY="56.0" mnemonicParsing="false" text="Inactivo" />
+            <Label layoutX="14.0" layoutY="98.0" prefHeight="17.0" prefWidth="71.0" text="Código" />
+            <TextField fx:id="txtCodigo" layoutX="65.0" layoutY="94.0" prefHeight="25.0" prefWidth="71.0" />
+            <Label layoutX="150.0" layoutY="98.0" prefHeight="17.0" prefWidth="71.0" text="Nombre" />
+            <TextField fx:id="txtNombre" layoutX="200.0" layoutY="94.0" prefHeight="25.0" prefWidth="270.0" />
+            <TabPane layoutX="7.0" layoutY="134.0" prefHeight="436.0" prefWidth="482.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="tab_principal" text="Principal">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="465.0" style="-fx-border-color: grey;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="143.0" text="Datos Principales">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="principal_label_ccosto" layoutX="16.0" layoutY="115.0" prefHeight="17.0" prefWidth="150.0" text="Centro de costo" />
+                              <Label fx:id="principal_label_scosto" layoutX="17.0" layoutY="144.0" prefHeight="17.0" prefWidth="150.0" text="Subcentro costo" />
+                              <ComboBox fx:id="principal_combo_ccosto" layoutX="142.0" layoutY="111.0" prefHeight="25.0" prefWidth="323.0" />
+                              <ComboBox fx:id="principal_combo_scosto" layoutX="142.0" layoutY="139.0" prefHeight="25.0" prefWidth="323.0" />
+                              <CheckBox fx:id="principal_check_pregunta_consecutivo" layoutX="304.0" layoutY="195.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="163.0" text="Pregunta consecutivo" />
+                              <Label fx:id="principal_label_bodega" layoutX="16.0" layoutY="86.0" prefHeight="17.0" prefWidth="150.0" text="Bodega" />
+                              <ComboBox fx:id="principal_combo_bodega" layoutX="142.0" layoutY="82.0" prefHeight="25.0" prefWidth="323.0" />
+                              <Label fx:id="principal_label_modo_pago" layoutX="17.0" layoutY="58.0" prefHeight="17.0" prefWidth="150.0" text="Modo de Pago" />
+                              <ComboBox fx:id="principal_cmb_modo_pago" layoutX="143.0" layoutY="54.0" prefHeight="25.0" prefWidth="323.0" />
+                              <CheckBox fx:id="principal_check_preciosPDV" layoutX="305.0" layoutY="216.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="163.0" text="Precios PDV" />
+                              <CheckBox fx:id="principal_no_cambiar_lgeneral" layoutX="305.0" layoutY="278.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="163.0" text="No cambiar a L.general" />
+                              <CheckBox fx:id="principal_check_lista_precios" layoutX="17.0" layoutY="195.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="239.0" text="Lista de precios predeterminada" />
+                              <CheckBox fx:id="principal_check_utilizar_siempre_bodega" layoutX="17.0" layoutY="215.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="270.0" text="Utilizar siempre la bodega predeterminada" />
+                              <Label fx:id="principal_label_lista_precios" layoutX="17.0" layoutY="172.0" prefHeight="17.0" prefWidth="150.0" text="Lista de precios" />
+                              <ComboBox fx:id="principal_combo_listaDePrecios" layoutX="142.0" layoutY="167.0" prefHeight="25.0" prefWidth="323.0" />
+                              <CheckBox fx:id="principal_check_modo_pago_fijo" layoutX="305.0" layoutY="258.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="163.0" text="Modo de pago fijo" />
+                              <CheckBox fx:id="principal_check_mostrar_interfaz_efectivo" layoutX="305.0" layoutY="238.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="163.0" text="Mostrar Interfaz Efectivo" />
+                              <CheckBox fx:id="principal_check_puede_facturar_servicios" layoutX="17.0" layoutY="258.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="270.0" text="Puede Facturar Servicios" />
+                              <Label fx:id="principal_lbl_turno" layoutX="14.0" layoutY="326.0" prefHeight="17.0" prefWidth="56.0" text="Turno" />
+                              <TextField fx:id="principal_txt_turno" layoutX="52.0" layoutY="322.0" />
+                              <CheckBox fx:id="principal_check_no_cambiar_bodegas" layoutX="17.0" layoutY="237.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="270.0" text="No cambiar las bodegas" />
+                              <CheckBox fx:id="principal_check_desactivar_desc_general" layoutX="17.0" layoutY="278.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="270.0" text="Desactivar descuento general en FV" />
+                              <Label fx:id="principal_label_bodega2" layoutX="213.0" layoutY="326.0" prefHeight="17.0" prefWidth="71.0" text="Bodega 2" />
+                              <ComboBox fx:id="principal_cmb_bodega2" layoutX="284.0" layoutY="322.0" prefHeight="25.0" prefWidth="174.0" />
+                              <Label fx:id="principal_label_nota_translado" layoutX="204.0" layoutY="359.0" prefHeight="17.0" prefWidth="89.0" text="Nota translado" />
+                              <ComboBox fx:id="principal_cmb_nota_translado" layoutX="285.0" layoutY="355.0" prefHeight="25.0" prefWidth="174.0" />
+                              <TextField fx:id="txt_modo_pago" layoutX="143.0" layoutY="54.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_bodega" layoutX="142.0" layoutY="82.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_centro_costo" layoutX="142.0" layoutY="111.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_subcentro_costo" layoutX="142.0" layoutY="139.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_lista_precios" layoutX="142.0" layoutY="167.0" prefHeight="25.0" prefWidth="323.0" />
+                              <TextField fx:id="txt_bodega2" layoutX="284.0" layoutY="322.0" prefHeight="25.0" prefWidth="177.0" />
+                              <TextField fx:id="txt_nota_translado" layoutX="284.0" layoutY="355.0" prefHeight="25.0" prefWidth="179.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="tab_imp1" text="Imp 1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="15.0" layoutY="15.0" prefHeight="113.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="2.0" layoutY="-12.0" prefHeight="21.0" prefWidth="194.0" text="Impresión personalizada">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="imp1_check_formato_personalizado" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="163.0" text="Formato personalizado" />
+                                    <Button fx:id="imp1_btn_modificar_formato" alignment="BOTTOM_LEFT" disable="true" layoutX="163.0" layoutY="21.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Modificar formato" />
+                                    <Button fx:id="imp1_btn_formato_original" alignment="BOTTOM_LEFT" disable="true" layoutX="288.0" layoutY="21.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Formato al original" />
+                                    <Button fx:id="imp1_btn_formato" alignment="BOTTOM_LEFT" disable="true" layoutX="415.0" layoutY="21.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0" text="..." />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="15.0" layoutY="147.0" prefHeight="70.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="2.0" layoutY="-12.0" prefHeight="21.0" prefWidth="194.0" text="Opciones">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="imp1_check_generar_archivo" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="132.0" text="Generar archivo" />
+                                    <CheckBox fx:id="imp1_check_no_imprime" layoutX="139.0" layoutY="27.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="132.0" text="No imprime" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="15.0" layoutY="238.0" prefHeight="88.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="2.0" layoutY="-12.0" prefHeight="21.0" prefWidth="194.0" text="Formato preimpreso">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="imp1_label_maximo_items_permitido" layoutX="9.0" layoutY="14.0" prefHeight="17.0" prefWidth="287.0" text="Máximo de ítems permitido en el documento" />
+                                    <CheckBox fx:id="imp1_check_permitir_sobrepasar" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="379.0" text="Permitir sobrepasar los items utilizando más hojas y consecutivos" />
+                                    <Label fx:id="imp1_label_impresion_preimpresa" layoutX="14.0" layoutY="60.0" prefHeight="17.0" prefWidth="148.0" text="(Impresión preimpresa)" textFill="#941e1e" underline="true" />
+                                    <TextField fx:id="items1_txt_maximo_items_permitidos" layoutX="287.0" layoutY="10.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="tab_imp2" text="Imp 2">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="14.0" prefHeight="387.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="3.0" prefHeight="21.0" prefWidth="194.0" text="Encabezado">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="158.0" prefHeight="21.0" prefWidth="194.0" text="Pie de Página">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="imp2_check_nombre_documento" layoutX="14.0" layoutY="319.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="172.0" text="Nombre del Documento" />
+                                    <CheckBox fx:id="imp2_check_si_es_copia" layoutX="215.0" layoutY="319.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="172.0" text="SI es copia" />
+                                    <CheckBox fx:id="imp2_check_segmento_productos" layoutX="215.0" layoutY="342.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="172.0" text="Segmentos de productos" />
+                                    <CheckBox fx:id="imp2_check_desc_factura" layoutX="15.0" layoutY="342.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="172.0" text="Descuentos en la factura" />
+                                    <TextField fx:id="imp2_txt_encabezado1" layoutX="15.0" layoutY="24.0" prefHeight="25.0" prefWidth="419.0" />
+                                    <TextField fx:id="imp2_txt_encabezado2" layoutX="15.0" layoutY="50.0" prefHeight="25.0" prefWidth="419.0" />
+                                    <TextField fx:id="imp2_txt_encabezado3" layoutX="15.0" layoutY="77.0" prefHeight="25.0" prefWidth="419.0" />
+                                    <TextField fx:id="imp2_txt_encabezado4" layoutX="15.0" layoutY="103.0" prefHeight="25.0" prefWidth="419.0" />
+                                    <TextField fx:id="imp2_txt_encabezado5" layoutX="16.0" layoutY="130.0" prefHeight="25.0" prefWidth="419.0" />
+                                    <TextField fx:id="imp2_txt_pie_pagina1" layoutX="15.0" layoutY="179.0" prefHeight="25.0" prefWidth="419.0" />
+                                    <TextField fx:id="imp2_txt_pie_pagina2" layoutX="15.0" layoutY="205.0" prefHeight="25.0" prefWidth="419.0" />
+                                    <TextField fx:id="imp2_txt_pie_pagina3" layoutX="15.0" layoutY="232.0" prefHeight="25.0" prefWidth="419.0" />
+                                    <TextField fx:id="imp2_txt_pie_pagina4" layoutX="15.0" layoutY="258.0" prefHeight="25.0" prefWidth="419.0" />
+                                    <TextField fx:id="imp2_txt_pie_pagina5" layoutX="16.0" layoutY="285.0" prefHeight="25.0" prefWidth="419.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_imp3" text="Imp 3">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="14.0" prefHeight="312.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="-10.0" prefHeight="21.0" prefWidth="316.0" text="Leyenda al pie de página del documento">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea fx:id="imp3_txtarea_leyenda_pie_pagina" layoutX="12.0" layoutY="17.0" prefHeight="273.0" prefWidth="424.0" wrapText="true" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_fiscal" text="Fiscal">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="14.0" prefHeight="219.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="-10.0" prefHeight="21.0" prefWidth="440.0" text="Resolución D.I.A.N. / Autorización Numeración de Facturación">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="fiscal_label_no" layoutX="8.0" layoutY="22.0" prefHeight="17.0" prefWidth="62.0" text="No" />
+                                    <TextField fx:id="fiscal_txt_no" layoutX="108.0" layoutY="18.0" prefHeight="25.0" prefWidth="179.0" />
+                                    <Label fx:id="fiscal_label_fecha" layoutX="7.0" layoutY="53.0" prefHeight="17.0" prefWidth="113.0" text="Fecha (mm/dd/aa)" />
+                                    <DatePicker fx:id="fiscal_date_fecha" layoutX="110.0" layoutY="49.0" />
+                                    <Label fx:id="fiscal_label_vigencia_meses" layoutX="7.0" layoutY="86.0" prefHeight="17.0" prefWidth="113.0" text="Vigencia en meses" />
+                                    <TextField fx:id="fiscal_txt_vigencia_meses" layoutX="108.0" layoutY="82.0" prefHeight="25.0" prefWidth="179.0" />
+                                    <Label fx:id="fiscal_label_prefijo" layoutX="7.0" layoutY="117.0" prefHeight="17.0" prefWidth="113.0" text="Prefijo" />
+                                    <TextField fx:id="fiscal_txt_prefijo" layoutX="110.0" layoutY="113.0" prefHeight="25.0" prefWidth="101.0" />
+                                    <Label fx:id="fiscal_label_desde" layoutX="7.0" layoutY="148.0" prefHeight="17.0" prefWidth="113.0" text="Desde" />
+                                    <TextField fx:id="fiscal_txt_desde" layoutX="110.0" layoutY="144.0" prefHeight="25.0" prefWidth="179.0" />
+                                    <Label fx:id="fiscal_label_hasta" layoutX="7.0" layoutY="178.0" prefHeight="17.0" prefWidth="113.0" text="Hasta" />
+                                    <TextField fx:id="fiscal_txt_hasta" layoutX="110.0" layoutY="174.0" prefHeight="25.0" prefWidth="101.0" />
+                                    <Label fx:id="fiscal_label_ne_inicio" layoutX="234.0" layoutY="178.0" prefHeight="17.0" prefWidth="71.0" text="N.E Inicio" />
+                                    <TextField fx:id="fiscal_txt_ne_inicio" layoutX="298.0" layoutY="174.0" prefHeight="25.0" prefWidth="101.0" />
+                                 </children>
+                              </Pane>
+                              <CheckBox fx:id="fiscal_check_genera_iva_consumo" layoutX="16.0" layoutY="242.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Generar Iva por consumo" />
+                              <CheckBox fx:id="fiscal_check_no_calcula_iva" layoutX="16.0" layoutY="266.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="No calcular IVA (Exportaciones)" />
+                              <Label fx:id="fiscal_label_retencion_aplicar" layoutX="17.0" layoutY="294.0" prefHeight="17.0" prefWidth="140.0" text="Retencion a aplicar" />
+                              <ComboBox fx:id="fiscal_cmb_retencion_aplicar" layoutX="146.0" layoutY="290.0" prefHeight="25.0" prefWidth="323.0" />
+                              <CheckBox fx:id="fiscal_check_factura_electronica_lote" layoutX="229.0" layoutY="266.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Genera Factura Electronica lote" />
+                              <CheckBox fx:id="fiscal_check_genera_fac_electronica_nomina" layoutX="229.0" layoutY="242.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Genera Fact Electronica/Nomina" />
+                              <CheckBox fx:id="fiscal_check_iva_asumido" layoutX="16.0" layoutY="319.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Iva asumido. R. simplificado" />
+                              <CheckBox fx:id="fiscal_check_calcular_cree" layoutX="16.0" layoutY="350.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Calcular Cree" />
+                              <Label fx:id="fiscal_label_cree_p" layoutX="6.0" layoutY="376.0" prefHeight="17.0" prefWidth="45.0" style="-fx-background-color: #d0d0d0;" text="Cree p" />
+                              <ComboBox fx:id="fiscal_cmb_cree_p" layoutX="52.0" layoutY="372.0" prefHeight="25.0" prefWidth="174.0" />
+                              <Label fx:id="fiscal_label_cree_s" layoutX="229.0" layoutY="376.0" prefHeight="17.0" prefWidth="40.0" style="-fx-background-color: #d0d0d0;" text="Cree S" />
+                              <ComboBox fx:id="fiscal_cmb_cree_s" layoutX="275.0" layoutY="372.0" prefHeight="25.0" prefWidth="174.0" />
+                              <CheckBox fx:id="fiscal_check_factura_electronica_contingencia" layoutX="226.0" layoutY="319.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Factura Electronica Contingencia" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_pdv" text="PDV">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="13.0" prefHeight="312.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <CheckBox fx:id="pdv_check_abrir_cajon_billetes" layoutX="33.0" layoutY="25.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="248.0" text="Abrir cajón de billetes" />
+                                    <CheckBox fx:id="pdv_check_utilizar_impresion_pdv" layoutX="34.0" layoutY="47.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="248.0" text="Utilizar impresión PDV (tiquete)" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_prom" text="Prom">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="14.0" prefHeight="312.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="-10.0" prefHeight="17.0" prefWidth="101.0" text="Evento">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="prom_label_mostrar_evento" layoutX="14.0" layoutY="26.0" prefHeight="17.0" prefWidth="246.0" text="Mostrar evento cuando el consecutivo" />
+                                    <Label fx:id="prom_label_llegue_sgnt_num" layoutX="15.0" layoutY="44.0" prefHeight="17.0" prefWidth="246.0" text="llegue al siguiente número" />
+                                    <TextField fx:id="prom_txt_evento" layoutX="287.0" layoutY="32.0" />
+                                    <Label fx:id="prom_label_detalle_evento" layoutX="15.0" layoutY="85.0" prefHeight="17.0" prefWidth="246.0" text="Detalle del evento ( 100 carácteres )" />
+                                    <TextArea fx:id="prom_txtarea_detalle_evento" layoutX="15.0" layoutY="112.0" prefHeight="151.0" prefWidth="425.0" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_ctas" text="Ctas">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="14.0" prefHeight="195.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label fx:id="ctas_label_contrapartida" layoutX="11.0" layoutY="13.0" prefHeight="17.0" prefWidth="218.0" text="Contrapartida nota de inventarios" />
+                                    <TextField fx:id="ctas_txt_contrapartida" layoutX="203.0" layoutY="9.0" prefHeight="25.0" prefWidth="198.0" />
+                                    <Button fx:id="ctas_btn_buscar" layoutX="405.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../img/botones/lupa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_referencia" text="Referencias">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="21.0" prefHeight="195.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="11.0" layoutY="-9.0" prefHeight="17.0" prefWidth="218.0" text="Referencias que utiliza">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="refer_txt_ref1" layoutX="56.0" layoutY="22.0" prefHeight="25.0" prefWidth="378.0" />
+                                    <Label fx:id="refer_label_ref1" layoutX="14.0" layoutY="26.0" prefHeight="17.0" prefWidth="14.0" text="1" />
+                                    <Label fx:id="refer_label_ref2" layoutX="14.0" layoutY="52.0" prefHeight="17.0" prefWidth="14.0" text="2" />
+                                    <Label fx:id="refer_label_ref3" layoutX="15.0" layoutY="77.0" prefHeight="17.0" prefWidth="14.0" text="3" />
+                                    <Label fx:id="refer_label_ref4" layoutX="15.0" layoutY="103.0" prefHeight="17.0" prefWidth="14.0" text="4" />
+                                    <CheckBox fx:id="refer_check_ref1" layoutX="27.0" layoutY="26.0" mnemonicParsing="false" />
+                                    <CheckBox fx:id="refer_check_ref2" layoutX="28.0" layoutY="51.0" mnemonicParsing="false" />
+                                    <CheckBox fx:id="refer_check_ref3" layoutX="28.0" layoutY="77.0" mnemonicParsing="false" />
+                                    <CheckBox fx:id="refer_check_ref4" layoutX="28.0" layoutY="103.0" mnemonicParsing="false" />
+                                    <TextField fx:id="refer_txt_ref2" layoutX="56.0" layoutY="49.0" prefHeight="25.0" prefWidth="378.0" />
+                                    <TextField fx:id="refer_txt_ref3" layoutX="56.0" layoutY="76.0" prefHeight="25.0" prefWidth="378.0" />
+                                    <TextField fx:id="refer_txt_ref4" layoutX="56.0" layoutY="103.0" prefHeight="25.0" prefWidth="378.0" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_inventario" text="Inventario">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="18.0" layoutY="16.0" prefHeight="195.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label fx:id="inven_label_uso_nota_inventario" layoutX="12.0" layoutY="6.0" prefHeight="17.0" prefWidth="259.0" text="Uso de la nota de inventarios" />
+                                    <CheckBox fx:id="inven_check_maneja_inventarios_periodico" layoutX="14.0" layoutY="80.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="371.0" text=" Maneja inventarios periódico para este tipo de documento." />
+                                    <CheckBox fx:id="inven_check_registrar_modificacion_costo_productos" layoutX="14.0" layoutY="61.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="389.0" text=" Registrar modificar costo de los productos." />
+                                    <ComboBox fx:id="inven_cmb_uso_nota_inventario" layoutX="12.0" layoutY="23.0" prefHeight="25.0" prefWidth="423.0" />
+                                    <CheckBox fx:id="inven_check_permite_facturar_negativo" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="371.0" text="Permite facturar en negativo" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_seguimiento" text="Seguimientos">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: gray;">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="14.0" prefHeight="195.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="11.0" layoutY="-9.0" prefHeight="19.0" prefWidth="360.0" text="Seguridad para captura de este Documento">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="seg_txt_usuarios" layoutX="15.0" layoutY="40.0" prefHeight="25.0" prefWidth="378.0" />
+                                    <Label fx:id="seg_label_usuario" layoutX="16.0" layoutY="16.0" prefHeight="17.0" prefWidth="71.0" text="Usuarios">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="seg_label_info_usuario" layoutX="80.0" layoutY="17.0" prefHeight="17.0" prefWidth="301.0" text="(Código de los usuarios separados por comas &quot;,&quot;)" />
+                                    <TextField fx:id="seg_txt_pc" layoutX="16.0" layoutY="111.0" prefHeight="25.0" prefWidth="378.0" />
+                                    <Label fx:id="seg_label_pc" layoutX="16.0" layoutY="88.0" prefHeight="17.0" prefWidth="71.0" text="PC">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="seg_label_info_pc" layoutX="43.0" layoutY="89.0" prefHeight="17.0" prefWidth="364.0" text="(Nombres de RED de las computadoras separados por comas &quot;,&quot;)" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="tab_otros" text="Otros">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="16.0" layoutY="14.0" prefHeight="381.0" prefWidth="450.0" style="-fx-background-color: #D3DCE3; -fx-border-color: gray;">
+                                 <children>
+                                    <Label layoutX="11.0" layoutY="-9.0" prefHeight="19.0" prefWidth="360.0" text="Otros">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="otros_check_excluir_consolidacion_empresas" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="366.0" text="Excluir de la consolidación de empresas" />
+                                    <CheckBox fx:id="otros_check_tratamiento_translados_sucursales" layoutX="15.0" layoutY="37.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="366.0" text="Tratamiento como translados entre sucursales" />
+                                    <CheckBox fx:id="otros_check_aplica_efecto_nulo" layoutX="16.0" layoutY="63.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="366.0" text="Aplicar un efecto nulo de todos los documentos de este tipo" />
+                                    <CheckBox fx:id="otros_check_doc_origen_externo" layoutX="17.0" layoutY="88.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="366.0" text="Documento de origen externo" />
+                                    <Button fx:id="otros_btn_proceso" layoutX="16.0" layoutY="218.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Proceso" />
+                                    <Label fx:id="otros_label_grupo" layoutX="17.0" layoutY="250.0" prefHeight="17.0" prefWidth="56.0" text="Grupo" />
+                                    <ComboBox fx:id="otros_cmb_grupo" layoutX="73.0" layoutY="246.0" prefHeight="25.0" prefWidth="212.0" />
+                                    <Button fx:id="otros_btn_buscar_grupo" layoutX="290.0" layoutY="246.0" mnemonicParsing="false" text="..." />
+                                    <CheckBox fx:id="otro_check_exist_consig_fc" layoutX="18.0" layoutY="112.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="366.0" text="Existencias en consignacion para fc" />
+                                    <Label fx:id="otros_label_documento_alterno" layoutX="17.0" layoutY="286.0" prefHeight="17.0" prefWidth="129.0" text="Documento alterno" />
+                                    <ComboBox fx:id="otros_cmb_documento_alterno" layoutX="131.0" layoutY="282.0" prefHeight="25.0" prefWidth="212.0" />
+                                    <TextField fx:id="otros_txt_valor1_buscar" layoutX="16.0" layoutY="324.0" prefHeight="25.0" prefWidth="110.0" />
+                                    <TextField fx:id="otros_txt_valor2_buscar" layoutX="130.0" layoutY="324.0" prefHeight="25.0" prefWidth="224.0" />
+                                    <Button fx:id="otros_btn_buscar" layoutX="355.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="82.0" text="Buscar" underline="true" />
+                                    <CheckBox fx:id="otro_check_no_cambiar_ccost" layoutX="17.0" layoutY="195.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="366.0" text="No cambiar centro de costo" />
+                                    <CheckBox fx:id="otros_check_no_tener_cuenta_formula_mts2" layoutX="17.0" layoutY="158.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="366.0" text="No tener en cuenta formula Mts2, pero calcular por unidades" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Button contentDisplay="TOP" layoutX="431.0" layoutY="578.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" text="Salir" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="242.0" layoutY="578.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" text="Modifica">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="181.0" layoutY="578.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" text="Nuevo">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/registro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="121.0" layoutY="578.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" text="Reclasificación">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/configuracion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="302.0" layoutY="578.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" text="Elimina">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/eliminar%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="txtClase" layoutX="81.0" layoutY="14.0" prefHeight="25.0" prefWidth="239.0" />
+            <Button contentDisplay="TOP" layoutX="362.0" layoutY="578.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="56.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="idBotonDocs" contentDisplay="TOP" layoutX="14.0" layoutY="578.0" mnemonicParsing="false" onAction="#click_docs" prefHeight="62.0" prefWidth="56.0" text="Docs">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/menuImg/cuenta.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

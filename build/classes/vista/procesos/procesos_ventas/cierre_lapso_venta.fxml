@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="624.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.procesos.procesos_ventas.Cierre_lapso_ventaController">
+    <stylesheets>
+        <URL value="@/style/procesos/procesos_ventas/cierre_lapso_venta.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="-2.0" layoutY="-2.0" prefHeight="348.0" prefWidth="626.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="242.0" layoutY="7.0" prefHeight="257.0" prefWidth="380.0" style="-fx-background-color: accad5; -fx-border-color: grey;">
+               <children>
+                  <Label layoutX="60.0" layoutY="14.0" prefHeight="17.0" prefWidth="233.0" text="Comprobante Contable No.">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="225.0" layoutY="10.0" />
+                  <TextField layoutX="56.0" layoutY="44.0" prefHeight="25.0" prefWidth="316.0" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="555.0" layoutY="271.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="66.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="479.0" layoutY="271.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="66.0" text="Nueva">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/registro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="403.0" layoutY="271.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="66.0" text="Eliminar">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/boton-eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="327.0" layoutY="271.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="66.0" text="Cierre">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/candado%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="257.0" fitWidth="241.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/cierre_lapso_ventas.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.inventarios.Kardex_bodegasController">
+    <stylesheets>
+        <URL value="@/style/informes/inventarios/kardex_bodegas.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="1.0" prefHeight="479.0" prefWidth="733.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="4.0" layoutY="4.0" prefHeight="397.0" prefWidth="725.0" style="-fx-background-color: accad5;">
+               <children>
+                  <Label layoutX="4.0" layoutY="11.0" prefHeight="17.0" prefWidth="108.0" text="Bodega">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="57.0" layoutY="7.0" prefHeight="25.0" prefWidth="163.0" />
+                  <Label layoutX="239.0" layoutY="11.0" prefHeight="17.0" prefWidth="80.0" text="Desde" />
+                  <TextField layoutX="284.0" layoutY="7.0" prefHeight="25.0" prefWidth="71.0" />
+                  <ComboBox layoutX="360.0" layoutY="6.0" prefHeight="25.0" prefWidth="117.0" />
+                  <Label layoutX="483.0" layoutY="10.0" prefHeight="17.0" prefWidth="80.0" text="Hasta" />
+                  <TextField layoutX="528.0" layoutY="6.0" prefHeight="25.0" prefWidth="71.0" />
+                  <ComboBox layoutX="604.0" layoutY="5.0" prefHeight="25.0" prefWidth="117.0" />
+                  <Label layoutX="5.0" layoutY="42.0" prefHeight="17.0" prefWidth="61.0" text="Ref" />
+                  <ComboBox layoutX="46.0" layoutY="38.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Button layoutX="199.0" layoutY="39.0" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="17.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../img/botones/binoculares.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField layoutX="240.0" layoutY="39.0" prefHeight="25.0" prefWidth="262.0" />
+                  <Label layoutX="507.0" layoutY="42.0" prefHeight="17.0" prefWidth="46.0" text="Cuenta" />
+                  <TextField layoutX="550.0" layoutY="38.0" prefHeight="25.0" prefWidth="137.0" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="658.0" layoutY="409.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="593.0" layoutY="409.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Utilids.">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/menuImg/martillo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="529.0" layoutY="409.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="465.0" layoutY="409.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="390.0" layoutY="409.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="71.0" text="Actualizar" />
+            <TableView layoutX="10.0" layoutY="76.0" prefHeight="200.0" prefWidth="712.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="Fecha" />
+                  <TableColumn prefWidth="121.0" text="Comprobante" />
+                  <TableColumn prefWidth="75.0" text="Entra" />
+                  <TableColumn prefWidth="75.0" text="Sale" />
+                  <TableColumn prefWidth="75.0" text="Saldo" />
+                  <TableColumn prefWidth="168.0" text="Red. Bodega" />
+                  <TableColumn prefWidth="125.0" text="Lote" />
+               </columns>
+            </TableView>
+            <Label layoutX="444.0" layoutY="298.0" prefHeight="17.0" prefWidth="46.0" text="Saldo" />
+            <TextField layoutX="487.0" layoutY="294.0" prefHeight="25.0" prefWidth="211.0" />
+            <Button layoutX="572.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="Ver segmentos" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

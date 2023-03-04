@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="852.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.controladores_maestro.productos.ProductosController">
+    <stylesheets>
+        <URL value="@/style/styles_maestros/productos/productos.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="525.0" prefWidth="852.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="8.0" layoutY="6.0" prefHeight="106.0" prefWidth="833.0" style="-fx-background-color: #accad5;">
+               <children>
+                  <Label layoutX="33.0" layoutY="6.0" prefHeight="17.0" prefWidth="102.0" text="Referencia">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="8.0" layoutY="23.0" />
+                  <Label layoutX="181.0" layoutY="6.0" prefHeight="17.0" prefWidth="111.0" text="Referencia Prov">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="161.0" layoutY="23.0" />
+                  <Label layoutX="315.0" layoutY="6.0" prefHeight="17.0" prefWidth="111.0" text="Detalle">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="312.0" layoutY="23.0" prefHeight="25.0" prefWidth="332.0" />
+                  <Label layoutX="651.0" layoutY="6.0" prefHeight="17.0" prefWidth="111.0" text="Presentación">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="648.0" layoutY="23.0" prefHeight="25.0" prefWidth="86.0" />
+                  <CheckBox layoutX="740.0" layoutY="27.0" mnemonicParsing="false" text="Inactiva" />
+                  <CheckBox layoutX="8.0" layoutY="59.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="196.0" text="Ocultar referencias inactivas" />
+                  <TextField layoutX="312.0" layoutY="55.0" prefHeight="25.0" prefWidth="332.0" />
+                  <TextField layoutX="651.0" layoutY="55.0" />
+               </children>
+            </Pane>
+            <TableView layoutX="10.0" layoutY="116.0" prefHeight="325.0" prefWidth="833.0">
+              <columns>
+                <TableColumn prefWidth="113.0" text="Detalle" />
+                <TableColumn prefWidth="118.0" text="Presenta." />
+                  <TableColumn prefWidth="118.0" text="Ref." />
+                  <TableColumn prefWidth="118.0" text="Precio" />
+                  <TableColumn prefWidth="118.0" text="Precio PDV" />
+                  <TableColumn prefWidth="118.0" text="Cost" />
+              </columns>
+            </TableView>
+            <Button contentDisplay="TOP" layoutX="10.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="C Ref.">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/menuImg/cuenta.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="69.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Etiquetas">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/menuImg/archivos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="128.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Duplicar">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/documentos.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="187.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Inactivar">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/boton-eliminar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="245.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Precios">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/caja-fuerte.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="303.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Ver">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/menuImg/escritorio.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="361.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Listado">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="419.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Kardex">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/menuImg/cliente.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="477.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Busca">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/menuImg/buscar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="535.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Nuevo">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/registro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="594.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Modifica">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/editar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="653.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Elimina">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/eliminar%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="712.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="55.0" text="Excel">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="771.0" layoutY="447.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="70.0" text="Salir">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

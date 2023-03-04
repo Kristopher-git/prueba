@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mantenimiento.controlador.ParametrizacionController">
+    <stylesheets>
+        <URL value="@/mantenimiento/style/parametrizacion.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="695.0" prefWidth="836.0" style="-fx-background-color: #8ca8a8;">
+         <children>
+            <TabPane layoutX="5.0" layoutY="3.0" prefHeight="624.0" prefWidth="825.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="825.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="109.0" text="Datos principales">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="14.0" layoutY="31.0" prefHeight="210.0" prefWidth="687.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="9.0" layoutY="8.0" prefHeight="17.0" prefWidth="37.0" text="Nit" />
+                                    <TextField layoutX="57.0" layoutY="4.0" prefHeight="25.0" prefWidth="113.0" />
+                                    <TextField layoutX="173.0" layoutY="4.0" prefHeight="25.0" prefWidth="53.0" />
+                                    <TextField layoutX="254.0" layoutY="4.0" prefHeight="25.0" prefWidth="113.0" />
+                                    <Label layoutX="389.0" layoutY="8.0" prefHeight="17.0" prefWidth="55.0" text="Empresa" />
+                                    <ComboBox layoutX="444.0" layoutY="4.0" prefWidth="150.0" />
+                                    <Label layoutX="9.0" layoutY="39.0" prefHeight="17.0" prefWidth="77.0" text="Razón social" />
+                                    <TextField layoutX="114.0" layoutY="35.0" prefHeight="25.0" prefWidth="482.0" />
+                                    <Label layoutX="9.0" layoutY="66.0" prefHeight="17.0" prefWidth="103.0" text="Nombre comercial" />
+                                    <TextField layoutX="114.0" layoutY="62.0" prefHeight="25.0" prefWidth="482.0" />
+                                    <Label layoutX="9.0" layoutY="93.0" prefHeight="17.0" prefWidth="103.0" text="Dirección" />
+                                    <TextField layoutX="114.0" layoutY="89.0" prefHeight="25.0" prefWidth="201.0" />
+                                    <Label layoutX="9.0" layoutY="120.0" prefHeight="17.0" prefWidth="103.0" text="Teléfono(s)" />
+                                    <TextField layoutX="114.0" layoutY="116.0" prefHeight="25.0" prefWidth="201.0" />
+                                    <Label layoutX="9.0" layoutY="147.0" prefHeight="17.0" prefWidth="103.0" text="Ciudad" />
+                                    <TextField layoutX="114.0" layoutY="143.0" prefHeight="25.0" prefWidth="201.0" />
+                                    <Label layoutX="10.0" layoutY="174.0" prefHeight="17.0" prefWidth="103.0" text="Departamento" />
+                                    <TextField layoutX="115.0" layoutY="170.0" prefHeight="25.0" prefWidth="201.0" />
+                                    <ComboBox layoutX="321.0" layoutY="143.0" prefHeight="25.0" prefWidth="319.0" />
+                                    <Button layoutX="645.0" layoutY="143.0" mnemonicParsing="false" text="..." />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="14.0" layoutY="249.0" prefHeight="30.0" prefWidth="601.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="153.0" layoutY="5.0" prefHeight="17.0" prefWidth="148.0" text="Nombres y Apellidos">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="342.0" layoutY="5.0" prefHeight="17.0" prefWidth="81.0" text="Identificación">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="470.0" layoutY="5.0" prefHeight="17.0" prefWidth="127.0" text="Tarjeta profesional">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="14.0" layoutY="281.0" prefHeight="108.0" prefWidth="601.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="6.0" layoutY="10.0" prefHeight="17.0" prefWidth="103.0" text="Rep. Legal" />
+                                    <TextField layoutX="111.0" layoutY="6.0" prefHeight="25.0" prefWidth="201.0" />
+                                    <Label layoutX="6.0" layoutY="36.0" prefHeight="17.0" prefWidth="103.0" text="Contador Público" />
+                                    <TextField layoutX="111.0" layoutY="32.0" prefHeight="25.0" prefWidth="201.0" />
+                                    <Label layoutX="6.0" layoutY="62.0" prefHeight="17.0" prefWidth="103.0" text="Revisor Fiscal" />
+                                    <TextField layoutX="111.0" layoutY="58.0" prefHeight="25.0" prefWidth="201.0" />
+                                    <TextField layoutX="329.0" layoutY="6.0" prefHeight="25.0" prefWidth="118.0" />
+                                    <TextField layoutX="329.0" layoutY="32.0" prefHeight="25.0" prefWidth="118.0" />
+                                    <TextField layoutX="329.0" layoutY="58.0" prefHeight="25.0" prefWidth="118.0" />
+                                    <TextField layoutX="469.0" layoutY="58.0" prefHeight="25.0" prefWidth="118.0" />
+                                    <TextField layoutX="469.0" layoutY="32.0" prefHeight="25.0" prefWidth="118.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="2">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="24.0" layoutY="14.0" prefHeight="17.0" prefWidth="140.0" text="Contables">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="24.0" layoutY="35.0" prefHeight="100.0" prefWidth="540.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="168.0" text="Centro de costo por defecto" />
+                                    <ComboBox layoutX="172.0" layoutY="10.0" prefHeight="25.0" prefWidth="129.0" />
+                                    <CheckBox layoutX="14.0" layoutY="42.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="385.0" text="Desea el detalle del asiento anterior en la captura de documentos" />
+                                    <CheckBox layoutX="14.0" layoutY="61.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="385.0" text="No llevar el saldo de la cuenta de la hoja de costos" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="3">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="15.0" layoutY="277.0" prefHeight="61.0" prefWidth="540.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="19.0" prefHeight="17.0" prefWidth="36.0" text="1." />
+                                    <TextField layoutX="39.0" layoutY="15.0" prefHeight="25.0" prefWidth="198.0" />
+                                    <Label layoutX="250.0" layoutY="19.0" prefHeight="17.0" prefWidth="36.0" text="2." />
+                                    <TextField layoutX="276.0" layoutY="15.0" prefHeight="25.0" prefWidth="198.0" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="15.0" layoutY="35.0" prefHeight="225.0" prefWidth="540.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="9.0" layoutY="9.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="385.0" text="No facturar en negativo" />
+                                    <CheckBox layoutX="9.0" layoutY="28.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="385.0" text="No facturar con precio inferior al cost" />
+                                    <CheckBox layoutX="9.0" layoutY="47.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="385.0" text="Ignorar dígito de verificación del código de barras" />
+                                    <CheckBox layoutX="9.0" layoutY="66.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="385.0" text="Archivo voluminoso de productos &gt; 1000" />
+                                    <CheckBox layoutX="9.0" layoutY="85.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="385.0" text="No redondear el valor unitario (Al  Detall)" />
+                                    <CheckBox layoutX="9.0" layoutY="104.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="385.0" text="Redondeo automático de precios" />
+                                    <Label layoutX="9.0" layoutY="130.0" prefHeight="17.0" prefWidth="159.0" text="N° de decimales a utilizar" />
+                                    <TextField layoutX="152.0" layoutY="126.0" prefHeight="25.0" prefWidth="58.0" />
+                                    <Label layoutX="9.0" layoutY="157.0" prefHeight="17.0" prefWidth="159.0" text="Bodega de trabajo actual" />
+                                    <ComboBox layoutX="152.0" layoutY="153.0" prefWidth="150.0" />
+                                    <Label layoutX="9.0" layoutY="182.0" prefHeight="17.0" prefWidth="159.0" text="\% descto base" />
+                                    <TextField layoutX="152.0" layoutY="178.0" prefHeight="25.0" prefWidth="58.0" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="90.0" text="Inventarios">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="16.0" layoutY="260.0" prefHeight="17.0" prefWidth="219.0" text="Factores conversión cantidades">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="4">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="14.0" layoutY="35.0" prefHeight="84.0" prefWidth="515.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="19.0" prefHeight="17.0" prefWidth="91.0" text="Cuenta de caja" />
+                                    <TextField layoutX="97.0" layoutY="15.0" prefHeight="25.0" prefWidth="143.0" />
+                                    <Button layoutX="242.0" layoutY="16.0" mnemonicParsing="false">
+                                       <graphic>
+                                          <ImageView fitHeight="12.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../img/botones/lupa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="323.0" layoutY="19.0" prefHeight="17.0" prefWidth="58.0" text="Alerta $" />
+                                    <TextField layoutX="365.0" layoutY="15.0" prefHeight="25.0" prefWidth="143.0" />
+                                    <Label layoutX="303.0" layoutY="46.0" prefHeight="17.0" prefWidth="78.0" text="Base Caja $" />
+                                    <TextField layoutX="365.0" layoutY="42.0" prefHeight="25.0" prefWidth="143.0" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="19.0" layoutY="17.0" prefHeight="17.0" prefWidth="149.0" text="Tesorería">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="14.0" layoutY="141.0" prefHeight="84.0" prefWidth="515.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="159.0" text="Imprimir cheque" />
+                                    <Button layoutX="14.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="229.0" text="Modificar Impresión del Cheque Pequeño">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="247.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="232.0" text="Modificar Impresión del Cheque Grande">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="24.0" layoutY="124.0" prefHeight="17.0" prefWidth="149.0" text="Cheque">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="5">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="22.0" layoutY="32.0" prefHeight="45.0" prefWidth="515.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="343.0" text="Descuentos financieros no son mayores que el recaudo." />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="149.0" text="Cartera">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="6">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="25.0" layoutY="29.0" prefHeight="239.0" prefWidth="720.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Ver detalles completos de la bonificación" />
+                                    <CheckBox layoutX="14.0" layoutY="31.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Ver unidad o presentación en detalle de la factura" />
+                                    <CheckBox layoutX="14.0" layoutY="48.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Ver marca en el detalle de la factura" />
+                                    <CheckBox layoutX="14.0" layoutY="65.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Modificar el detalle en factura de venta" />
+                                    <CheckBox layoutX="14.0" layoutY="82.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Modificar precio sugerido en factura de venta" />
+                                    <CheckBox layoutX="14.0" layoutY="101.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Modificar precio sugerido superior" />
+                                    <CheckBox layoutX="14.0" layoutY="118.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Ver saldos debodega al facturar" />
+                                    <CheckBox layoutX="14.0" layoutY="135.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Ver saldos generales al facturar" />
+                                    <CheckBox layoutX="14.0" layoutY="152.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Colocar el total decada registro en la fact." />
+                                    <CheckBox layoutX="14.0" layoutY="170.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Hacer devoluciones registrando items vendidos" />
+                                    <CheckBox layoutX="14.0" layoutY="187.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Permite bovnificaciones facturando" />
+                                    <CheckBox layoutX="336.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Modificar precio unitario en factura de venta" />
+                                    <CheckBox layoutX="336.0" layoutY="31.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Descto financiero por producto" />
+                                    <CheckBox layoutX="336.0" layoutY="48.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Descto financiero en varios plazos" />
+                                    <CheckBox layoutX="336.0" layoutY="65.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Imputación contable descto comercial" />
+                                    <Pane layoutX="335.0" layoutY="98.0" prefHeight="61.0" prefWidth="274.0" style="-fx-border-color: white;">
+                                       <children>
+                                          <Label layoutX="10.0" layoutY="-10.0" prefHeight="17.0" prefWidth="149.0" style="-fx-background-color: white;" text="Redonder precios">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton layoutX="7.0" layoutY="12.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="118.0" text="Con decimales" />
+                                          <RadioButton layoutX="8.0" layoutY="34.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="118.0" text="Redondea al peso" />
+                                          <RadioButton layoutX="137.0" layoutY="11.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="118.0" text="Redondea a 10" />
+                                          <RadioButton layoutX="138.0" layoutY="33.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="118.0" text="Redondea a 100" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="336.0" layoutY="161.0" prefHeight="17.0" prefWidth="211.0" text="Calcular el descuento financiero" />
+                                    <ComboBox layoutX="335.0" layoutY="176.0" prefHeight="25.0" prefWidth="279.0" />
+                                    <CheckBox layoutX="336.0" layoutY="205.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="105.0" text="RM Proyectos" />
+                                    <CheckBox layoutX="445.0" layoutY="205.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="105.0" text="Nota Ajuste RM" />
+                                    <TextField layoutX="556.0" layoutY="203.0" prefHeight="25.0" prefWidth="76.0" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="33.0" layoutY="20.0" prefHeight="17.0" prefWidth="149.0" style="-fx-background-color: f0f0f0;" text="Facturación">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="25.0" layoutY="278.0" prefHeight="163.0" prefWidth="720.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="8.0" layoutY="-8.0" prefHeight="17.0" prefWidth="108.0" style="-fx-background-color: f0f0f0;" text="Facturación PDV">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Imprimir cotización en factura PDV" />
+                                    <CheckBox layoutX="14.0" layoutY="31.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Ver columna % descto en facturación PDV" />
+                                    <CheckBox layoutX="14.0" layoutY="48.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Eliminar pedidos PDV al cierre de facturación" />
+                                    <CheckBox layoutX="14.0" layoutY="65.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Pregunta N° pedido Factura PDV" />
+                                    <CheckBox layoutX="14.0" layoutY="82.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Cliente obligatorio en factura PDV" />
+                                    <CheckBox layoutX="14.0" layoutY="99.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Pregunta Zona de Factura PDV" />
+                                    <CheckBox layoutX="14.0" layoutY="116.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Ver cupo cartera" />
+                                    <CheckBox layoutX="14.0" layoutY="133.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Ver saldo anticipos" />
+                                    <CheckBox layoutX="336.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Varias formas de pago" />
+                                    <CheckBox layoutX="336.0" layoutY="31.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Ajustar el peso el total de la factura PDV" />
+                                    <CheckBox layoutX="336.0" layoutY="48.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="No redondea a la decena" />
+                                    <CheckBox layoutX="336.0" layoutY="65.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="No permitir descuento si no esta parametrizado el %" />
+                                    <CheckBox layoutX="336.0" layoutY="82.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="322.0" text="Retenciones en PDV " />
+                                    <Button layoutX="336.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="184.0" text="Mod.Formato Cotización PDV" />
+                                    <Button layoutX="336.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="184.0" text="Mod.Formato O.T.I" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="7">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="18.0" layoutY="30.0" prefHeight="49.0" prefWidth="578.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="9.0" layoutY="19.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="253.0" text="Causar comisioens vendedor al facturar" />
+                                    <CheckBox layoutX="254.0" layoutY="19.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="186.0" text="La comisión baja el ingreso" />
+                                    <CheckBox layoutX="432.0" layoutY="19.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="143.0" text="Anticipo Recaudos" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="25.0" layoutY="22.0" prefHeight="17.0" prefWidth="100.0" style="-fx-background-color: f0f0f0;" text="Comisiones">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="18.0" layoutY="105.0" prefHeight="102.0" prefWidth="578.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="12.0" layoutY="-8.0" prefHeight="17.0" prefWidth="253.0" text="Sistema de acumular puntos para las ventas">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="267.0" text="Como acumular puntos en las ventas" />
+                                    <ComboBox layoutX="14.0" layoutY="31.0" prefHeight="25.0" prefWidth="552.0" />
+                                    <Label layoutX="14.0" layoutY="61.0" prefHeight="17.0" prefWidth="118.0" text="Por cada venta de" />
+                                    <TextField layoutX="116.0" layoutY="57.0" />
+                                    <Label layoutX="273.0" layoutY="61.0" prefHeight="17.0" prefWidth="118.0" text="Acumular puntos" />
+                                    <TextField layoutX="375.0" layoutY="57.0" prefHeight="25.0" prefWidth="80.0" />
+                                    <Label layoutX="459.0" layoutY="61.0" prefHeight="17.0" prefWidth="74.0" text="puntos" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="8">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="19.0" layoutY="35.0" prefHeight="200.0" prefWidth="549.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="291.0" text="Se manejarán los terceros por puntos o sucursales." />
+                                    <CheckBox layoutX="14.0" layoutY="31.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="291.0" text="Manejar terceros con fotos." />
+                                    <CheckBox layoutX="14.0" layoutY="49.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="334.0" text="No crear terceros desde la elaboración de un documento" />
+                                    <CheckBox layoutX="14.0" layoutY="66.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="334.0" text="Se permiten letras en el Nit del tercero." />
+                                    <Label layoutX="5.0" layoutY="100.0" prefHeight="17.0" prefWidth="221.0" text="Nombre para los puntos o sucursales" />
+                                    <TextField layoutX="221.0" layoutY="96.0" prefHeight="25.0" prefWidth="247.0" />
+                                    <Label layoutX="4.0" layoutY="128.0" prefHeight="17.0" prefWidth="221.0" text="Nombre para la clasificación de terceros" />
+                                    <TextField layoutX="221.0" layoutY="124.0" prefHeight="25.0" prefWidth="247.0" />
+                                    <ComboBox layoutX="47.0" layoutY="161.0" prefHeight="25.0" prefWidth="338.0" />
+                                    <Button layoutX="388.0" layoutY="161.0" mnemonicParsing="false" text="..." />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="19.0" layoutY="18.0" prefHeight="17.0" prefWidth="110.0" style="-fx-background-color: f0f0f0;" text="Terceros">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="9">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="17.0" layoutY="34.0" prefHeight="116.0" prefWidth="549.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="291.0" text="Permitir modificar el detalle en las compras" />
+                                    <CheckBox layoutX="14.0" layoutY="31.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="291.0" text="Permitir actualizar precio de venta desde la compra" />
+                                    <CheckBox layoutX="14.0" layoutY="49.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="427.0" text="No actualizar costo de compra automáticamente al efectuar una compra" />
+                                    <CheckBox layoutX="14.0" layoutY="66.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="505.0" text="Ver columna descuento financiero en las compras y tratarlo como descuento comercial" />
+                                    <CheckBox layoutX="14.0" layoutY="83.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="505.0" text="Si el nuevo precio resulta inferior al precio actual dejar el precio actual" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="23.0" layoutY="14.0" prefHeight="17.0" prefWidth="110.0" style="-fx-background-color: f0f0f0;" text="Compras">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="10">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="584.0" prefWidth="825.0">
+                           <children>
+                              <Pane layoutX="15.0" layoutY="30.0" prefHeight="73.0" prefWidth="662.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="-7.0" prefHeight="17.0" prefWidth="159.0" text="Clasif. tributaría en ventas">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="28.0" prefHeight="17.0" prefWidth="105.0" text="Régimen de ventas" />
+                                    <ComboBox layoutX="131.0" layoutY="24.0" prefWidth="150.0" />
+                                    <CheckBox layoutX="295.0" layoutY="28.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="283.0" text="Gran contribuyente (práctica ReteIva)" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="27.0" layoutY="2.0" prefHeight="17.0" prefWidth="77.0" style="-fx-background-color: f0f0f0;" text="Fiscales">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="15.0" layoutY="112.0" prefHeight="73.0" prefWidth="662.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="-11.0" prefHeight="17.0" prefWidth="159.0" text="Clasif. tributaría en rentas">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="314.0" text="Es agente retenedor (práctica retencion en la fuente)" />
+                                    <CheckBox layoutX="14.0" layoutY="34.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="226.0" text="Es autorretenedor" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="15.0" layoutY="200.0" prefHeight="73.0" prefWidth="328.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="-11.0" prefHeight="17.0" prefWidth="264.0" text="Clasif. tributaria en industrias y comercio">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox layoutX="102.0" layoutY="42.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="226.0" text="Agente retenedor de ICA" />
+                                    <TextField layoutX="14.0" layoutY="38.0" prefHeight="25.0" prefWidth="83.0" />
+                                    <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="78.0" text="Tarifa de ICA" />
+                                    <ComboBox layoutX="102.0" layoutY="10.0" prefHeight="25.0" prefWidth="216.0" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="349.0" layoutY="200.0" prefHeight="73.0" prefWidth="328.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="-11.0" prefHeight="17.0" prefWidth="264.0" text="Actividad economica CIIU">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="83.0" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="15.0" layoutY="385.0" prefHeight="97.0" prefWidth="410.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="-11.0" prefHeight="17.0" prefWidth="159.0" text="Opciones">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox layoutX="235.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="152.0" text="Cierre por sucursales" />
+                                    <CheckBox layoutX="13.0" layoutY="33.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="400.0" text="Puede alterar el porcentaje de IVA al momento de la compra o venta" />
+                                    <CheckBox layoutX="13.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="222.0" text="Hacer cierres a los Lapsos de Ventas" />
+                                    <CheckBox layoutX="13.0" layoutY="51.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="222.0" text="Redondear el valor del ICA" />
+                                    <CheckBox layoutX="13.0" layoutY="67.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="277.0" text="Contabiliza asiento R.Comun y R. Simplificado" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="430.0" layoutY="385.0" prefHeight="37.0" prefWidth="247.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <TextField layoutX="128.0" layoutY="4.0" prefHeight="25.0" prefWidth="105.0" />
+                                    <Label layoutX="19.0" layoutY="9.0" prefHeight="17.0" prefWidth="103.0" text="Nit de la DIAN" />
+                                 </children>
+                              </Pane>
+                              <TextField layoutX="561.0" layoutY="424.0" prefHeight="25.0" prefWidth="105.0" />
+                              <Label layoutX="437.0" layoutY="429.0" prefHeight="17.0" prefWidth="126.0" text="Fecha Inicial Facelect" />
+                              <Pane layoutX="430.0" layoutY="451.0" prefHeight="32.0" prefWidth="247.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="8.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="188.0" text="Facturación Eléctronica" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="14.0" layoutY="484.0" prefHeight="107.0" prefWidth="662.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <TextField layoutX="115.0" layoutY="4.0" prefHeight="25.0" prefWidth="525.0" />
+                                    <Label layoutX="6.0" layoutY="9.0" prefHeight="17.0" prefWidth="103.0" text="Url:" />
+                                    <TextField layoutX="115.0" layoutY="29.0" prefHeight="25.0" prefWidth="525.0" />
+                                    <Label layoutX="6.0" layoutY="34.0" prefHeight="17.0" prefWidth="103.0" text="Urladj:" />
+                                    <TextField layoutX="115.0" layoutY="54.0" prefHeight="25.0" prefWidth="525.0" />
+                                    <Label layoutX="6.0" layoutY="59.0" prefHeight="17.0" prefWidth="103.0" text="TokenEmp:" />
+                                    <TextField layoutX="115.0" layoutY="79.0" prefHeight="25.0" prefWidth="525.0" />
+                                    <Label layoutX="6.0" layoutY="84.0" prefHeight="17.0" prefWidth="103.0" text="TokenPas:" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="15.0" layoutY="282.0" prefHeight="93.0" prefWidth="662.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="-11.0" prefHeight="17.0" prefWidth="271.0" text="Comprobante Informe Diario Facturación">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="216.0" layoutY="10.0" prefHeight="25.0" prefWidth="118.0" />
+                                    <Label layoutX="11.0" layoutY="14.0" prefHeight="17.0" prefWidth="184.0" text="Número interno de la máquina" />
+                                    <TextField layoutX="216.0" layoutY="38.0" prefHeight="25.0" prefWidth="118.0" />
+                                    <Label layoutX="10.0" layoutY="42.0" prefHeight="17.0" prefWidth="207.0" text="Número estación de trabajo (empresa)" />
+                                    <TextField layoutX="471.0" layoutY="10.0" prefHeight="25.0" prefWidth="118.0" />
+                                    <Label layoutX="365.0" layoutY="14.0" prefHeight="17.0" prefWidth="184.0" text="Consecutivo actual" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="11">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="32.0" layoutY="16.0" prefHeight="17.0" prefWidth="231.0" style="-fx-background-color: f0f0f0;" text="Configuración de Punto de Venta (PDV)">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="32.0" layoutY="55.0" prefHeight="340.0" prefWidth="353.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="7.0" layoutY="-13.0" prefHeight="17.0" prefWidth="173.0" style="-fx-background-color: f0f0f0;" text="Configuración del Tiquete">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="21.0" prefHeight="17.0" prefWidth="58.0" text="Columnas" />
+                                    <TextField layoutX="94.0" layoutY="17.0" prefHeight="25.0" prefWidth="84.0" />
+                                    <Label layoutX="14.0" layoutY="50.0" prefHeight="17.0" prefWidth="84.0" text="Tamaño letra" />
+                                    <TextField layoutX="94.0" layoutY="46.0" prefHeight="25.0" prefWidth="84.0" />
+                                    <Label layoutX="206.0" layoutY="50.0" prefHeight="17.0" prefWidth="84.0" text="Títulos" />
+                                    <TextField layoutX="259.0" layoutY="46.0" prefHeight="25.0" prefWidth="84.0" />
+                                    <Label layoutX="14.0" layoutY="124.0" prefHeight="17.0" prefWidth="159.0" text="Renglones margen superior" />
+                                    <ComboBox layoutX="13.0" layoutY="91.0" prefHeight="25.0" prefWidth="329.0" />
+                                    <TextField layoutX="259.0" layoutY="120.0" prefHeight="25.0" prefWidth="84.0" />
+                                    <Label layoutX="14.0" layoutY="150.0" prefHeight="17.0" prefWidth="159.0" text="Renglones margen inferior" />
+                                    <TextField layoutX="259.0" layoutY="146.0" prefHeight="25.0" prefWidth="84.0" />
+                                    <Label layoutX="14.0" layoutY="177.0" prefHeight="17.0" prefWidth="212.0" text="Carácter avance línea (150-151)" />
+                                    <TextField layoutX="259.0" layoutY="173.0" prefHeight="25.0" prefWidth="84.0" />
+                                    <Label layoutX="14.0" layoutY="200.0" prefHeight="17.0" prefWidth="212.0" text="Caracteres apertura de cajón" />
+                                    <TextField layoutX="14.0" layoutY="217.0" prefHeight="25.0" prefWidth="329.0" />
+                                    <Label layoutX="12.0" layoutY="247.0" prefHeight="17.0" prefWidth="212.0" text="Nombre de la Impresora" />
+                                    <TextField layoutX="12.0" layoutY="264.0" prefHeight="25.0" prefWidth="256.0" />
+                                    <Button layoutX="270.0" layoutY="264.0" mnemonicParsing="false" text="..." />
+                                    <Label layoutX="14.0" layoutY="297.0" prefHeight="17.0" prefWidth="108.0" text="Modelo tiquete" />
+                                    <TextField layoutX="108.0" layoutY="293.0" prefHeight="25.0" prefWidth="84.0" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="393.0" layoutY="55.0" prefHeight="339.0" prefWidth="325.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="103.0" layoutY="-10.0" prefHeight="17.0" prefWidth="110.0" style="-fx-background-color: f0f0f0;" text="Cajón Monedero">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="14.0" layoutY="30.0" prefHeight="144.0" prefWidth="133.0" style="-fx-border-color: white;">
+                                       <children>
+                                          <Label layoutX="19.0" layoutY="-9.0" prefHeight="17.0" prefWidth="64.0" style="-fx-background-color: f0f0f0;" text="General">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Paralelo" />
+                                          <RadioButton layoutX="14.0" layoutY="31.0" mnemonicParsing="false" text="Serial COM 1" />
+                                          <RadioButton layoutX="14.0" layoutY="48.0" mnemonicParsing="false" text="Serial COM 2" />
+                                          <RadioButton layoutX="14.0" layoutY="66.0" mnemonicParsing="false" text="Serial COM 3" />
+                                          <RadioButton layoutX="14.0" layoutY="83.0" mnemonicParsing="false" text="Serial COM 4" />
+                                          <RadioButton layoutX="14.0" layoutY="100.0" mnemonicParsing="false" text="Sin cajón" />
+                                       </children>
+                                    </Pane>
+                                    <Pane layoutX="170.0" layoutY="30.0" prefHeight="144.0" prefWidth="133.0" style="-fx-border-color: white;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="-11.0" prefHeight="17.0" prefWidth="94.0" style="-fx-background-color: f0f0f0;" text="Solo este PC">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Paralelo" />
+                                          <RadioButton layoutX="14.0" layoutY="31.0" mnemonicParsing="false" text="Serial COM 1" />
+                                          <RadioButton layoutX="14.0" layoutY="48.0" mnemonicParsing="false" text="Serial COM 2" />
+                                          <RadioButton layoutX="14.0" layoutY="66.0" mnemonicParsing="false" text="Serial COM 3" />
+                                          <RadioButton layoutX="14.0" layoutY="83.0" mnemonicParsing="false" text="Serial COM 4" />
+                                          <RadioButton layoutX="14.0" layoutY="100.0" mnemonicParsing="false" text="Sin cajón" />
+                                       </children>
+                                    </Pane>
+                                    <CheckBox layoutX="14.0" layoutY="191.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="292.0" text="Abrir cajón modero al inicio de la impresión" />
+                                    <CheckBox layoutX="14.0" layoutY="210.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="292.0" text="Abrir cajón modero al final de la impresión" />
+                                    <CheckBox layoutX="14.0" layoutY="229.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="292.0" text="No permitir abrir cajón monedero con clave" />
+                                    <Label layoutX="13.0" layoutY="258.0" prefHeight="17.0" prefWidth="212.0" text="Nombre de la Impresora de comandas" />
+                                    <TextField layoutX="13.0" layoutY="275.0" prefHeight="25.0" prefWidth="256.0" />
+                                    <Button layoutX="271.0" layoutY="275.0" mnemonicParsing="false" text="..." />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="12">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="50.0" layoutY="28.0" prefHeight="17.0" prefWidth="64.0" style="-fx-background-color: f0f0f0;" text="Logotipo">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextArea layoutX="50.0" layoutY="55.0" prefHeight="252.0" prefWidth="298.0" />
+                              <Label layoutX="50.0" layoutY="332.0" prefHeight="17.0" prefWidth="81.0" text="Archivo" />
+                              <TextField layoutX="103.0" layoutY="328.0" prefHeight="25.0" prefWidth="288.0" />
+                              <Button layoutX="396.0" layoutY="328.0" mnemonicParsing="false" text="..." />
+                              <Label layoutX="50.0" layoutY="360.0" prefHeight="17.0" prefWidth="81.0" text="Archivo" />
+                              <TextField layoutX="103.0" layoutY="356.0" prefHeight="25.0" prefWidth="288.0" />
+                              <Button layoutX="396.0" layoutY="356.0" mnemonicParsing="false" text="..." />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="13">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="36.0" layoutY="43.0" prefHeight="72.0" prefWidth="561.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="-10.0" prefHeight="17.0" prefWidth="174.0" style="-fx-background-color: f0f0f0;" text="Contraseña de empresa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="193.0" text="Contraseña de empresa" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="35.0" layoutY="135.0" prefHeight="72.0" prefWidth="561.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="8.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="104.0" text="Ver empresas?" />
+                                    <Label layoutX="14.0" layoutY="36.0" prefHeight="17.0" prefWidth="135.0" text="Cual empresa inicia?" />
+                                    <TextField layoutX="132.0" layoutY="32.0" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="36.0" layoutY="238.0" prefHeight="196.0" prefWidth="561.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="14.0" layoutY="55.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="290.0" text="permitir eliminar items en la cuenta pendientes" />
+                                    <Label layoutX="12.0" layoutY="28.0" prefHeight="17.0" prefWidth="168.0" text="Porcentaje servicio voluntario:" />
+                                    <TextField layoutX="189.0" layoutY="24.0" prefHeight="25.0" prefWidth="64.0" />
+                                    <Label layoutX="12.0" layoutY="-9.0" prefHeight="17.0" prefWidth="88.0" style="-fx-background-color: f0f0f0;" text="Restaurante">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="14">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="25.0" layoutY="31.0" prefHeight="156.0" prefWidth="561.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="12.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="111.0" text="Referencia 1" />
+                                    <Label layoutX="12.0" layoutY="-20.0" prefHeight="17.0" prefWidth="88.0" style="-fx-background-color: f0f0f0;" text="Documentos">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox layoutX="134.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="111.0" text="Referencia 2" />
+                                    <CheckBox layoutX="261.0" layoutY="16.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="111.0" text="Referencia 3" />
+                                    <CheckBox layoutX="12.0" layoutY="44.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="306.0" text="Fecha del periodo actual al crear un documento." />
+                                    <Button layoutX="14.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="Definir variables adicionales" />
+                                    <Button layoutX="14.0" layoutY="115.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="Definir monedas extranjeras" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="25.0" layoutY="220.0" prefHeight="127.0" prefWidth="378.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="12.0" layoutY="-20.0" prefHeight="17.0" prefWidth="88.0" style="-fx-background-color: f0f0f0;" text="AIU">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="100.0" layoutY="14.0" prefHeight="17.0" prefWidth="200.0" text="\%           Concepto A.I.U" />
+                                    <Label layoutX="14.0" layoutY="40.0" prefHeight="17.0" prefWidth="81.0" text="Admon" />
+                                    <TextField layoutX="78.0" layoutY="36.0" prefHeight="25.0" prefWidth="64.0" />
+                                    <ComboBox layoutX="150.0" layoutY="36.0" prefHeight="25.0" prefWidth="208.0" />
+                                    <Label layoutX="14.0" layoutY="66.0" prefHeight="17.0" prefWidth="81.0" text="Imprevistos" />
+                                    <TextField layoutX="78.0" layoutY="62.0" prefHeight="25.0" prefWidth="64.0" />
+                                    <ComboBox layoutX="150.0" layoutY="62.0" prefHeight="25.0" prefWidth="208.0" />
+                                    <Label layoutX="14.0" layoutY="91.0" prefHeight="17.0" prefWidth="81.0" text="Utilidad" />
+                                    <TextField layoutX="78.0" layoutY="87.0" prefHeight="25.0" prefWidth="64.0" />
+                                    <ComboBox layoutX="150.0" layoutY="87.0" prefHeight="25.0" prefWidth="208.0" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="15">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="31.0" layoutY="27.0" prefHeight="365.0" prefWidth="597.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="190.0" text="Carácteristicas especiales">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox layoutX="22.0" layoutY="41.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Al Detall" />
+                                    <CheckBox layoutX="22.0" layoutY="58.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Ipoconsumo" />
+                                    <CheckBox layoutX="117.0" layoutY="58.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="73.0" text="ipo %" />
+                                    <CheckBox layoutX="190.0" layoutY="57.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="73.0" text="Ipo iva" />
+                                    <CheckBox layoutX="22.0" layoutY="76.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="142.0" text="Inventarios periódico" />
+                                    <CheckBox layoutX="22.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="193.0" text="Orden de Trabajo / Separados" />
+                                    <CheckBox layoutX="22.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="193.0" text="Mercancía en consignación" />
+                                    <CheckBox layoutX="22.0" layoutY="127.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="217.0" text="Entregas parciales en la facturación" />
+                                    <CheckBox layoutX="22.0" layoutY="144.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="217.0" text="Cobradores" />
+                                    <CheckBox layoutX="22.0" layoutY="161.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="217.0" text="Extraer documentos modelo" />
+                                    <CheckBox layoutX="22.0" layoutY="178.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="217.0" text="Empresa maneja OT Fabrica" />
+                                    <CheckBox layoutX="22.0" layoutY="195.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="140.0" text="Ipoconsumo bolsa" />
+                                    <CheckBox layoutX="169.0" layoutY="195.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="140.0" text="Dcto. Ipo. Bolsa" />
+                                    <Label layoutX="22.0" layoutY="227.0" prefHeight="17.0" prefWidth="106.0" text="Valor impuesto" />
+                                    <TextField layoutX="22.0" layoutY="244.0" />
+                                    <CheckBox layoutX="317.0" layoutY="41.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Promociones" />
+                                    <CheckBox layoutX="317.0" layoutY="58.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="152.0" text="Cartera de difícil cobro" />
+                                    <CheckBox layoutX="317.0" layoutY="76.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="152.0" text="Agentes comercales" />
+                                    <CheckBox layoutX="317.0" layoutY="93.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="178.0" text="Distribución de fletes al costo" />
+                                    <CheckBox layoutX="317.0" layoutY="110.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="178.0" text="Balanza" />
+                                    <CheckBox layoutX="317.0" layoutY="127.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Opciones adicionales de Impresión" />
+                                    <CheckBox layoutX="317.0" layoutY="144.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Puntos a clientes" />
+                                    <CheckBox layoutX="317.0" layoutY="161.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Los productos manejan lote" />
+                                    <CheckBox layoutX="317.0" layoutY="178.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="213.0" text="Peluqueria (Tercero Individual)" />
+                                    <CheckBox layoutX="317.0" layoutY="195.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="246.0" text="Lista de precios individual por cada item" />
+                                    <CheckBox layoutX="317.0" layoutY="212.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="246.0" text="Maneja Serial" />
+                                    <CheckBox layoutX="317.0" layoutY="229.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="246.0" text="Serial Automático" />
+                                    <TextField layoutX="319.0" layoutY="252.0" />
+                                    <CheckBox layoutX="317.0" layoutY="285.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="246.0" text="No agregar item con código de barras" />
+                                    <CheckBox layoutX="23.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="26.0" />
+                                    <Label layoutX="25.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="1" />
+                                    <CheckBox layoutX="45.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="26.0" />
+                                    <Label layoutX="47.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="2" />
+                                    <CheckBox layoutX="67.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="26.0" />
+                                    <Label layoutX="69.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="3" />
+                                    <CheckBox layoutX="89.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="26.0" />
+                                    <Label layoutX="91.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="4" />
+                                    <CheckBox layoutX="110.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="26.0" />
+                                    <Label layoutX="112.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="5" />
+                                    <CheckBox layoutX="132.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="26.0" />
+                                    <Label layoutX="134.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="6" />
+                                    <CheckBox layoutX="154.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="26.0" />
+                                    <Label layoutX="156.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="7" />
+                                    <CheckBox layoutX="176.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="15.0" />
+                                    <Label layoutX="178.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="8" />
+                                    <CheckBox layoutX="197.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="15.0" />
+                                    <Label layoutX="199.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="9" />
+                                    <CheckBox layoutX="218.0" layoutY="316.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="15.0" />
+                                    <Label layoutX="220.0" layoutY="294.0" prefHeight="17.0" prefWidth="12.0" text="0" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="16">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="26.0" layoutY="52.0" prefHeight="61.0" prefWidth="556.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <Label layoutX="15.0" layoutY="16.0" prefHeight="17.0" prefWidth="74.0" text="Directorio" />
+                                    <TextField layoutX="89.0" layoutY="12.0" prefHeight="25.0" prefWidth="443.0" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="44.0" layoutY="32.0" prefHeight="17.0" prefWidth="144.0" style="-fx-background-color: f0f0f0;" text="Directorio Actual">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="17">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="24.0" layoutY="54.0" prefHeight="391.0" prefWidth="597.0" style="-fx-background-color: cacef4; -fx-border-color: grey;">
+                                 <children>
+                                    <CheckBox layoutX="22.0" layoutY="7.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="293.0" text="Facturación en lote asignada a puntos/sucursales" />
+                                    <CheckBox layoutX="22.0" layoutY="26.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="120.0" text="Otra moneda" />
+                                    <CheckBox layoutX="22.0" layoutY="44.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="201.0" text="Información Ultimas Ventas (FV)" />
+                                    <CheckBox layoutX="22.0" layoutY="61.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="229.0" text="Imprimir -no imprimir precios (RM, NI)" />
+                                    <CheckBox layoutX="22.0" layoutY="78.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="193.0" text="Saldos general Art. otras emp." />
+                                    <CheckBox layoutX="22.0" layoutY="95.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="250.0" text="Entregas parciales pedido en remisión" />
+                                    <CheckBox layoutX="22.0" layoutY="112.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="217.0" text="Mayor en FV y FP" />
+                                    <CheckBox layoutX="22.0" layoutY="129.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="217.0" text="Duplicar Art. en Documentos" />
+                                    <CheckBox layoutX="317.0" layoutY="8.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="260.0" text="Control cartera más remisiones pendientes" />
+                                    <CheckBox layoutX="317.0" layoutY="25.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="246.0" text="Redondear al peso parafiscales" />
+                                    <CheckBox layoutX="317.0" layoutY="43.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="222.0" text="Vinculación de subgrupos a grupos" />
+                                    <CheckBox layoutX="317.0" layoutY="60.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="178.0" text="Pacientes en FV" />
+                                    <CheckBox layoutX="317.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="246.0" text="Porcentaje informe pedidos" />
+                                    <Label layoutX="353.0" layoutY="87.0" prefHeight="17.0" prefWidth="159.0" text="\% utilidad vtas otras Emp." />
+                                    <TextField layoutX="495.0" layoutY="83.0" prefHeight="25.0" prefWidth="79.0" />
+                                    <Label layoutX="319.0" layoutY="125.0" prefHeight="17.0" prefWidth="196.0" text="Número de Planilla (Transporte):" />
+                                    <TextField layoutX="319.0" layoutY="142.0" prefHeight="25.0" prefWidth="194.0" />
+                                    <Label layoutX="24.0" layoutY="200.0" prefHeight="17.0" prefWidth="240.0" style="-fx-background-color: f0f0f0;" text="Opciones especiales INMOBILIARIA">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="24.0" layoutY="232.0" prefHeight="17.0" prefWidth="100.0" text="SERVADMONI" />
+                                    <ComboBox layoutX="215.0" layoutY="228.0" prefHeight="25.0" prefWidth="364.0" />
+                                    <Label layoutX="24.0" layoutY="258.0" prefHeight="17.0" prefWidth="100.0" text="SERVCANON" />
+                                    <ComboBox layoutX="215.0" layoutY="254.0" prefHeight="25.0" prefWidth="364.0" />
+                                    <Label layoutX="24.0" layoutY="284.0" prefHeight="17.0" prefWidth="100.0" text="SERVCANONG" />
+                                    <ComboBox layoutX="215.0" layoutY="280.0" prefHeight="25.0" prefWidth="364.0" />
+                                    <Label layoutX="24.0" layoutY="309.0" prefHeight="17.0" prefWidth="100.0" text="SERVADMON" />
+                                    <ComboBox layoutX="215.0" layoutY="305.0" prefHeight="25.0" prefWidth="364.0" />
+                                    <Label layoutX="24.0" layoutY="334.0" prefHeight="17.0" prefWidth="100.0" text="SERVSEGURO" />
+                                    <ComboBox layoutX="215.0" layoutY="330.0" prefHeight="25.0" prefWidth="364.0" />
+                                    <Label layoutX="24.0" layoutY="360.0" prefHeight="17.0" prefWidth="100.0" text="SERVRETEF" />
+                                    <ComboBox layoutX="215.0" layoutY="356.0" prefHeight="25.0" prefWidth="364.0" />
+                                 </children>
+                              </Pane>
+                              <Label layoutX="27.0" layoutY="35.0" prefHeight="17.0" prefWidth="190.0" style="-fx-background-color: f0f0f0;" text="Opciones especiales">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox layoutX="27.0" layoutY="467.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="246.0" text="Filtrar usuario comprobante fiscal" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="18">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="45.0" layoutY="22.0" prefHeight="17.0" prefWidth="72.0" text="Nómina">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="45.0" layoutY="52.0" prefHeight="17.0" prefWidth="83.0" text="Salario minimo" />
+                              <ComboBox layoutX="209.0" layoutY="48.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="45.0" layoutY="80.0" prefHeight="17.0" prefWidth="169.0" text="Fondo solidaridad pensional" />
+                              <ComboBox layoutX="209.0" layoutY="76.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="45.0" layoutY="107.0" prefHeight="17.0" prefWidth="169.0" text="Tipo de entidad" />
+                              <ComboBox layoutX="209.0" layoutY="103.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="45.0" layoutY="134.0" prefHeight="17.0" prefWidth="169.0" text="Clase de aportante" />
+                              <ComboBox layoutX="209.0" layoutY="130.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="45.0" layoutY="162.0" prefHeight="17.0" prefWidth="169.0" text="Sena" />
+                              <ComboBox layoutX="209.0" layoutY="158.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="45.0" layoutY="190.0" prefHeight="17.0" prefWidth="169.0" text="ICBF" />
+                              <ComboBox layoutX="209.0" layoutY="186.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Separator layoutX="14.0" layoutY="242.0" prefHeight="9.0" prefWidth="807.0" />
+                              <Label layoutX="14.0" layoutY="258.0" prefHeight="17.0" prefWidth="168.0" text="Contabilizar nóminas">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox layoutX="14.0" layoutY="281.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="274.0" text="Aplicar códigos contables por centro de trabajo" />
+                              <CheckBox layoutX="392.0" layoutY="258.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="211.0" text="Causar salarios por pagar en NF" />
+                              <CheckBox layoutX="392.0" layoutY="281.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="211.0" text="Liq. final por pagar en NF" />
+                              <Label layoutX="14.0" layoutY="309.0" prefHeight="17.0" prefWidth="124.0" text="Prima Semestral">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="338.0" prefHeight="17.0" prefWidth="169.0" text="Concepto a liquidar" />
+                              <ComboBox layoutX="138.0" layoutY="334.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="14.0" layoutY="367.0" prefHeight="17.0" prefWidth="169.0" text="Concepto causado" />
+                              <ComboBox layoutX="138.0" layoutY="363.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="404.0" layoutY="307.0" prefHeight="17.0" prefWidth="124.0" text="Vacaciones">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="404.0" layoutY="336.0" prefHeight="17.0" prefWidth="169.0" text="Concepto a liquidar" />
+                              <ComboBox layoutX="528.0" layoutY="332.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="404.0" layoutY="365.0" prefHeight="17.0" prefWidth="169.0" text="Concepto causado" />
+                              <ComboBox layoutX="528.0" layoutY="361.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="14.0" layoutY="401.0" prefHeight="17.0" prefWidth="124.0" text="Cesantías">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="430.0" prefHeight="17.0" prefWidth="169.0" text="Concepto a liquidar" />
+                              <ComboBox layoutX="138.0" layoutY="426.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="14.0" layoutY="459.0" prefHeight="17.0" prefWidth="169.0" text="Concepto causado" />
+                              <ComboBox layoutX="138.0" layoutY="455.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="405.0" layoutY="406.0" prefHeight="17.0" prefWidth="187.0" text="Interés a las cesantías">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="405.0" layoutY="435.0" prefHeight="17.0" prefWidth="169.0" text="Concepto a liquidar" />
+                              <ComboBox layoutX="529.0" layoutY="431.0" prefHeight="25.0" prefWidth="247.0" />
+                              <Label layoutX="405.0" layoutY="464.0" prefHeight="17.0" prefWidth="169.0" text="Concepto causado" />
+                              <ComboBox layoutX="529.0" layoutY="460.0" prefHeight="25.0" prefWidth="247.0" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Button contentDisplay="TOP" layoutX="764.0" layoutY="630.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="58.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="660.0" layoutY="630.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="64.0" text="Devolver">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/girar-a-la-izquierda.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="594.0" layoutY="630.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="64.0" text="Grabar">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/botones/disquete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="385.0" layoutY="630.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Parámetros Cooperativa" />
+            <Button layoutX="385.0" layoutY="661.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="159.0" text="Parámetros Adicionales" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

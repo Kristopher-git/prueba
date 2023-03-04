@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="286.0" prefWidth="497.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.deudores.Listado_clientes_saldosController">
+    <stylesheets>
+        <URL value="@/style/informes/deudores/listado_clientes_saldos.css" />
+    </stylesheets>
+   <children>
+      <Pane prefHeight="292.0" prefWidth="496.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="5.0" layoutY="6.0" prefHeight="201.0" prefWidth="485.0" style="-fx-background-color: accad5; -fx-border-color: grey;">
+               <children>
+                  <Pane layoutX="322.0" layoutY="14.0" prefHeight="76.0" prefWidth="142.0" style="-fx-border-color: white;">
+                     <children>
+                        <Label layoutX="9.0" layoutY="-9.0" prefHeight="17.0" prefWidth="88.0" text="Listado de">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="Listar clientes" />
+                        <RadioButton layoutX="14.0" layoutY="38.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="Listar Sucursal" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="321.0" layoutY="99.0" prefHeight="94.0" prefWidth="142.0" style="-fx-border-color: white;">
+                     <children>
+                        <Label layoutX="9.0" layoutY="-9.0" prefHeight="17.0" prefWidth="88.0" text="Ordenado">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="Nombres" />
+                        <RadioButton layoutX="14.0" layoutY="38.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="Nit/Codigo" />
+                        <RadioButton layoutX="14.0" layoutY="65.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="Codigo" />
+                     </children>
+                  </Pane>
+                  <ComboBox layoutX="14.0" layoutY="27.0" prefWidth="150.0" />
+                  <TextField layoutX="168.0" layoutY="27.0" prefHeight="25.0" prefWidth="71.0" />
+                  <Label layoutX="21.0" layoutY="73.0" prefHeight="17.0" prefWidth="88.0" text="Agrupar">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="99.0" prefHeight="17.0" prefWidth="71.0" text="Acumular" />
+                  <ComboBox layoutX="82.0" layoutY="95.0" prefHeight="25.0" prefWidth="110.0" />
+                  <Label layoutX="22.0" layoutY="124.0" prefHeight="17.0" prefWidth="71.0" text="Detallar" />
+                  <ComboBox layoutX="83.0" layoutY="120.0" prefHeight="25.0" prefWidth="110.0" />
+               </children>
+            </Pane>
+            <Label layoutX="22.0" layoutY="17.0" prefHeight="17.0" prefWidth="88.0" text="Cuenta">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="TOP" layoutX="424.0" layoutY="217.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="66.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="355.0" layoutY="217.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="66.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="285.0" layoutY="217.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="66.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

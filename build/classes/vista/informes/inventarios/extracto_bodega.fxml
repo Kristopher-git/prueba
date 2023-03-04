@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="174.0" prefWidth="734.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="controlador.informes.inventarios.Extracto_bodegaController">
+    <stylesheets>
+        <URL value="@/style/informes/inventarios/extracto_bodega.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="1.0" layoutY="-2.0" prefHeight="196.0" prefWidth="733.0" style="-fx-background-color: white;">
+         <children>
+            <Pane layoutX="4.0" layoutY="4.0" prefHeight="98.0" prefWidth="725.0" style="-fx-background-color: accad5;">
+               <children>
+                  <Label layoutX="4.0" layoutY="11.0" prefHeight="17.0" prefWidth="108.0" text="Bodega">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox layoutX="6.0" layoutY="28.0" prefHeight="25.0" prefWidth="236.0" />
+                  <Label layoutX="254.0" layoutY="32.0" prefHeight="17.0" prefWidth="80.0" text="Periodo" />
+                  <TextField layoutX="299.0" layoutY="28.0" prefHeight="25.0" prefWidth="71.0" />
+                  <ComboBox layoutX="374.0" layoutY="28.0" prefHeight="25.0" prefWidth="145.0" />
+                  <Label layoutX="526.0" layoutY="32.0" prefHeight="17.0" prefWidth="41.0" text="del" />
+                  <TextField layoutX="555.0" layoutY="28.0" prefHeight="25.0" prefWidth="50.0" />
+                  <Label layoutX="611.0" layoutY="32.0" prefHeight="17.0" prefWidth="41.0" text="al" />
+                  <TextField layoutX="640.0" layoutY="28.0" prefHeight="25.0" prefWidth="50.0" />
+               </children>
+            </Pane>
+            <Button contentDisplay="TOP" layoutX="665.0" layoutY="109.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Salir">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/cerrar-sesion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="534.0" layoutY="109.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Imprime">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/impresora.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="600.0" layoutY="109.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="61.0" text="Excel">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../img/botones/sobresalir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
